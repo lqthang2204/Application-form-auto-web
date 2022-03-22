@@ -1,0 +1,34 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: email-copy-radio-option
+    description: Email me a copy radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"email a copy to me")]
+    values:
+      - lang: EN
+        value: email a copy to me
+  - id: page-end
+    description: page end
+    locators:
+      - device: WEB
+        type: ID
+        value: pageEnd
+  - id: page-title
+    description: Page title
+    locators:
+      - device: API
+        value: ExtraConsent_EmailACopyToMe
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(), 'Consent to Join the')]
+    values:
+      - lang: EN
+        value: Consent to Join the
+apiPage: {}

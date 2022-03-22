@@ -1,0 +1,121 @@
+elements:
+  - id: create-email-input
+    description: Email input to create participant
+    locators:
+      - device: WEB
+        type: ID
+        value: email
+  - id: verification-code-input
+    description: Verification code
+    locators:
+      - device: WEB
+        type: ID
+        value: verification_code
+  - id: secret-answer-1-input
+    description: Secret answer 1
+    locators:
+      - device: WEB
+        type: ID
+        value: secret_answer_1
+  - id: secret-answer-2-input
+    description: Secret answer 2
+    locators:
+      - device: WEB
+        type: ID
+        value: secret_answer_2
+  - id: secret-answer-3-input
+    description: Secret answer 3
+    locators:
+      - device: WEB
+        type: ID
+        value: secret_answer_3
+  - id: get-started-button
+    description: Get started button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[id='beginYourJournyContinueButton']
+  - &email-input
+    id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: ID
+        value: emailOrPhone
+  - &password-input
+    id: password-input
+    description: Password input
+    locators:
+      - device: WEB
+        type: ID
+        value: password
+  - &action-login-button
+    id: action-login-button
+    description: Login button
+    locators:
+      - device: WEB
+        type: ID
+        value: action-button
+  - &error-account-locked
+    id: error-account-locked
+    description: Error account locked
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[data-i18n="signin.banner.error.accountLocked"]
+  - &set-up-security-questions
+    id: set-up-security-questions
+    description: Form set up security questions
+    locators:
+      - device: WEB
+        type: CSS
+        value: h2[title="Set up Security Questions"]
+  - &login-link
+    id: login-link
+    description: Login link
+    locators:
+      - device: WEB
+        type: ID
+        value: login-page-link
+  - &pmi-program-logo
+    id: pmi-program-logo
+    description: PMI program logo
+    locators:
+      - device: WEB
+        type: ID
+        value: program-logo
+actions:
+  - id: login-pmi
+    description: Login to PMI
+    actionElements:
+      - element: *login-link
+        condition: DISPLAYED
+        timeout: 5000
+        inputType: click
+      - element: *email-input
+        condition: DISPLAYED
+        infoType: email
+        inputType: text
+      - element: *password-input
+        infoType: password
+        inputType: text
+      - element: *action-login-button
+        condition: ENABLED
+        inputType: click
+  - id: login-pmi-by-phone-number
+    description: Login to PMI
+    actionElements:
+      - element: *login-link
+        condition: DISPLAYED
+        timeout: 5000
+        inputType: click
+      - element: *email-input
+        condition: DISPLAYED
+        infoType: verifiedPrimaryPhoneNumber
+        inputType: text
+      - element: *password-input
+        infoType: password
+        inputType: text
+      - element: *action-login-button
+        condition: ENABLED
+        inputType: click

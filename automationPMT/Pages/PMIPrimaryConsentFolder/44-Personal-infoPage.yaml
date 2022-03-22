@@ -1,0 +1,184 @@
+elements:
+  - &first-name
+    id: first-name
+    description: First name
+    locators:
+      - device: API
+        value: PIIName_First
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='first name']
+    values:
+      - lang: EN
+        value: first name
+  - &middle-initial
+    id: middle-initial
+    description: Middle initial
+    locators:
+      - device: API
+        value: PIIName_Middle
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='middle name']
+    values:
+      - lang: EN
+        value: middle name
+  - &last-name
+    id: last-name
+    description: Last name
+    locators:
+      - device: API
+        value: PIIName_Last
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='last name']
+    values:
+      - lang: EN
+        value: last-name
+  - &address-one
+    id: address-one
+    description: Address 1
+    locators:
+      - device: API
+        value: PIIAddress_StreetAddress
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='address 1']
+    values:
+      - lang: EN
+        value: address 1
+  - id: address-two
+    description: Address 2
+    locators:
+      - device: API
+        value: PIIAddress_StreetAddress2
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='address 2']
+    values:
+      - lang: EN
+        value: address 2
+  - &city
+    id: city
+    description: City
+    locators:
+      - device: API
+        value: StreetAddress_PIICity
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='city']
+    values:
+      - lang: EN
+        value: city
+  - id: zip-code
+    description: Zip Code
+    locators:
+      - device: API
+        value: StreetAddress_PIIZIP
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='zip code']
+    values:
+      - lang: EN
+        value: zip code
+  - &phone-number
+    id: phone-number
+    description: Phone number
+    locators:
+      - device: API
+        value: PIIContactInformation_Phone
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='phone number']
+    values:
+      - lang: EN
+        value: phone number
+  - id: birthdate
+    description: Birthdate
+    locators:
+      - device: API
+        value: PIIBirthInformation_BirthDate
+      - device: WEB
+        type: XPATH
+        value: //input[@ui-mask-placeholder='mm/dd/yyyy']
+    values:
+      - lang: EN
+        value: mm/dd/yyyy
+  - &state-dropdown
+    id: state-dropdown
+    description: Dropdown list with states
+    locators:
+      - device: API
+        value: StreetAddress_PIIState
+      - device: WEB
+        type: CSS
+        value: .form-control.dropdown-select
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='email']
+actions:
+  - id: fill-whole-form
+    description: starter action with randomly assembled ActionElements
+    actionElements:
+      - element: *first-name
+        infoType: firstName
+        inputType: text
+      - element: *middle-initial
+        infoType: middleInitial
+        inputType: text
+      - element: *last-name
+        infoType: lastName
+        inputType: text
+      - element: *address-one
+        infoType: streetOne
+        inputType: text
+      - element: *phone-number
+        infoType: phoneNumber
+        inputType: text
+      - element: *state-dropdown
+        infoType: state
+        inputType: dropDown
+      - element: *city
+        infoType: city
+        inputType: text
+apiPage:
+    name: contact information
+    sections:
+      - name: ConsentPII_Personal Information
+        fields:
+          - name: first-name
+            values:
+              - user.firstName
+          - name: middle-initial
+            values:
+              - user.middleInitial
+          - name: last-name
+            values:
+              - user.lastName
+          - name: address-one
+            values:
+              - 10401 W Thunderbird Blvd
+          - name: city
+            values:
+              - Sun City
+          - name: state-dropdown
+            values:
+              - AZ
+          - name: zip-code
+            values:
+              - '85351'
+          - name: phone-number
+            values:
+              - '6666666661'
+          - name: birthdate
+            values:
+              - user.dob

@@ -1,0 +1,41 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Sexual Orientation
+  - id: option-straight
+    description: Straight Orientation
+    locators:
+      - device: API
+        value: GenderIdentity_SexualityCloserDescription
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "Straight")]
+    values:
+      - lang: EN
+        value: Straight; that is, not gay or lesbian, etc.
+  - id: page-end
+    description: page end
+    locators:
+      - device: WEB
+        type: ID
+        value: pageEnd
+apiPage:
+    name: Sexual Orientation
+    sections:
+      - name: TheBasics_SexualOrientation
+        fields:
+          - name: option-straight
+            values:
+              - SexualOrientation_Straight

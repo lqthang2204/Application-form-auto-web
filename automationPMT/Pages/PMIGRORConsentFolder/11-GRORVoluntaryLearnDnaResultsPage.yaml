@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: voluntary-learn-dna-results-page-title
+    description: Voluntary learn DNA results page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Do I have to learn my DNA results?
+apiPage: {}

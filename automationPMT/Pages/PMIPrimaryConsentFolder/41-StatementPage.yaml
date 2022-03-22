@@ -1,0 +1,37 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: I've read the consent form radio button
+    locators:
+      - device: API
+        value: ExtraConsent_AgreeToConsent
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"I have read this consent form")]
+    values:
+      - lang: EN
+        value: I have read this consent form (or someone read it to me). I understand
+            the information in this form. All of my questions have been answered.
+            I freely and willingly choose to take part in the All of Us Research Program.
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Statement')]
+    values:
+      - lang: EN
+        value: Statement by Person Agreeing to Take Part in This Research Program
+apiPage:
+    name: statement agreeing to consent
+    sections:
+      - name: ConsentPII_ExtraConsent
+        fields:
+          - name: radio-option-1
+            values:
+              - true

@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Yes")]
+  - id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"No")]
+  - id: question4-page-title
+    description: Question 4 page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Pregunta 4
+apiPage: {}

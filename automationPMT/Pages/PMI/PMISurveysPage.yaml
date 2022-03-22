@@ -1,0 +1,11 @@
+elements:
+  - id: basic-completed-text
+    description: Basics survey completed on text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[contains(text(),'The Basics')]/following::span[@data-target='completed'][1]
+  values:
+      - lang: EN
+        value: Completed on
+apiPage: {}

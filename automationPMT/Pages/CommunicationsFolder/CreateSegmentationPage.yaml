@@ -1,0 +1,489 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: segmentation-name-input
+    description: Segmentation name input
+    locators:
+      - device: WEB
+        type: NAME
+        value: name
+  - id: description-input
+    description: Description input
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea
+  - &communication-channel-dropdown
+    id: communication-channel-dropdown
+    description: Communication channel dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Communication Channel']/following-sibling::div/div/div
+  - &email-option
+    id: email-option
+    description: Email option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email']
+  - &sms-option
+    id: sms-option
+    description: SMS option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='SMS']
+  - &target-audience-dropdown
+    id: target-audience-dropdown
+    description: Target audience dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[data-value="participants"]
+  - &prospect-option
+    id: prospect-option
+    description: Prospect option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prospects']
+  - &participant-option
+    id: participant-option
+    description: Participant option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Participants']
+  - &organizational-structure-edit-button
+    id: organizational-structure-edit-button
+    description: Organizational structure edit button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='pencil-button']
+  - &automation-org-checkbox
+    id: automation-org-checkbox
+    description: Automation Org checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Org']
+  - &site-title
+    id: site-title
+    description: Site title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='title-hierarchy'][text()='Site']
+  - &organization-title
+    id: organization-title
+    description: Organization title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='title-hierarchy'][text()='Organization']
+  - &awardee-title
+    id: awardee-title
+    description: Awardee title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='title-hierarchy'][text()='Awardee']
+  - id: vrp-organization-title
+    description: Organization title in vrp
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='title-hierarchy'])[last()]
+  - &site-view-all-button
+    id: site-view-all-button
+    description: site view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Site']//button[text()='View All']
+  - &organization-view-all-button
+    id: organization-view-all-button
+    description: organization view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Organization']//button[text()='View All']
+  - &awardee-view-all-button
+    id: awardee-view-all-button
+    description: Awardee view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Awardee']//button[text()='View All']
+  - id: vrp-organization-view-all-button
+    description: organization view all button in vrp
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Clinic Location']//button[text()='View All']
+  - &select-all-checkbox
+    id: select-all-checkbox
+    description: Select all checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Select All']
+  - &organizational-structure-save-button
+    id: organizational-structure-save-button
+    description: Organizational structure save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-save']
+  - &organizational-structure-cancel-button
+    id: organizational-structure-cancel-button
+    description: Organizational structure cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-cancel']
+  - &segmentation-dropdown
+    id: segmentation-dropdown
+    description: Dropdown Select a segmentation category
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(.,'Add Category')]/preceding-sibling::div
+  - &segmentation-first-option
+    id: segmentation-first-option
+    description: Segmentation first option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Program Milestones']
+  - &segmentation-second-option
+    id: segmentation-second-option
+    description: Segmentation second option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Demographic Segmentation']
+  - &segmentation-third-option
+    id: segmentation-third-option
+    description: Segmentation third option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Geographic Segmentation']
+  - &segmentation-fourth-option
+    id: segmentation-fourth-option
+    description: Segmentation fourth option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Campaign Activity']
+  - &prospect-upload-date-option
+    id: prospect-upload-date-option
+    description: Prospect Upload Date option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prospect Upload Date']
+  - &add-category-button
+    id: add-category-button
+    description: Add category button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[aria-label="Add Category"]
+  - &select-program-milestones-dropdown
+    id: select-program-milestones-dropdown
+    description: Select program milestones dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select Filter']
+  - &select-demographic-segment-dropdown
+    id: select-demographic-segment-dropdown
+    description: Select Demographic Segmentation dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select Filter']
+  - &primary-consent-option
+    id: primary-consent-option
+    description: Primary consent option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Primary Consent']
+  - &program-update-on-dna-option
+    id: program-update-on-dna-option
+    description: Program update on DNA option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Program Update on DNA']
+  - &select-filter-operator-dropdown
+    id: select-filter-operator-dropdown
+    description: Select filter operator dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select Operator']
+  - &is-equal-to-only-option
+    id: is-equal-to-only-option
+    description: Is equal to only option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is equal to only']
+  - &is-any-of-option
+    id: is-any-of-option
+    description: Is any of option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is any of']
+  - &select-value-dropdown
+    id: select-value-dropdown
+    description: Select value dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Value']/following-sibling::div/div/div
+  - &eligible-but-not-started-option
+    id: eligible-but-not-started-option
+    description: Eligible but not started option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Eligible but Not Started']
+  - &select-date-range-dropdown
+    id: select-date-range-dropdown
+    description: Select date range dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'date-operator')]/div
+  - &on-any-date-option
+    id: on-any-date-option
+    description: On any dated option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='on any date']
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: ID
+        value: saveButton
+  - &one-on-one-engagement-option
+    id: one-on-one-engagement-option
+    description: One on one engagement option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='1-on-1 Engagement']
+  - &select-segmentation-category-dropdown
+    id: select-segmentation-category-dropdown
+    description: Dropdown Select a Segmentation Category
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(.,'Add Category')]/preceding-sibling::div
+  - &program-milestones-option
+    id: program-milestones-option
+    description: Program milestones option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Program Milestones']
+  - &prospect-list-name-option
+    id: prospect-list-name-option
+    description: Prospect list name option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prospect List Name']
+  - &demographic-segmentation-option
+    id: demographic-segmentation-option
+    description: Demographic Segmentation option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Demographic Segmentation']
+  - &automation-prospect-list-option
+    id: automation-prospect-list-option
+    description: Automation prospect list option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation prospect list']
+  - &age18-24-option
+    id: age18-24-option
+    description: Option age 18-24
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='18-24']
+  - &age25-34-option
+    id: age25-34-option
+    description: Option age 25-34
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='25-34']
+  - &age35-44-option
+    id: age35-44-option
+    description: Option age 35-44
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='35-44']
+  - &age45-54-option
+    id: age45-54-option
+    description: Option age 45-54
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='45-54']
+  - &age55-64-option
+    id: age55-64-option
+    description: Option age 55-64
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='55-64']
+  - &segment-dropdown
+    id: segment-dropdown
+    description: Segment dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="segment-bar"] div[class*="react-select-container"]
+  - &age-option
+    id: age-option
+    description: Age option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Age']
+  - id: race-option
+    description: Age option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Race']
+  - id: asian-option
+    description: Asian option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Asian']
+actions:
+  - id: add-email-participants-audience-segmentation
+    description: Add email participants audience segmentation
+    actionElements:
+      - element: *communication-channel-dropdown
+        inputType: click
+      - element: *email-option
+        inputType: click
+      - element: *organizational-structure-edit-button
+        inputType: click
+      - element: *site-title
+        inputType: click
+      - element: *site-view-all-button
+        inputType: click
+      - element: *select-all-checkbox
+        inputType: click
+      - element: *organizational-structure-save-button
+        inputType: click
+  - id: create-sms-prospects-segmentation
+    description: Create sms prospects segmentation
+    actionElements:
+      - element: *communication-channel-dropdown
+        inputType: click
+      - element: *sms-option
+        inputType: click
+      - element: *target-audience-dropdown
+        inputType: click
+      - element: *prospect-option
+        inputType: click
+      - element: *organizational-structure-edit-button
+        inputType: click
+      - element: *site-title
+        inputType: click
+      - element: *site-view-all-button
+        inputType: click
+      - element: *select-all-checkbox
+        inputType: click
+      - element: *organizational-structure-save-button
+        inputType: click
+      - element: *segmentation-dropdown
+        inputType: click
+      - element: *prospect-upload-date-option
+        inputType: click
+      - element: *segmentation-dropdown
+        inputType: click
+      - element: *prospect-upload-date-option
+        inputType: click
+      - element: *add-category-button
+        inputType: click
+      - element: *select-date-range-dropdown
+        inputType: click
+      - element: *on-any-date-option
+        inputType: click
+  - id: create-1-on-1-prospects-segmentation
+    description: Create 1-on-1 prospects segmentation
+    actionElements:
+      - element: *communication-channel-dropdown
+        inputType: click
+      - element: *one-on-one-engagement-option
+        inputType: click
+      - element: *target-audience-dropdown
+        inputType: click
+      - element: *prospect-option
+        inputType: click
+      - element: *organizational-structure-edit-button
+        inputType: click
+      - element: *organization-title
+        inputType: click
+      - element: *organization-view-all-button
+        inputType: click
+      - element: *automation-org-checkbox
+        inputType: click
+      - element: *organizational-structure-save-button
+        inputType: click
+      - element: *select-segmentation-category-dropdown
+        inputType: click
+      - element: *prospect-list-name-option
+        inputType: click
+      - element: *select-segmentation-category-dropdown
+        inputType: click
+      - element: *prospect-list-name-option
+        inputType: click
+      - element: *add-category-button
+        inputType: click
+      - element: *select-filter-operator-dropdown
+        inputType: click
+      - element: *is-equal-to-only-option
+        inputType: click
+      - element: *select-value-dropdown
+        inputType: click
+      - element: *automation-prospect-list-option
+        inputType: click
+  - id: click-save-button
+    description: Click on Save button
+    actionElements:
+      - element: *save-button
+        condition: DISPLAYED
+        timeout: 5000
+        inputType: click
+      - element: *save-button
+        condition: DISPLAYED
+        timeout: 5000
+        inputType: click

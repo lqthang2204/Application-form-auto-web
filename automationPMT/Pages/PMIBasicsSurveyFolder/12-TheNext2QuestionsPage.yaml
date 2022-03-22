@@ -1,0 +1,18 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: The next 2 questions ask about any people who live with you.
+      - lang: ES
+apiPage: {}

@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: pay-dna-results-page-title
+    description: Pay DNA results page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Do I need to pay to get my DNA results?
+apiPage: {}

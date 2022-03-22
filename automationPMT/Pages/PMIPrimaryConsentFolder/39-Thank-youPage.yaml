@@ -1,0 +1,31 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: API
+        value: ExtraConsent_ReadyOrNeedHelp
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"ready to join")]
+  - id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Get some help")]
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Thank you')]
+    values:
+      - lang: EN
+        value: Thank you!
+apiPage: {}

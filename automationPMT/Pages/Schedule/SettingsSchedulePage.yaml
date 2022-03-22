@@ -1,0 +1,50 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: search-awardee-input
+    description: Search Awardee Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Settings']/../following-sibling::div/div/div/div
+  - id: automation-awardee-option
+    description: Automation Awardee Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Automation Awardee']
+  - id: search-input
+    description: Search Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@placeholder='Search']
+  - id: accept-appointment-toggle-off
+    description: Accept Appointment Toggle when it is OFF
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='slidercontainer']/div[text()='OFF']
+  - id: accept-appointment-toggle-on
+    description: Accept Appointment Toggle when it is ON
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='slidercontainer']/div[text()='ON']
+  - id: automation-site-1
+    description: Automation Site 1 otpion
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Site 1']
+  - id: edit-site-button
+    description: Edit Site Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='site-actions']//*[@data-icon='pencil-alt']

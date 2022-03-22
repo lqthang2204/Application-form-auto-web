@@ -1,0 +1,60 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &success-message
+    id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - &create-hierarchy-button
+    id: create-hierarchy-button
+    description: Create hierarchy button
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class='create-hierarchy-text']
+  - &created-date-header
+    id: created-date-header
+    description: Created date header
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Created Date']
+  - &the-first-hierarchy-name
+    id: the-first-hierarchy-name
+    description: The first hierarchy name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[@tabindex='1']/div
+  - &edit-button
+    id: edit-button
+    description: Edit button of the first hierarchy
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'edit-hierarchy-btn')])[1]
+  - &manage-button
+    id: manage-button
+    description: Manage button of the first hierarchy
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//table/following::button[contains(@class,'manage-hierarchy-btn')])[1]
+  - &manage-hierarchy-button
+    id: manage-hierarchy-button
+    description: Manage hierarchy button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='manage-hierarchy-btn']

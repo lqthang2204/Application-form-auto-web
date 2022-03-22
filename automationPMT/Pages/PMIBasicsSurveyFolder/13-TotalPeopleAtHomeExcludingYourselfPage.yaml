@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Home
+  - id: number-of-people
+    description: Number of people input
+    locators:
+      - device: API
+        value: LivingSituation_HowManyPeople
+      - device: WEB
+        type: ARIA_LABEL
+        value: number of people
+apiPage:
+    name: How Many People At Home
+    sections:
+      - name: TheBasics_LivingSituation
+        fields:
+          - name: number-of-people
+            values:
+              - 5

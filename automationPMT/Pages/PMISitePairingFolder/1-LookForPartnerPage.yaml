@@ -1,0 +1,22 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &awardee-code
+    id: awardee-code
+    description: Awardee code of user
+    locators:
+      - device: API
+        value: organization
+apiPage:
+    name: Introduction
+    sections:
+      - name: Copy of New Section
+        fields:
+          - name: awardee-code
+            values:
+              - Organization/SOUTHERN

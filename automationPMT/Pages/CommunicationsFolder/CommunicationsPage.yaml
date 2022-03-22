@@ -1,0 +1,31 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: segment-tab
+    description: Audience segmentation tab
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href='/communications/segmentation']
+  - id: campaigns-tab
+    description: Campaigns tab
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href='/communications/campaigns']
+  - id: case-management-tab
+    description: Case Management tab
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href="/communications/caseManagement"]
+  - id: template-tab
+    description: Template tab
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href="/communications/templates"]

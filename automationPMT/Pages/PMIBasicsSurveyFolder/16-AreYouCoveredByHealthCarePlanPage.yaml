@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Health Insurance
+  - id: yes-answer
+    description: Answer Yes
+    locators:
+      - device: API
+        value: Insurance_HealthInsurance
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Yes")]
+apiPage:
+    name: Insurance Coverage
+    sections:
+      - name: TheBasics_Insurance
+        fields:
+          - name: yes-answer
+            values:
+              - HealthInsurance_Yes

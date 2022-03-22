@@ -1,0 +1,109 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &success-message
+    id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - &upload-input
+    id: upload-input
+    description: Upload input
+    locators:
+      - device: WEB
+        type: ID
+        value: file-id
+  - &validation-complete-title
+    id: validation-complete-title
+    description: Validation complete title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='complete-title']
+    values:
+      - lang: EN
+        value: Validation Complete!
+  - &submit-list-button
+    id: submit-list-button
+    description: Submit list button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='submit-list-btn']
+  - &name-of-first-record
+    id: name-of-first-record
+    description: Name of first record
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='2'] div
+  - &email-of-first-record
+    id: email-of-first-record
+    description: Email of first record
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='3'] div
+  - &validation-error-title
+    id: validation-error-title
+    description: Validation error title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='error-title']
+    values:
+      - lang: EN
+        value: Validation Error!
+  - &tooltip-icon
+    id: tooltip-icon
+    description: Tooltip icon
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[aria-describedby*='tooltip']
+  - &tooltip-inner
+    id: tooltip-inner
+    description: Tooltip inner
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='tooltip-inner']
+    values:
+      - lang: EN
+        value: Prospect profile must have either Email or Mobile Phone Number value.
+  - &select-org-button
+    id: select-org-button
+    description: Select Organization Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Select']
+  - &edit-org-button
+    id: edit-org-button
+    description: Edit Organization Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Edit']
+actions:
+  - id: select-edit-org-button
+    description: Click on Select or Edit button
+    actionElements:
+      - element: *select-org-button
+        condition: DISPLAYED
+        timeout: 3000
+        inputType: click
+      - element: *edit-org-button
+        condition: DISPLAYED
+        timeout: 3000
+        inputType: click

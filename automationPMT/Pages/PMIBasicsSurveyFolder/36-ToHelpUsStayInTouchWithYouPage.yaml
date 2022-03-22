@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: To help us stay in touch with you in the future, the last section asks
+          for contact information for family and/or friends.  This information is
+          not required in order to participate in the program. All information will
+          be securely stored.
+apiPage: {}

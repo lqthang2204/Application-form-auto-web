@@ -1,0 +1,488 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: setup-a-new-campaign-title
+    description: Setup a new campaign
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(text(),'Setup a New Campaign')]
+  - id: campaign-name-input
+    description: Campaign name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[label='Campaign Name']
+  - &campaign-type-dropdown
+    id: campaign-type-dropdown
+    description: Campaign type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[label[text()='Campaign Type']]/following::div[contains(@class,
+            'select__control')])[1]
+  - &single-option
+    id: single-option
+    description: Single option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Single']
+  - &recurring-option
+    id: recurring-option
+    description: Recurring option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Recurring']
+  - id: description-input
+    description: Description (Optional) input
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea[label='Description (Optional)']
+  - &campaign-goal-dropdown
+    id: campaign-goal-dropdown
+    description: Campaign Goal (Optional) dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//label[.='Campaign Goal (Optional)']/following::div[contains(@class,
+            'select__control')])[1]
+  - id: ta-data-form-option
+    description: TA Data Form Campaign Goal Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'TADataForm')]
+  - id: primary-consent-option
+    description: Primary Consent Campaign Goal Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Primary Consent')]
+  - id: updated-data-form-option
+    description: TA Data Form Campaign Goal Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'UpdatedTADataForm')]
+  - &complete-program-update-on-dna-option
+    id: complete-program-update-on-dna-option
+    description: Complete program update on DNA option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Complete Program Update on DNA']
+    values:
+      - lang: EN
+        value: Complete Program Update on DNA
+  - &channel-dropdown
+    id: channel-dropdown
+    description: Channel dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//label[.='Channel']/following::div[contains(@class, 'select__control')])[1]
+  - &email-option
+    id: email-option
+    description: Email option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email']
+  - &sms-option
+    id: sms-option
+    description: SMS option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='SMS']
+  - &save-as-draft-button
+    id: save-as-draft-button
+    description: Save as draft button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Save as Draft']
+  - id: save-as-draft-disabled-button
+    description: Save as draft disabled button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[@disabled]/span[text()='Save as Draft']
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-next']
+  - id: send-button
+    description: Send button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Send']
+  - id: send-now-button
+    description: Send now button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Send Now']
+  - id: select-audience-segmentation-title
+    description: Select audience segmentation
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Select Audience Segmentation')]
+  - id: channel-header
+    description: Channel header
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[@class='headertext'][text()='CHANNEL']
+  - id: email-channel-in-table
+    description: Email channel in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Email']
+  - id: sms-channel-in-table
+    description: SMS channel in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='SMS']
+  - &first-segment-in-table
+    id: first-segment-in-table
+    description: The first target audience segmentation radio
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //table/following::label[contains(@class, 'radioButton')][1]
+  - id: view-list-title
+    description: View list title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'View List')]
+  - id: select-template-title
+    description: Select template title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Select Template')]
+  - &first-template-in-table
+    id: first-template-in-table
+    description: The first template in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //table/following::label[contains(@class, 'radioButton')][1]
+  - &second-template-in-table
+    id: second-template-in-table
+    description: The first template in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //table/following::label[contains(@class, 'radioButton')][2]
+  - id: review-title
+    description: Review title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Review')]
+  - id: select-segment-icon
+    description: Select segment icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='rounded-circle'][text()='2']
+  - &select-template-icon
+    id: select-template-icon
+    description: Select template icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='rounded-circle'][text()='4']
+  - id: required-field-error
+    description: This field is required.
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[span[text()='This field is required.']]
+    values:
+      - lang: EN
+        value: This field is required.
+  - &schedule-for-later
+    id: schedule-for-later
+    description: Schedule for later
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Schedule for later']
+  - &launch-date-and-time
+    id: launch-date-and-time
+    description: Launch Date and Time
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='Launch Date and Time']]/div
+  - &start-date-and-time
+    id: start-date-and-time
+    description: Start Date and Time
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='Start Date and Time']]/div
+  - &end-date-and-time
+    id: end-date-and-time
+    description: End Date and Time
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='End Date and Time (Optional)']]/div
+  - &tomorrow
+    id: tomorrow
+    description: Tomorrow
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'stop-date')]//div[contains(@class, 'rdtPicker')]//td[div[contains(@class,
+            'rdtToday')]]/following-sibling::td/div)[1]
+  - &today
+    id: today
+    description: Today
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]
+  - &time-zone
+    id: time-zone
+    description: Time Zone
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='Time Zone']]/div
+  - &adak-time-zone
+    id: adak-time-zone
+    description: (HDT) America/Adak -9h
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='Time Zone']]//div[text()='(HDT) America/Adak -9h']
+  - &frequency
+    id: frequency
+    description: Frequency
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='Frequency']]/div
+  - &weekly
+    id: weekly
+    description: Weekly
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[label[text()='Frequency']]//div[text()='Weekly']
+  - &next-month-end
+    id: next-month-end
+    description: Next month on end date
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'stop-date')]//div[contains(@class,'rdtPicker')]//th[contains(@class,'rdtNext')]
+  - &1st-day-of-month
+    id: 1st-day-of-month
+    description: first day of month in end date box
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'stop-date')]//div[contains(@class,'rdtPicker')]//div[@data-value = '1']
+  - id: schedule-button
+    description: Schedule button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(@class,'btn-Schedule')]/span[text()='Schedule']
+  - id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(@class,'btn-cancel')]/span[text()='Cancel']
+  - id: schedule-warn-message
+    description: Schedule warning mesage
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[text()='Do you want to schedule this recurring campaign?']
+    values:
+      - lang: EN
+        value: Do you want to schedule this recurring campaign?
+  - id: cancel-schedule-button
+    description: Cancel schedule button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel']
+  - id: cancel-schedule-warn-message
+    description: Cancel schedule warning mesage
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[h4[p[text()='Warning']]]/following-sibling::div/p[text()='Are
+            you sure you want to cancel? Any changes made will not be saved.']
+    values:
+      - lang: EN
+        value: Are you sure you want to cancel? Any changes made will not be saved.
+  - id: confirm-cancel-schedule-button
+    description: Confirm cancel schedule button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Confirm']
+  - id: confirm-schedule-button
+    description: Confirm schedule button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Schedule']
+actions:
+  - id: setup-recurring-email
+    description: Setup step, choose recurring email channel
+    actionElements:
+      - element: *campaign-type-dropdown
+        inputType: click
+      - element: *recurring-option
+        inputType: click
+      - element: *campaign-goal-dropdown
+        inputType: click
+      - element: *complete-program-update-on-dna-option
+        inputType: click
+      - element: *channel-dropdown
+        inputType: click
+      - element: *email-option
+        inputType: click
+      - element: *next-button
+        inputType: click
+  - id: setup-recurring-sms
+    description: Setup step, choose email channel
+    actionElements:
+      - element: *campaign-type-dropdown
+        inputType: click
+      - element: *recurring-option
+        inputType: click
+      - element: *campaign-goal-dropdown
+        inputType: click
+      - element: *complete-program-update-on-dna-option
+        inputType: click
+      - element: *channel-dropdown
+        inputType: click
+      - element: *sms-option
+        inputType: click
+      - element: *next-button
+        inputType: click
+  - id: setup-single-email
+    description: Setup step, choose email channel
+    actionElements:
+      - element: *campaign-type-dropdown
+        inputType: click
+      - element: *single-option
+        inputType: click
+      - element: *campaign-goal-dropdown
+        inputType: click
+      - element: *complete-program-update-on-dna-option
+        inputType: click
+      - element: *channel-dropdown
+        inputType: click
+      - element: *email-option
+        inputType: click
+      - element: *next-button
+        inputType: click
+  - id: setup-single-sms
+    description: Setup step, choose email channel
+    actionElements:
+      - element: *campaign-type-dropdown
+        inputType: click
+      - element: *single-option
+        inputType: click
+      - element: *campaign-goal-dropdown
+        inputType: click
+      - element: *complete-program-update-on-dna-option
+        inputType: click
+      - element: *channel-dropdown
+        inputType: click
+      - element: *sms-option
+        inputType: click
+      - element: *next-button
+        inputType: click
+  - id: select-segmentation
+    description: Select segmentation step
+    actionElements:
+      - element: *first-segment-in-table
+        condition: DISPLAYED
+        inputType: click
+      - element: *next-button
+        condition: ENABLED
+        inputType: click
+  - id: view-list
+    description: View list step
+    actionElements:
+      - element: *next-button
+        inputType: click
+  - id: select-template
+    description: Select template
+    actionElements:
+      - element: *first-template-in-table
+        inputType: click
+      - element: *next-button
+        inputType: click
+  - id: change-template
+    description: Change template
+    actionElements:
+      - element: *select-template-icon
+        inputType: click
+      - element: *second-template-in-table
+        inputType: click
+      - element: *save-as-draft-button
+        inputType: click
+  - id: choose-time-zone
+    description: Choose time zone
+    actionElements:
+      - element: *schedule-for-later
+        inputType: click
+      - element: *launch-date-and-time
+        inputType: click
+      - element: *today
+        inputType: click
+      - element: *time-zone
+        inputType: click
+      - element: *adak-time-zone
+        inputType: click
+  - id: choose-campaign-execution-date-and-time
+    description: Choose campaign execution date and time
+    actionElements:
+      - element: *start-date-and-time
+        inputType: click
+      - element: *today
+        inputType: click
+      - element: *end-date-and-time
+        inputType: click
+      - element: *next-month-end
+        inputType: click
+      - element: *1st-day-of-month
+        inputType: click
+      - element: *time-zone
+        inputType: click
+      - element: *adak-time-zone
+        inputType: click
+      - element: *frequency
+        inputType: click
+      - element: *weekly
+        inputType: click

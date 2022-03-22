@@ -1,0 +1,20 @@
+elements:
+  - id: surveys-tab
+    description: Surveys tab
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: container name Multi Form ROR
+      - device: IOS
+        type: ACCESSIBILITY_ID
+        value: Surveys
+      - device: ANDROID
+        type: XPATH
+        value: //android.widget.TextView[@text="Surveys"]
+    values:
+      - lang: EN
+        value: Surveys
+actions:
+  - id: fill-whole-form
+    description: starter action with randomly assembled ActionElements
+apiPage: {}

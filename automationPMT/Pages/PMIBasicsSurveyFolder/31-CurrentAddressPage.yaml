@@ -1,0 +1,29 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Current Address
+  - id: years-at-cuurent-address
+    description: Years At Current Address
+    locators:
+      - device: API
+        value: LivingSituation_HowManyLivingYears
+apiPage:
+    name: Years at Current Address
+    sections:
+      - name: TheBasics_LivingSituation
+        fields:
+          - name: years-at-cuurent-address
+            values:
+              - HowManyLivingYears_1to2

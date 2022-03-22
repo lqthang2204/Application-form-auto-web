@@ -1,0 +1,34 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &ssn-input
+    id: ssn-input
+    description: Social Security Input
+    locators:
+      - device: API
+        value: SocialSecurity_SocialSecurityNumber
+      - device: WEB
+        type: CSS
+        value: input[aria-label='social security number']
+  - &page-title
+    id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Please provide your Social Security Number
+apiPage:
+    name: SSN
+    sections:
+      - name: TheBasics_SocialSecurityNumber
+        fields:
+          - name: ssn-input
+            values:
+              - 999999999

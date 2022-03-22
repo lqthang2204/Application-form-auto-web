@@ -1,0 +1,397 @@
+elements:
+  - &add-new-button
+    id: add-new-button
+    description: Add new button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-add']
+  - id: save-attributes-button
+    description: Save attributes button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-save']
+  - id: attribute-3-name-input
+    description: Attribute 3 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[3]
+  - id: attribute-4-name-input
+    description: Attribute 4 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[4]
+  - id: attribute-5-name-input
+    description: Attribute 5 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[5]
+  - id: attribute-6-name-input
+    description: Attribute 6 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[6]
+  - id: attribute-7-name-input
+    description: Attribute 7 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[7]
+  - id: attribute-8-name-input
+    description: Attribute 8 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[8]
+  - id: attribute-9-name-input
+    description: Attribute 9 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[9]
+  - id: attribute-10-name-input
+    description: Attribute 10 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[10]
+  - id: attribute-11-name-input
+    description: Attribute 11 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[11]
+  - id: attribute-12-name-input
+    description: Attribute 12 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[12]
+  - id: attribute-13-name-input
+    description: Attribute 13 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[13]
+  - id: attribute-14-name-input
+    description: Attribute 14 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[14]
+  - id: attribute-14-edit-button
+    description: Attribute 14 edit button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-icon-edit-option']//button)[1]
+  - id: attribute-15-name-input
+    description: Attribute 15 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[15]
+  - id: attribute-15-edit-button
+    description: Attribute 15 edit button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-icon-edit-option']//button)[2]
+  - id: attribute-16-name-input
+    description: Attribute 16 name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Enter Attribute Name'])[16]
+  - id: attribute-16-edit-button
+    description: Attribute 16 edit button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-icon-edit-option']//button)[3]
+  - &attribute-3-row
+    id: attribute-3-row
+    description: Attribute 3 row
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='draggable-item row'])[3]
+  - id: attribute-14-row
+    description: Attribute 14 row
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='draggable-item row'])[14]
+  - id: attribute-15-row
+    description: Attribute 15 row
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='draggable-item row'])[15]
+  - id: attribute-16-row
+    description: Attribute 16 row
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='draggable-item row'])[16]
+  - id: attribute-name-input-for-verifying
+    description: Attribute name input for verifying
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter Attribute Name'][value='TA - LEVEL 1 ADDRESS']
+  - &remove-button
+    id: remove-button
+    description: Remove button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class, 'btn-remove')])[3]
+  - id: view-deactivated-attributes-checkbox
+    description: View deactivated attributes checkbox
+    locators:
+      - device: WEB
+        type: CSS
+        value: label[for*='checkbox-deactive']
+  - id: restore-button
+    description: Restore button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-restore']
+  - id: attribute-type-3-dropdown
+    description: Attribute type 3 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[3]
+  - id: attribute-type-4-dropdown
+    description: Attribute type 4 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[4]
+  - id: attribute-type-5-dropdown
+    description: Attribute type 5 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[5]
+  - id: attribute-type-6-dropdown
+    description: Attribute type 6 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[6]
+  - id: attribute-type-7-dropdown
+    description: Attribute type 7 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[7]
+  - id: attribute-type-8-dropdown
+    description: Attribute type 8 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[8]
+  - id: attribute-type-9-dropdown
+    description: Attribute type 9 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[9]
+  - id: attribute-type-10-dropdown
+    description: Attribute type 10 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[10]
+  - id: attribute-type-11-dropdown
+    description: Attribute type 11 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[11]
+  - id: attribute-type-12-dropdown
+    description: Attribute type 12 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[12]
+  - id: attribute-type-13-dropdown
+    description: Attribute type 13 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[13]
+  - id: attribute-type-14-dropdown
+    description: Attribute type 14 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[14]
+  - id: option-1-input
+    description: Option 1 input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Type the label name here'])[1]
+  - id: option-2-input
+    description: Option 2 input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@placeholder='Type the label name here'])[2]
+  - id: attribute-type-save-button
+    description: Attribute type save button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class, 'btn-save')])[2]
+  - id: attribute-type-15-dropdown
+    description: Attribute type 15 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[15]
+  - id: attribute-type-16-dropdown
+    description: Attribute type 16 dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='level-type'])[16]
+  - id: email-option
+    description: Email option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email']
+  - id: address-option
+    description: Address option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Address'])[1]
+  - id: phone-number-option
+    description: Phone number option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Phone Number']
+  - id: phone-number-option
+    description: Phone number option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Phone Number']
+  - id: text-only-option
+    description: Text only option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Text Only']
+  - id: url-option
+    description: Url option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='URL']
+  - id: upload-option
+    description: Upload option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Upload']
+  - id: alphanumeric-option
+    description: Alphanumeric option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Alphanumeric'])[last()]
+  - id: boolean-option
+    description: Boolean option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Boolean']
+  - id: date-only-option
+    description: Date only option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Date Only']
+  - id: date-and-time-option
+    description: Date and time option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Date and Time']
+  - id: number-type-option
+    description: Number type option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Number Type']
+  - id: level-type-option
+    description: Level type option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Level Type']
+  - id: multi-select-option
+    description: Multi select option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Multi-Select']
+  - id: single-select-option
+    description: Single select option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Single-Select']
+actions:
+  - id: chooses-remove-button
+    description: Chooses remove button
+    actionElements:
+      - element: *attribute-3-row
+        inputType: click
+      - element: *remove-button
+        inputType: click
+  - id: add-attributes
+    description: Add attributes
+    actionElements:
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click
+      - element: *add-new-button
+        inputType: click

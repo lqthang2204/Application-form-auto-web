@@ -1,0 +1,144 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &email-channel
+    id: email-channel
+    description: Email Channel Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[@class='channel-label' and text()='Email']
+  - &sms-channel
+    id: sms-channel
+    description: SMS Channel Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[@class='channel-label' and text()='SMS']
+  - id: template-name-input
+    description: Template Name Input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='name']
+  - id: template-name-input
+    description: Template Name Input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='name']
+  - id: description-input
+    description: Description input
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-next']
+  - id: first-layout
+    description: First pre-built layout
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'available-layouts row')]/div[1]
+  - id: sender-email-input
+    description: Sender Email Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select the email address associated with this template']
+  - id: sender-email-option
+    description: Sender Email Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='internaltest@vibrenthealth.com']
+  - id: subject-line-input
+    description: Subject Line Input
+    locators:
+      - device: WEB
+        type: NAME
+        value: emailTemplates[0].subjectLine
+  - id: from-name-input
+    description: From Name Input field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='From Name']/../following-sibling::div
+  - id: pre-header-text
+    description: Pre-header Text Field
+    locators:
+      - device: WEB
+        type: NAME
+        value: emailTemplates[0].preHeader
+  - id: test-email-recipients-input
+    description: Test Recipients Input Field
+    locators:
+      - device: WEB
+        type: ID
+        value: emails
+  - id: sms-message-input
+    description: SMS Message Input Field
+    locators:
+      - device: WEB
+        type: NAME
+        value: smsTemplates[0].message
+  - id: test-sms-recipients-input
+    description: SMS Message Input Field
+    locators:
+      - device: WEB
+        type: NAME
+        value: smsTemplates[0].recipients
+  - id: first-ack-receipt-checkbox
+    description: First Acknowledgment Receipts checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='first-acknowledgment-receipts']/following-sibling::span
+  - id: second-ack-receipt-checkbox
+    description: Second Acknowledgment Receipts checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='second-acknowledgment-receipts']/following-sibling::span
+  - id: publish-button
+    description: Publish Template button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Publish']
+actions:
+  - id: click-sms-channel
+    description: Click SMS channel in step 1 of Template Creation
+    actionElements:
+      - element: *sms-channel
+        condition: DISPLAYED
+        inputType: click
+      - element: *sms-channel
+        condition: NOT_DISPLAYED
+        timeout: 3000
+        inputType: click
+      - element: *sms-channel
+        condition: DISPLAYED
+        inputType: click
+  - id: click-email-channel
+    description: Click SMS channel in step 1 of Template Creation
+    actionElements:
+      - element: *email-channel
+        condition: DISPLAYED
+        inputType: click
+      - element: *email-channel
+        condition: NOT_DISPLAYED
+        timeout: 3000
+        inputType: click
+      - element: *email-channel
+        condition: DISPLAYED
+        inputType: click

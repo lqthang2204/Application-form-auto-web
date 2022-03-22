@@ -1,0 +1,384 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &location-dropdown
+    id: location-dropdown
+    description: Location dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'singleValue')])[1]
+  - id: external-id-value
+    description: External ID value info
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='ID:']/..
+  - &automation-site-1-option
+    id: automation-site-1-option
+    description: Automation site 1 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Site 1']
+  - &automation-org-option
+    id: automation-org-option
+    description: Automation org option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Org']
+  - &vrp-automation-org-option
+    id: vrp-automation-org-option
+    description: Automation org option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Org']        
+  - &type-dropdown
+    id: type-dropdown
+    description: Type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'singleValue')])[2]
+  - &pm-b-option
+    id: pm-b-option
+    description: PM/B option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='PM/B']
+  - &full-enrollment-option
+    id: full-enrollment-option
+    description: Full enrollment option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Full Enrollment']
+  - &note-textarea
+    id: note-textarea
+    description: Note textarea
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea[name='notes']
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-next']
+  - &available-time-day
+    id: available-time-day
+    description: Available time day
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'available-time-day ')])[1]
+  - &second-available-time-day
+    id: second-available-time-day
+    description: The second available time day
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'available-time-day ')])[2]
+  - &day-selected
+    id: day-selected
+    description: Appointment seleted day
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class*='day-selected']
+  - &schedule-button
+    id: schedule-button
+    description: Schedule button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-schedule']
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-schedule__save__edit']
+  - &go-next-week-button
+    id: go-next-week-button
+    description: Go next week button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class, 'go-week')])[2]
+  - &reschedule-button
+    id: reschedule-button
+    description: Reschedule button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='reschedule-btn']
+  - &back-to-prospect-profile-button
+    id: back-to-prospect-profile-button
+    description: Back to prospect profile button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='scheduler-back-button']
+  - &cancel-appointment-button
+    id: cancel-appointment-button
+    description: Cancel appointment button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cancel-btn']
+  - &confirm-cancel-appointment-button
+    id: confirm-cancel-appointment-button
+    description: Confirm cancel appointment button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-cancel']
+  - &edit-button
+    id: edit-button
+    description: Edit button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-btn']
+  - &afternoon-tab
+    id: afternoon-tab
+    description: Afternoon tab
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Afternoon']
+  - &scheduling-success-message
+    id: scheduling-success-message
+    description: Scheduling success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Appointment successfully created.
+  - &rescheduling-success-message
+    id: rescheduling-success-message
+    description: Rescheduling success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The appointment for Jacinto Cummings has been successfully rescheduled
+  - &content-title
+    id: content-title
+    description: Title of page
+    locators:
+      - device: WEB
+        type: CSS
+        value: h1[class="content-title"]
+  - &back-to-prospect-profile-button
+    id: back-to-prospect-profile-button
+    description: Button back to prospect profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="scheduler-back-button"]
+  - &cancel-edit-button
+    id: cancel-edit-button
+    description: Button cancel editing appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="btn-schedule__cancel__edit"]
+  - &page-label
+    id: page-label
+    description: Title of current page
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="page-label"]
+  - &back-button
+    id: back-button
+    description: Button back on rescheduling page
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="btn-back-select-time"]
+  - &day-selected
+    id: day-selected
+    description: Day selected for scheduling appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class="day-selected"]
+  - &appointment-day-and-time
+    id: appointment-day-and-time
+    description: Day and time of appointment displayed on editing page
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[.="Date & Time"]/following-sibling::div//p
+  - &available-time-12h15
+    id: available-time-12h15
+    description: Available time 12:15 PM
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'available-time-day ')])[18]
+  - &first-name-input
+    id: first-name-input
+    description: First name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='firstName']
+  - &last-name-input
+    id: last-name-input
+    description: Last name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='lastName']
+  - &mobile-phone-input
+    id: mobile-phone-input
+    description: Mobile phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='phoneNumber']
+  - &account-already-message
+    id: account-already-message
+    description: Account already exist message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='box-message']
+    values:
+      - lang: EN
+        value: Account already exists.
+  - id: search-tab
+    description: Search tab
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Search']
+  - id: search-button
+    description: Search button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-primary-search']
+  - id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: NAME
+        value: emailAddress
+  - id: create-new-button
+    description: Create new button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-create-new btn btn-primary']
+  - id: email-value
+    description: Email value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='existing-participant-email'] > div
+  - id: phone-value
+    description: Phone value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='phone-number']
+  - id: dob-value
+    description: DOB value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='DOB:']/parent::div
+  - id: participant-name
+    description: Name of participant
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="name"]
+  - id: appointment-type-option-pmb
+    description: Option PM/B of appointment type
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(@class,"participant-label-custom")][.="Type"]/following-sibling::div[.="PM/B"]
+  - id: mobile-phone-number-input
+    description: Input mobile phone number on search tab
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name="phoneNumber"]
+  - id: participant-result-item
+    description: Participant in result item
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="participant-info"]
+  - id: result-item-info
+    description: Result item info
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="result-item"]
+  - id: no-result
+    description: No results found
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="no-results"]
+  - id: participant-name
+    description: Participant name
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="participant-name"]
+  - id: participant-emailAddress
+    description: Participant email address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="participant-emailAddress"]
+  - id: participant-dob
+    description: Participant DOB
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="participant-dob"]
+  - id: participant-phone-number
+    description: Participant phone number
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="phone-number"]
+  - id: participant-mobile-phone-number
+    description: Participant mobile phone number
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"(M)")]
+actions:
+  - id: select-available-time-slot
+    description: Select available time slot
+    actionElements:
+      - element: *go-next-week-button
+        inputType: click
+      - element: *available-time-day
+        inputType: click

@@ -1,0 +1,206 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &health-condition-type
+    id: health-condition-type
+    description: Health condition type value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Health Condition Type')]/following-sibling::div
+  - &current-status-assessment-needed
+    id: current-status-assessment-needed
+    description: Current status value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div.status-name span.name
+    values:
+      - lang: EN
+        value: Assessment Needed
+  - &current-status-follow-up-needed
+    id: current-status-follow-up-needed
+    description: Follow up deeded value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div.status-name span.name
+    values:
+      - lang: EN
+        value: Follow up Needed
+  - &current-status-assessment-completed
+    id: current-status-assessment-completed
+    description: Assessment completed value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div.status-name span.name
+    values:
+      - lang: EN
+        value: Assessment Completed
+  - &report-type-self-reported
+    id: report-type-self-reported
+    description: Self reported value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Report Type')]/following-sibling::div[contains(.,'Self Reported')]
+    values:
+      - lang: EN
+        value: Self Reported
+  - &report-type-lab-reported
+    id: report-type-lab-reported
+    description: Lab reported value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Report Type')]/following-sibling::div[contains(.,'Lab Reported')]
+    values:
+      - lang: EN
+        value: Lab Reported
+  - &report-type-proximity-contact
+    id: report-type-proximity-contact
+    description: proximity contact value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Report Type')]/following-sibling::div[contains(.,'Proximity Contact')]
+    values:
+      - lang: EN
+        value: Proximity Contact
+  - &report-type-direct-contact
+    id: report-type-direct-contact
+    description: Direct contact value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Report Type')]/following-sibling::div[contains(.,'Direct Contact')]
+    values:
+      - lang: EN
+        value: Direct Contact
+  - &report-type-close-contact
+    id: report-type-close-contact
+    description: Close contact value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Report Type')]/following-sibling::div[contains(.,'Close Contact')]
+    values:
+      - lang: EN
+        value: Close Contact
+  - &lab-test-result
+    id: lab-test-result
+    description: Lab test result value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div
+  - &lab-test-result-result-pending
+    id: lab-test-result-result-pending
+    description: Result pending value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div[contains(.,'Result Pending')]
+    values:
+      - lang: EN
+        value: Result Pending
+  - &lab-test-result-not-needed
+    id: lab-test-result-not-needed
+    description: Not needed value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div[contains(.,'Not Needed')]
+    values:
+      - lang: EN
+        value: Not Needed
+  - &lab-test-result-declined-to-submit
+    id: lab-test-result-declined-to-submit
+    description: Declined to submit value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div[contains(.,'Declined to Submit')]
+    values:
+      - lang: EN
+        value: Declined to Submit
+  - &lab-test-result-positive-detected
+    id: lab-test-result-positive-detected
+    description: Positive / detected value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div[contains(.,'Positive / Detected')]
+    values:
+      - lang: EN
+        value: Positive / Detected
+  - &lab-test-result-negative-not-detected
+    id: lab-test-result-negative-not-detected
+    description: Negative / not detected value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div[contains(.,'Negative / Not Detected')]
+    values:
+      - lang: EN
+        value: Negative / Not Detected
+  - &lab-test-result-result-inconclusive
+    id: lab-test-result-result-inconclusive
+    description: Result inconclusive value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div[contains(.,'Result Inconclusive')]
+    values:
+      - lang: EN
+        value: Result Inconclusive
+  - &symptom-status
+    id: symptom-status
+    description: Symptom status value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Symptom Status')]/following-sibling::div
+  - &exposure-prevention-measure
+    id: exposure-prevention-measure
+    description: Exposure prevention measure value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Exposure Prevention Measure')]/following-sibling::div
+  - &summary
+    id: summary
+    description: summary value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Summary')]/following-sibling::div
+  - id: back-arrow-icon
+    description: Back arrow icon
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class*='back-arrow'] svg
+  - id: health-condition-status-success-message
+    description: Health condition status success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The Health Condition Status record has been saved successfully.
+  - &edit-button
+    id: edit-button
+    description: Edit button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Edit']
+        

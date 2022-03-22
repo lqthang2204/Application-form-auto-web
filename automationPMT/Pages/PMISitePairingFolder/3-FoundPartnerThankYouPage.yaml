@@ -1,0 +1,9 @@
+elements:
+  - &submit-button
+    id: submit-button
+    description: Submit button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|submit'
+apiPage: {}

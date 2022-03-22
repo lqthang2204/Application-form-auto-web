@@ -1,0 +1,19 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: back-to-segmentation-view
+    description: Back to Segmentation View
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Back to Segmentation View']
+  - id: participant-list-result-table
+    description: Participant List result table
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='participantListResultTable']

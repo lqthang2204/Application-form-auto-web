@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Grade Level
+  - id: pick-a-option-dropdown
+    description: Pick a option dropdown
+    locators:
+      - device: API
+        value: EducationLevel_HighestGrade
+      - device: WEB
+        type: CSS
+        value: select[ng-model='subField._parent.fieldEntryValue.value.value']
+apiPage:
+    name: Education Level
+    sections:
+      - name: TheBasics_EducationLevel
+        fields:
+          - name: pick-a-option-dropdown
+            values:
+              - HighestGrade_CollegeGraduate

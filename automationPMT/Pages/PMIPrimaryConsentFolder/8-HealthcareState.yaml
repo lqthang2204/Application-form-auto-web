@@ -1,0 +1,41 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: state-dropdown
+    description: Dropdown list with states
+    locators:
+      - device: API
+        value: ReceiveCare_PIIState
+      - device: WEB
+        type: CSS
+        value: .form-control.dropdown-select
+  - id: hidden-state-of-care
+    description: Hidden State of care field - required for setting State_Receive_Care
+        profile value of user
+    locators:
+      - device: API
+        value: StateofCare
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Where you get')]
+    values:
+      - lang: EN
+        value: Where you get healthcare
+apiPage:
+    name: where you get your healthcare
+    sections:
+      - name: where you get your healthcare
+        fields:
+          - name: state-dropdown
+            values:
+              - PIIStateCare_user.state
+          - name: hidden-state-of-care
+            values:
+              - PIIState_user.state

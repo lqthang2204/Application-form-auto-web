@@ -1,0 +1,156 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &first-name-input
+    id: first-name-input
+    description: Person 2 first name input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_SecondContactsFirstName
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 2 first name"]
+  - &last-name-input
+    id: last-name-input
+    description: Person 2 last name input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_SecondContactsLastName
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 2 last name"]
+  - &address-1-input
+    id: address-1-input
+    description: Person 2 Address 1 input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_SecondContactsAddressOne
+      - device: WEB
+        type: XPATH
+        value: //textarea[@placeholder ='person 2 address 1']
+  - &city-input
+    id: city-input
+    description: Person 2 city input
+    locators:
+      - device: API
+        value: SecondContactsAddress_SecondContactCity
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 2 city"]
+  - &state-input-dropdown
+    id: state-input-dropdown
+    description: Person 2 state drop-down
+    locators:
+      - device: API
+        value: SecondContactsAddress_SecondContactState
+      - device: WEB
+        type: XPATH
+        value: (//select)[1]
+  - &email-input
+    id: email-input
+    description: Person 2 email input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_SecondContactsEmail
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 2 email address"]
+  - &zip-code-input
+    id: zip-code-input
+    description: Person 2 zip code input
+    locators:
+      - device: API
+        value: SecondContactsAddress_SecondContactZipCode
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 2 zip code"]
+  - &phone-number-input
+    id: phone-number-input
+    description: Person 2 phone number input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_SecondContactsNumber
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 2 phone number"]
+  - &relationship-input-dropdown
+    id: relationship-input-dropdown
+    description: Person 2 relationship drop-down
+    locators:
+      - device: API
+        value: SecondaryContactInfo_SecondContactsRelationship
+      - device: WEB
+        type: XPATH
+        value: (//select)[2]
+  - &page-title
+    id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: The All of Us Research Program will contact you periodically to gather
+          additional health related information. Please provide us with the name,
+          address, and telephone number of a relative or friend who would know where
+          you can be reached in case we have trouble contacting you (please give
+          us name of a person not currently living in the household).
+actions:
+  - id: fill-person-2-details
+    description: Fills out person 2 details for below elements
+    actionElements:
+      - element: *first-name-input
+        inputType: text
+      - element: *last-name-input
+        inputType: text
+      - element: *address-1-input
+        inputType: text
+      - element: *city-input
+        inputType: text
+      - element: *state-input-dropdown
+        inputType: dropDown
+      - element: *zip-code-input
+        inputType: text
+      - element: *email-input
+        inputType: text
+      - element: *phone-number-input
+        inputType: text
+      - element: *relationship-input-dropdown
+        inputType: dropDown
+apiPage:
+    name: Secondary Contact Info 2
+    sections:
+      - name: TheBasics_SecondaryContactInfo
+        fields:
+          - name: first-name-input
+            values:
+              - Alice
+          - name: last-name-input
+            values:
+              - Camber
+          - name: address-1-input
+            values:
+              - 2867  University Street
+          - name: city-input
+            values:
+              - Seattle
+          - name: state-input-dropdown
+            values:
+              - SecondContactState_Washington
+          - name: zip-code-input
+            values:
+              - 98155
+          - name: email-input
+            values:
+              - alice.chamber@example.com
+          - name: phone-number-input
+            values:
+              - 2222222230
+          - name: relationship-input-dropdown
+            values:
+              - SecondContactsRelationship_Relative

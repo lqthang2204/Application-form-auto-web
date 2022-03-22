@@ -1,0 +1,48 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &previous-button
+    id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - &email-copy-radio-option
+    id: email-copy-radio-option
+    description: Email me a copy radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"email a copy to me")]
+  - id: email-copy-page-title
+    description: Email copy page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(),"All of Us")]
+  - id: page-end
+    description: page end
+    locators:
+      - device: WEB
+        type: ID
+        value: pageEnd
+actions:
+  - id: fill-whole-form
+    description: starter action with randomly assembled ActionElements
+    actionElements:
+      - element: *next-button
+        infoType: firstName
+        inputType: text
+      - element: *previous-button
+        infoType: firstName
+        inputType: text
+      - element: *email-copy-radio-option
+        infoType: firstName
+        inputType: text
+apiPage: {}

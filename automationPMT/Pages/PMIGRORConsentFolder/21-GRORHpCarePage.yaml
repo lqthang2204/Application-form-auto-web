@@ -1,0 +1,33 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: option-1
+    description: Option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"want to know things about my health earlier
+            than I need to.")]
+  - id: option-2
+    description: Option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"I would like to learn")]
+  - id: hp-care-page-title
+    description: Healthcare provider care page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: It may help my healthcare provider take better care of me.
+apiPage: {}

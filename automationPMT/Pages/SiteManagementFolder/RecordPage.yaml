@@ -1,0 +1,179 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - id: add-new-button
+    description: Add new button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='add-new-btn']
+  - &editable-cell
+    id: editable-cell
+    description: Editable cell
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//table[contains(@class, 'datatable-custom-body')])[3]
+  - &row-edit-button
+    id: row-edit-button
+    description: Row edit button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='row-edit-btn']
+  - id: id-value
+    description: Id value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='ID1']
+    values:
+      - lang: EN
+        value: ID1
+  - id: name-value
+    description: Name value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='TA - RECORD 1']
+    values:
+      - lang: EN
+        value: TA - RECORD 1
+  - id: edited-id-value
+    description: Edited id value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='ID1_EDITED']
+    values:
+      - lang: EN
+        value: ID1_EDITED
+  - id: edited-name-value
+    description: Edited name value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='TA - RECORD 1 EDITED']
+    values:
+      - lang: EN
+        value: TA - RECORD 1 EDITED
+  - id: delete-success-message
+    description: Delete success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your record has been deleted successfully.
+  - &filter-button
+    id: filter-button
+    description: Filter button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-filter']
+  - &clear-all-filter-button
+    id: clear-all-filter-button
+    description: Filter button
+    locators:
+      - device: WEB
+        type: ID
+        value: clearbtn
+  - &select-all-checkbox
+    id: select-all-checkbox
+    description: Select all checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Select all']
+  - &deleted-checkbox
+    id: deleted-checkbox
+    description: Deleted checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Deleted']
+  - &apply-button
+    id: apply-button
+    description: Apply button
+    locators:
+      - device: WEB
+        type: ID
+        value: apply
+  - id: publish-success-message
+    description: Publish success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The record has been published with the latest changes.
+  - id: published-icon
+    description: Published icon
+    locators:
+      - device: WEB
+        type: ID
+        value: Icon/Published
+  - id: import-input
+    description: Import input
+    locators:
+      - device: WEB
+        type: ID
+        value: file-id
+  - id: import-success-message
+    description: Import success message
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[text()='All data has been imported successfully into the system.']
+  - id: ok-button
+    description: OK button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='OK']
+actions:
+  - id: deleted-filter
+    description: Deleted filter
+    actionElements:
+      - element: *filter-button
+        inputType: click
+      - element: *clear-all-filter-button
+        inputType: click
+      - element: *deleted-checkbox
+        inputType: click
+      - element: *apply-button
+        inputType: click
+  - id: not-deleted-filter
+    description: Not deleted filter
+    actionElements:
+      - element: *filter-button
+        inputType: click
+      - element: *select-all-checkbox
+        inputType: click
+      - element: *deleted-checkbox
+        inputType: click
+      - element: *apply-button
+        inputType: click
+  - id: chooses-edit-button
+    description: Chooses edit button
+    actionElements:
+      - element: *editable-cell
+        inputType: click
+      - element: *row-edit-button
+        inputType: click

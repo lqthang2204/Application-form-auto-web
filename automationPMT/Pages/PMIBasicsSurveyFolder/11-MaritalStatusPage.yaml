@@ -1,0 +1,38 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Marital Status
+  - id: option-married
+    description: Married Marrital Status
+    locators:
+      - device: API
+        value: MaritalStatus_CurrentMaritalStatus
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Married")]
+      - device: ANDROID
+        type: XPATH
+        value: //android.widget.TextView[contains(@text,"Married")]
+    values:
+      - lang: EN
+        value: Married
+apiPage:
+    name: Marital Status
+    sections:
+      - name: TheBasics_MaritalStatus
+        fields:
+          - name: option-married
+            values:
+              - CurrentMaritalStatus_Married

@@ -1,0 +1,23 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &radio-option-1
+    id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Yes")]
+  - &radio-option-2
+    id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Risks to my privacy are minimized")]
+apiPage: {}

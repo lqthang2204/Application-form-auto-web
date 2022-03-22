@@ -1,0 +1,313 @@
+elements:
+  - &first-name-input
+    id: first-name-input
+    description: First name input
+    locators:
+      - device: WEB
+        type: NAME
+        value: firstName
+  - &last-name-input
+    id: last-name-input
+    description: Last name input
+    locators:
+      - device: WEB
+        type: NAME
+        value: lastName
+  - &email-input
+    id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: NAME
+        value: email
+  - &role-dropdown
+    id: role-dropdown
+    description: Role dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='userRoles'] div[class*='dropdown']
+  - &role-program-manager
+    id: role-program-manager
+    description: Role program manager
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Program Manager']
+  - &role-support-admin
+    id: role-support-admin
+    description: Role support admin
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Support Admin']
+  - &role-support-staff
+    id: role-support-staff
+    description: Role support staff
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Support Staff']
+  - &role-cati
+    id: role-cati
+    description: Role CATI
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='CATI Interviewer']
+  - &role-NIH
+    id: role-NIH
+    description: Role NIH
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='NIH']
+  - &role-system-admin
+    id: role-system-admin
+    description: Role system admin
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='System Administrator']
+  - &all-of-us
+    id: all-of-us
+    description: All of us node
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@name='nodeIds'])[1]
+  - &vrp-automation-awardee
+    id: vrp-automation-awardee
+    description: Vrp automation awardee node
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@name='nodeIds'])[2]
+  - &vrp
+    id: vrp
+    description: Vrp node
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Health Starts Here')]/preceding-sibling::input
+  - &automation-org
+    id: automation-org
+    description: VRP automation org node
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='PMI|AUTOMATION_AWARDEE|AUTOMATION_ORG']
+  - &vrp-automation-org
+    id: vrp-automation-org
+    description: Automation org node
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='4|AUTOMATION_AWARDEE|AUTOMATION_ORG']
+  - &automation-awardee
+    id: automation-awardee
+    description: Automation awardee node
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='PMI|AUTOMATION_AWARDEE']
+  - &vrp-automation-awardee
+    id: vrp-automation-awardee
+    description: VRP automation awardee node
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='node']//input)[2]
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: ID
+        value: save
+  - &role-site-manager
+    id: role-site-manager
+    description: Role site manager
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Site Manager']
+  - &role-program-coordinator
+    id: role-program-coordinator
+    description: Role PC
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Program Coordinator']
+  - &role-CEM
+    id: role-CEM
+    description: Role CEM
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Communications & Engagement Manager']
+  - &role-administrator
+    id: role-administrator
+    description: Role administrator
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Administrator']
+  - &role-RA
+    id: role-RA
+    description: Role RA
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Research Assistant']
+actions:
+  - id: create-program-manager-user
+    description: Fill out user create form
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-program-manager
+        inputType: click
+      - element: *automation-awardee
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: create-system-admin-user
+    description: Fill out user create form
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-system-admin
+        condition: DISPLAYED
+        inputType: click
+      - element: *automation-awardee
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: create-support-admin-user
+    description: Fill out user create form
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-support-admin
+        inputType: click
+      - element: *all-of-us
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: create-support-staff-user
+    description: Fill out user create form
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-support-staff
+        inputType: click
+      - element: *all-of-us
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: create-program-manager-user-all-of-us-node
+    description: Fill out user create form
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-program-manager
+        inputType: click
+      - element: *all-of-us
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: create-program-manager-user-vrp-node
+    description: Fill out user create form
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-program-manager
+        inputType: click
+      - element: *vrp
+        inputType: click
+      - element: *save-button
+        condition: DISPLAYED
+        inputType: click
+  - id: create-cati-user
+    description: Fill out user create form with role CATI
+    actionElements:
+      - element: *first-name-input
+        infoType: firstName
+        inputType: text
+      - element: *last-name-input
+        infoType: lastName
+        inputType: text
+      - element: *email-input
+        infoType: email
+        inputType: text
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-cati
+        inputType: click
+      - element: *all-of-us
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click

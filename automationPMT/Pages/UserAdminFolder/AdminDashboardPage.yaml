@@ -1,0 +1,38 @@
+elements:
+  - &dashboard-header
+    id: dashboard-header
+    description: Dashboard Page header
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //h1[@translate="tiles.collection.DASHBOARD"]
+  - &external-server-logs
+    id: external-server-logs
+    description: External Server Logs
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //h4[@translate="tiles.title.EXTERNAL"]
+  - &account-dropdown-menu
+    id: account-dropdown-menu
+    description: Account dropdown menu
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//span[contains(text(),'Account')])[1]
+  - &logout-button
+    id: logout-button
+    description: Logout button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//a[@ng-click='logout()'])[1]
+actions:
+  - id: log-out
+    description: Log out
+    actionElements:
+      - element: *account-dropdown-menu
+        inputType: click
+      - element: *logout-button
+        condition: DISPLAYED
+        inputType: click

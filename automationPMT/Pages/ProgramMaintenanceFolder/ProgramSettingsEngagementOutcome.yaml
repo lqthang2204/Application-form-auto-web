@@ -1,0 +1,199 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: success-message
+    description: Success message when saving successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+  - id: table-header-text
+    description: Table Header Text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Engagement Outcomes (')]
+  - id: program-settings-tab
+    description: Program Settings Tab
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Program Settings']
+  - id: positive-outcome-group
+    description: Positive Outcome Group
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Positive Outcome Group (')]
+  - id: unsuccessful-outcome-group
+    description: Unsuccessful Outcome Group
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Unsuccessful Outcome Group (')]
+  - id: retry-outcome-group
+    description: Retry Outcome Group
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Retry Outcome Group (')]
+  - id: do-not-contact-group
+    description: Do Not Contact Group
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Do Not Contact Group (')]
+  - id: other-outcome-group
+    description: Other Outcome Group
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Other Outcome (')]
+  - id: edit-button
+    description: Edit Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Edit']
+  - id: add-new-button
+    description: Add New Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()=' Add New']
+  - id: save-button
+    description: Save Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Save']
+  - id: cancel-button
+    description: Cancel Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel']
+  - id: new-outcome-input
+    description: New Engagement Outcome Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Engagement Outcomes')]/following::input[@type='text'][1]
+  - id: new-outcome-error-msg
+    description: New Engagement Outcome Error Msg when field is left blank
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='This field can not be empty.']
+  - id: new-outcome-duplicate-msg
+    description: New Engagement Outcome Error Msg when text is duplicated
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Duplicate with other field.']
+  - id: first-item-drag-icon
+    description: First dragable item in engagement outcome table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Engagement Outcomes (')]/following::div[contains(@class,'draggable-order-icon')][1]
+  - id: positive-outcome-group-details
+    description: Positive Outcome Group Item Details
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Positive Outcome Group')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: unsuccessful-outcome-group-details
+    description: Unsuccessful Outcome Group Item Details
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Unsuccessful Outcome Group')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: retry-outcome-group-details
+    description: Retry Outcome Group Item Details
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Retry Outcome Group')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: not-contact-group-details
+    description: Do Not Contact Group Item Details
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Do Not Contact Group')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: other-outcome-details
+    description: Other Outcome Item Details
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Other Outcome')]/following::div[@class='rc-collapse-content-box'][1]
+  - &ta-custom-outcome-input
+    id: ta-custom-outcome-input
+    description: TA Custom Outcome item input field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@value,'TA Custom') and contains(@class,'false')]
+  - &ta-updated-outcome-input
+    id: ta-updated-outcome-input
+    description: TA Updated Outcome item input field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@value,'TA Updated') and contains(@class,'false')]
+  - id: ta-archived-outcome-input
+    description: TA Archived Outcome item input field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[contains(@value,'TA Updated') and contains(@class,'archived')])[1]
+  - &remove-ta-custom-outcome-icon
+    id: remove-ta-custom-outcome-icon
+    description: Remove TA Custom Outcome icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@value,'TA Custom') and contains(@class,'false')]/following::button[contains(@class,'btn-remove')][1]
+  - &remove-ta-updated-outcome-icon
+    id: remove-ta-updated-outcome-icon
+    description: Remove TA Updated Outcome icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@value,'TA Updated') and contains(@class,'false')]/following::button[contains(@class,'btn-remove')][1]
+  - id: restore-ta-updated-outcome-icon
+    description: Restore TA Updated Outcome icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[contains(@value,'TA Updated') and contains(@class,'archived')]/following::button)[1]
+  - id: view-archived
+    description: View Archived checkbox
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='colored-checkbox-checkmark']
+actions:
+  - id: remove-existing-ta-customer-outcome
+    description: Remove avaialble existing TA Data Form
+    actionElements:
+      - element: *ta-custom-outcome-input
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *remove-ta-custom-outcome-icon
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *ta-updated-outcome-input
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *remove-ta-updated-outcome-icon
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click

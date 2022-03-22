@@ -1,0 +1,36 @@
+elements:
+  - &withdraw-link
+    id: withdraw-link
+    description: Link direct to withdraw page
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target="agreements.withdraw.title"]
+  - &stop-participant-next-button
+    id: stop-participant-next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[ng-click="goToNextPage()"]
+  - &withdraw-option
+    id: withdraw-option
+    description: Second option of the form - to withdraw participant
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class,"radio-image-left")])[2]
+  - &stop-participating-button
+    id: stop-participating-button
+    description: Button stop participating
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[title="Withdraw from the program"]
+  - &stop-participating-agreement
+    id: stop-participating-agreement
+    description: Text thank you displayed after stop participating successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[translate*="agreements.stopParticipating"]

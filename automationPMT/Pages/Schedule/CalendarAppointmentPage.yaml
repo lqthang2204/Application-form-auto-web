@@ -1,0 +1,112 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &location-dropdown
+    id: location-dropdown
+    description: Location dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='site-select']
+  - &automation-site-1-option
+    id: automation-site-1-option
+    description: Automation site 1 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Site 1']
+  - &automation-site-2-option
+    id: automation-site-2-option
+    description: Automation site 2 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Site 2']
+  - id: vrp-automation-org
+    description: Vrp automation org
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Org']
+  - &new-appointment-button
+    id: new-appointment-button
+    description: New appointment button in calendar page
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='new-appointment-btn']
+  - &appointment-on-calendar
+    id: appointment-on-calendar
+    description: Newly created appointment on calendar views
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class,"event-block-title")])[last()]
+  - &calendar-switch-right
+    id: calendar-switch-right
+    description: Button switch right on calendar
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="calendarSwitcher-navigation-index__right"]
+  - &calendar-mode-selector
+    id: calendar-mode-selector
+    description: Calendar mode selector
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="calendar-mode-selector"]
+  - &calendar-month-view-selector
+    id: calendar-month-view-selector
+    description: Calendar month view selector
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[.="Month"]
+  - &no-of-appointments
+    id: no-of-appointments
+    description: Number of appointments
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="no-of-appointments"]
+  - &appointment-name-on-month-view
+    id: appointment-name-on-month-view
+    description: Appointment name on month view
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="participant-name-container"]
+  - &appointment-info-on-month-view
+    id: appointment-info-on-month-view
+    description: Appointment info on month view
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="appointment-info"]
+  - &filter-button
+    id: filter-button
+    description: Button filter on calendar sidebar menu
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="btn-filter"]
+  - &pmb-checkbox
+    id: pmb-checkbox
+    description: Checkbox PM/B
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()="PM/B"]/following-sibling::span
+  - &last-time-block-in-first-column
+    id: last-time-block-in-first-column
+    description: Last time block in first column on calendar
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='appt-column']:first-of-type button[class*='time-open']:first-of-type

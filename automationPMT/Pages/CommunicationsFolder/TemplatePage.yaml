@@ -1,0 +1,43 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: search-input
+    description: Search input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Search Template Name']
+  - id: create-template-button
+    description: Create a new segmentation button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Create Template']
+  - id: template-name-in-table
+    description: Template name in table
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class='link-view-detail']
+  - id: archive-button
+    description: Archive button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[aria-label='Archive']
+  - id: confirm-archive-button
+    description: Confirm archive button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Archive']
+  - id: success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']

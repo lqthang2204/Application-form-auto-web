@@ -1,0 +1,55 @@
+elements:
+  - id: time-page
+    description: Location's local time zone page
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select time']
+  - id: available-date-for-appointment
+    description: Next Available date for Appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@aria-label, 'Choose')][1]
+  - id: next-available-date-for-appointment
+    description: Change Date to Next Available Date for Appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@aria-label, 'Choose')][2]
+  - id: next-available-time-slot
+    description: Change Date to Next Available Date for Appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@aria-label='time slots']//span[contains(text(), 'pm') or contains(text(), 'am')]
+  - id: schedule-button
+    description: Schedule an appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Schedule']
+  - id: reschedule-button
+    description: Re-schedule an appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Reschedule']
+  - id: the-first-available-time-slot
+    description: Select the first available time slot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@aria-label='time slots']//span[contains(text(), 'pm') or contains(text(), 'am')])[1]
+  - id: the-second-available-time-slot
+    description: Select the second available time slot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@aria-label='time slots']//span[contains(text(), 'pm') or contains(text(), 'am')])[2]
+  - id: next-month-icon
+    description: Next month icon
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: nextIcon

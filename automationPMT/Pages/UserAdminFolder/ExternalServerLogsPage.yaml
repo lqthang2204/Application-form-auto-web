@@ -1,0 +1,154 @@
+elements:
+  - &external-server-logs-header
+    id: external-server-logs-header
+    description: External Server Logs Page header
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //h2[text()="External Server Logs"]
+  - &filter-logs-button
+    id: filter-logs-button
+    description: Filter Logs Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[@title="Filter Logs"]
+  - &filter-external-logs-header
+    id: filter-external-logs-header
+    description: Filter External Logs Header
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "Filter External Logs") and @class="modal-header
+          ng-binding"]
+  - &service-dropdown
+    id: service-dropdown
+    description: Service Dropdown
+    locators:
+      - device: WEB
+        type: ID
+        value: service
+  - &event-type-dropdown
+    id: event-type-dropdown
+    description: Event Type Dropdown
+    locators:
+      - device: WEB
+        type: ID
+        value: eventType
+  - &http-method-dropdown
+    id: http-method-dropdown
+    description: HTTP Method Dropdown
+    locators:
+      - device: WEB
+        type: ID
+        value: httpMethod
+  - &event-source-dropdown
+    id: event-source-dropdown
+    description: Event Source Dropdown
+    locators:
+      - device: WEB
+        type: ID
+        value: eventSource
+  - &filter-button
+    id: filter-button
+    description: Filter Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[@title='Filter']
+  - &drc-VXP_DRC_ORGANIZATION_UPDATE-response-code
+    id: drc-VXP_DRC_ORGANIZATION_UPDATE-response-code
+    description: DRC VXP_DRC_ORGANIZATION_UPDATE Response Code
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //tr/td/span[contains(text(), 'VXP_DRC_ORGANIZATION_UPDATE')]/preceding::td[3]
+    values:
+      - lang: EN
+        value: 200
+  - &log-id-1
+    id: log-id-1
+    description: Log ID 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//a[contains(@href, 'external/detail/')])[1]
+  - &log-id-2
+    id: log-id-2
+    description: Log ID 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//a[contains(@href, 'external/detail/')])[2]
+  - &close-model-button
+    id: close-model-button
+    description: Close model button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class='close']
+  - &response-body
+    id: response-body
+    description: Response body
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(), 'Response body')]
+  - &site-name
+    id: site-name
+    description: Site name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//span[contains(text(), 'ATA_SITE_NAME')])[2]
+    values:
+      - lang: EN
+        value: ATA_SITE_NAME
+  - &organization-name
+    id: organization-name
+    description: Organization name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(), 'Response body')]/following::span[text()='name']/following::span[2]
+  - &identifier-tag
+    id: identifier-tag
+    description: Identifier tag
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//span[text()='identifier'])[2]
+  - &identifier-element-1
+    id: identifier-element-1
+    description: Identifier element 1
+    locators:
+    - device: WEB
+      type: XPATH
+      value: (//span[text()='identifier'])[2]/following::span[contains(text(), 'Object')][1]
+  - &site-id-value
+    id: site-id-value
+    description: Site id value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='"http://all-of-us.org/fhir/sites/site-id"']/following::span[contains(text(), 'ATA_SITE_ID')]
+  - &site-is-active
+    id: site-is-active
+    description: Site is active
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//span[text()='active']/following::span[text()='true'])[2]
+    values:
+      - lang: EN
+        value: true
+  - &site-is-not-active
+    id: site-is-not-active
+    description: Site is not active
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//span[text()='active']/following::span[text()='false'])[2]
+    values:
+      - lang: EN
+        value: false

@@ -1,0 +1,56 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Sex at Birth
+  - id: option-female
+    description: Sex at Birth Female
+    locators:
+      - device: API
+        value: BiologicalSexAtBirth_SexAtBirth
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "Female")]
+    values:
+      - lang: EN
+        value: Female
+  - id: page-end
+    description: page end
+    locators:
+      - device: WEB
+        type: ID
+        value: pageEnd
+  - id: option-none-of-these
+    description: None of these options describes me
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "None of these")]
+    values:
+      - lang: EN
+        value: None of these describe me
+  - id: user-input-placeholder
+    description: User text field input placeholder
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea[placeholder="other (please specify)"]
+apiPage:
+    name: Biological Sex At Birth
+    sections:
+      - name: TheBasics_BiologicalSexAtBirth
+        fields:
+          - name: option-female
+            values:
+              - SexAtBirth_Female

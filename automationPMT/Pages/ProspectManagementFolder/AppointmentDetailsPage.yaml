@@ -1,0 +1,147 @@
+elements:
+  - &upcoming-appointment
+    id: upcoming-appointment
+    description: Upcoming appointment which have just created
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[aria-labelledby="tabs-appointment-list-tab-upcoming"] div[class*="accordion-title"]
+  - &past-appointment
+    id: past-appointment
+    description: Past appointment which have just created
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[aria-labelledby="tabs-appointment-list-tab-past"]
+  - &appointment-location-info
+    id: appointment-location-info
+    description: Location name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[.='Location']/following-sibling::div
+  - &appointment-type-info
+    id: appointment-type-info
+    description: Type of appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[.='Type']/following-sibling::div
+  - &appointment-notes
+    id: appointment-notes
+    description: Notes of appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[.='Notes']/following-sibling::div
+  - &appointment-outcome
+    id: appointment-outcome
+    description: Outcome of appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[.='Outcome']/following-sibling::div
+  - &appointment-time
+    id: appointment-time
+    description: Time of appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@id="tabs-appointment-list-pane-upcoming"][@aria-hidden="false"]//div[.='Time']/following-sibling::div
+  - &appointment-date
+    id: appointment-date
+    description: Date of appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id="tabs-appointment-list-pane-upcoming"][aria-hidden="false"] div[class="accordion-title"]
+  - &cancel-appointment-button
+    id: cancel-appointment-button
+    description: Button cancel appointment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Cancel Appointment']
+  - &edit-appointment-button
+    id: edit-appointment-button
+    description: Button edit appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[name="edit"]
+  - &reschedule-appointment-button
+    id: reschedule-appointment-button
+    description: Button reschedule appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[name="reschedule"]
+  - &keep-appointment-button
+    id: keep-appointment-button
+    description: Button keep appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="btn-keep"]
+  - &cancel-appointment-confirm-button
+    id: cancel-appointment-confirm-button
+    description: Button confirm cancle appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="btn-cancel"]
+  - &modal-title
+    id: modal-title
+    description: Title of modal
+    locators:
+      - device: WEB
+        type: CSS
+        value: h4[class="modal-title"] p
+  - &modal-content
+    id: modal-content
+    description: Content of modal
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="body-content"]
+  - &upcoming-appointment-detail
+    id: upcoming-appointment-detail
+    description: Detail of upcoming appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id="tabs-appointment-list-pane-upcoming"] div[class*="appointment-detail"]
+  - &past-appointment-detail
+    id: past-appointment-detail
+    description: Detail of past appointment
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id="tabs-appointment-list-pane-past"] div[class*="appointment-detail"]
+  - &past-appointment-tab
+    id: past-appointment-tab
+    description: Tab past appointment
+    locators:
+      - device: WEB
+        type: ID
+        value: tabs-appointment-list-tab-past
+  - &upcoming-appointment-tab
+    id: upcoming-appointment-tab
+    description: Tab upcoming appointment
+    locators:
+      - device: WEB
+        type: ID
+        value: tabs-appointment-list-tab-upcoming
+  - &edit-outcome-button
+    id: edit-outcome-button
+    description: Button edit outcome
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[name="edit"]
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']

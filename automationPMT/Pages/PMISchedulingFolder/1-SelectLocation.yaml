@@ -1,0 +1,19 @@
+elements:
+  - id: select-location-home-next-button
+    description: Select a Location - Home Address Next Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(@class,'MuiButton-text')]
+  - id: map-page
+    description: Map Page for selecting Home Address
+    locators:
+      - device: WEB
+        type: ID
+        value: starkovMap
+  - id: automation-site-1
+    description: Automation site 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Site 1']

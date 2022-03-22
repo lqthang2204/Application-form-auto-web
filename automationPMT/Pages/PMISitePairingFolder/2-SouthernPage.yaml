@@ -1,0 +1,138 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &radio-option-1
+    id: radio-option-1
+    description: Radio option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"UAB Medicine")]
+    values:
+      - lang: EN
+        value: UAB Medicine, Birmingham
+  - &radio-option-2
+    id: radio-option-2
+    description: Radio option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Cooper Green Mercy")]
+    values:
+      - lang: EN
+        value: Cooper Green Mercy Health Services, Birmingham
+  - &radio-option-3
+    id: radio-option-3
+    description: Radio option 3
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Huntsville Hospital")]
+    values:
+      - lang: EN
+        value: Huntsville Hospital, Huntsville (opening in 2019)
+  - &radio-option-4
+    id: radio-option-4
+    description: Radio option 4
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Louisiana State University")]
+    values:
+      - lang: EN
+        value: Louisiana State University Health Sciences Center, New Orleans
+  - &radio-option-5
+    id: radio-option-5
+    description: Radio option 5
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Tulane Medical Center")]
+    values:
+      - lang: EN
+        value: Tulane Medical Center, New Orleans
+  - &radio-option-6
+    id: radio-option-6
+    description: Radio option 6
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"UAB Montgomery Internal Medicine")]
+    values:
+      - lang: EN
+        value: UAB Montgomery Internal Medicine, Montgomery
+  - &radio-option-7
+    id: radio-option-7
+    description: Radio option 7
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"UAB Selma Family Practice")]
+    values:
+      - lang: EN
+        value: UAB Selma Family Practice, Selma
+  - &radio-option-8
+    id: radio-option-8
+    description: Radio option 8
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"University of Mississippi Medical Center")]
+    values:
+      - lang: EN
+        value: University of Mississippi Medical Center, Jackson
+  - &radio-option-9
+    id: radio-option-9
+    description: Radio option 9
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"University of South Alabama Health System")]
+    values:
+      - lang: EN
+        value: University of South Alabama Health System, Mobile
+  - &radio-option-10
+    id: radio-option-10
+    description: Radio option 10
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"The University of Alabama")]
+    values:
+      - lang: EN
+        value: The University of Alabama, Tuscaloosa
+  - &radio-option-11
+    id: radio-option-11
+    description: Radio option 11
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"UAB Huntsville Regional")]
+    values:
+      - lang: EN
+        value: UAB Huntsville Regional Medical Campus
+  - &radio-option-12
+    id: radio-option-12
+    description: Radio option 12
+    locators:
+      - device: API
+        value: SitePairing_SouthernProviders
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"None of these")]
+    values:
+      - lang: EN
+        value: None of these
+apiPage:
+    name: Southern
+    sections:
+      - name: SitePairing_SouthernProviders
+        fields:
+          - name: radio-option-12
+            values:
+              - SouthernProviders_NoneOfThese

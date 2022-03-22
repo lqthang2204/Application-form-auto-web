@@ -1,0 +1,278 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+  - id: table-header
+    description: Program Milestones table header
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[@data-field='title']/..
+  - &edit-button
+    id: edit-button
+    description: Edit Program Milestones button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Edit']
+  - id: add-new-button
+    description: Add New Program Milestones button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()=' Add New']
+  - id: save-button
+    description: Save Program Milestones button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Save']
+  - id: cancel-button
+    description: Cancel Program Milestones button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel']
+  - id: cancel-button-on-popup
+    description: Cancel button on Delete confirmation popup
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Delete']/following::button
+  - id: add-new-modal-title
+    description: Add New Modal Title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[@class='modal-title']
+  - id: item-type-dropdown
+    description: Item Type Dropdown List
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select an Item Type']
+  - id: item-type-error-message
+    description: Item Type Error message
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Item Type is required.']
+  - id: form-type-option
+    description: Form Type option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Form']
+  - id: profile-property-type-option
+    description: Profile Property Type option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Profile Property']
+  - id: identifier-input
+    description: Identifier Input field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Identifier']/following::input[1]
+  - id: identifier-first-option
+    description: Identifier first option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Identifier']/following::div[contains(@id,'option-0')]
+  - id: identifier-295-option
+    description: Identifier 295 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='295']
+  - id: item-name-input
+    description: Item Name Input field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Item Name']/following::input[1]
+  - id: item-name-first-option
+    description: Item Name first option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Item Name']/following::div[contains(@id,'option-0')]
+  - id: category-type-dropdown
+    description: Category Type field
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Category Type']/following-sibling::div
+  - id: consent-form-cate-type
+    description: Consent Form Category Type
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Consent Form']
+  - id: data-form-cate-type
+    description: Data Form Category Type
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Data Form']
+  - id: profile-form-cate-type
+    description: Profile Form Category Type
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Profile Form']
+  - id: snap-questions-cate-type
+    description: Snap Questions Category Type
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Snap Questions']
+  - id: apply-button
+    description: Apply Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Apply']
+  - id: cancel-button
+    description: Cancel Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel']
+  - id: first-itemname-identifier-field
+    description: Item Name/Identifier field in first rown of program milestones table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Primary Consent')]/preceding::div[@class='item-name-field']
+  - &remove-ta-data-form-button
+    id: remove-ta-data-form-button
+    description: Remove TA Data Form Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'TADataForm')]/following::button[1]
+  - &remove-consentPII-form-button
+    id: remove-consentPII-form-button
+    description: Remove Consent PII Form Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'ConsentPII')]/following::button[1]
+  - id: display-name-ta-data-form-button
+    description: Display Name input in TA Data Form Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'TADataForm')]/following::input[@placeholder='Enter Display Name'][1]
+  - &delete-button
+    id: delete-button
+    description: Delete Item Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Delete']
+  - id: first-item-drag-icon
+    description: First dragable item in program milestones table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'Primary Consent')]/preceding::div[contains(@class,'draggable-order-icon')]
+  - id: survey-module-container
+    description: Survey Module container
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Survey Modules')]
+  - id: primary-consent-container
+    description: Primary Consent container
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Primary Consent')]
+  - id: additional-consent-container
+    description: Additional Consent container
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Additional Consent')]
+  - id: protocol-activities-container
+    description: Protocol Activities container
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Protocol Activities')]
+  - id: primary-consent-item-details
+    description: Primary Consent Item Details section
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Primary Consent')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: additional-consent-item-details
+    description: Additional Consent Item Details section
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Additional Consent')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: protocol-activities-item-details
+    description: Protocol Activities Item Details section
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Protocol Activities')]/following::div[@class='rc-collapse-content-box'][1]
+  - id: survey-modules-item-details
+    description: Survey Modules Item Details section
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[contains(text(),'Survey Modules')]/following::div[@class='rc-collapse-content-box'][1]
+actions:
+  - id: remove-existing-ta-data-form
+    description: Remove avaialble existing TA Data Form
+    actionElements:
+      - element: *remove-ta-data-form-button
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *delete-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *remove-ta-data-form-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *delete-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+  - id: remove-existing-consentPII-form
+    description: Remove avaialble existing Consent PII Form
+    actionElements:
+      - element: *remove-consentPII-form-button
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *delete-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *remove-consentPII-form-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *delete-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click

@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Disability
+  - id: no-answer
+    description: Answer No
+    locators:
+      - device: API
+        value: Disability_ErrandsAlone
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"No")]
+apiPage:
+    name: Difficulty Running Errands Alone
+    sections:
+      - name: TheBasics_Disability
+        fields:
+          - name: no-answer
+            values:
+              - ErrandsAlone_No

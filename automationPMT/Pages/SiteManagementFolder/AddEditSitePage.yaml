@@ -1,0 +1,242 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &select-parent-input
+    id: select-parent-input
+    description: Select parent input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Select Parent']/following::input[1]
+  - &select-parent-option-1
+    id: select-parent-option-1
+    description: Select parent option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@id, 'option')]
+  - &site-id-input
+    id: site-id-input
+    description: Site id input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Site ID']/following::input[1]
+  - &site-name-input
+    id: site-name-input
+    description: Site name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Site Name']/following::input[1]
+  - &clinic-radio-button
+    id: clinic-radio-button
+    description: Clinic radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Clinic']
+  - &site-require-radio-button
+    id: site-require-radio-button
+    description: Site require radio button
+    locators:
+      - device: WEB
+        type: CSS
+        value: label[for*='Yes']
+  - &mayolink-client-input
+    id: mayolink-client-input
+    description: MayoLINK client input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(text(),'MayoLINK Client')]/following::input[1]
+  - &google-group-name-input
+    id: google-group-name-input
+    description: Google group name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Google Group Name']/following::input[1]
+  - &enrolling-status-radio-button
+    id: enrolling-status-radio-button
+    description: Enrolling status radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Enrolling Status']/following::label[1]
+  - &ptsc-scheduling-status-radio-button
+    id: ptsc-scheduling-status-radio-button
+    description: PTSC scheduling status radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='PTSC Scheduling Status']/following::label[1]
+  - &digital-scheduling-status-radio-button
+    id: digital-scheduling-status-radio-button
+    description: Digital scheduling status radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Digital Scheduling Status']/following::label[1]
+  - &scheduling-instructions-input
+    id: scheduling-instructions-input
+    description: Scheduling instructions input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Scheduling Instructions']/following::p[1]
+  - &directions-input
+    id: directions-input
+    description: Directions input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Directions']/following::p[1]
+  - &address-input
+    id: address-input
+    description: Address input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Address']/following::input[1]
+  - &address-input-2
+    id: address-input-2
+    description: Address input field 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Address']/following::input[2]
+  - &admin-email-address-input
+    id: admin-email-address-input
+    description: Admin email address input
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea[class='email-textarea']
+  - &city-input
+    id: city-input
+    description: City input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='City']/following::input[1]
+  - &state-dropdown
+    id: state-dropdown
+    description: State dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='State']/following::div[contains(@class, 'select__control')]
+  - &option-1
+    id: option-1
+    description: Option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alabama']
+  - id: option-4
+    description: Option 4
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Arizona']
+  - &zip-code-input
+    id: zip-code-input
+    description: Zip code input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Zip Code']/following::input[1]
+  - &verify-button
+    id: verify-button
+    description: Verify button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='verify-btn']
+  - &clinic-site-radio-button
+    id: clinic-site-radio-button
+    description: Clinic site radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Clinic Site']
+  - &phone-input
+    id: phone-input
+    description: Phone input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Phone']/following::input[1]
+  - &publish-button
+    id: publish-button
+    description: Publish button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cerulean-blue-btn']
+  - &publish-confirm-button
+    id: publish-confirm-button
+    description: Publish confirm button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-publish']
+  - &delete-button
+    id: delete-button
+    description: Delete button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='delete-btn']
+  - &confirm-delete-button
+    id: confirm-delete-button
+    description: Confirm delete button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-delete']
+  - &page-title
+    id: page-title
+    description: Page Title AoU Site Management
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='AoU Site Management']
+actions:
+  - id: click-clinic-radio-button-if-exist
+    description: Click clinic radio button if exist
+    actionElements:
+      - element: *clinic-radio-button
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: click-clinic-site-radio-button-if-exist
+    description: Click clinic site radio button if exist
+    actionElements:
+      - element: *clinic-site-radio-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *site-require-radio-button
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *mayolink-client-input
+        condition: DISPLAYED
+        timeout: 1000
+        infoType: phoneNumber
+        inputType: text
+  - id: fill-phone-input-if-exist
+    description: Fill phone input if exist
+    actionElements:
+      - element: *phone-input
+        condition: DISPLAYED
+        timeout: 1000
+        infoType: phoneNumber
+        inputType: text

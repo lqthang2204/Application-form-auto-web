@@ -1,0 +1,17 @@
+elements:
+  - id: start-button
+    description: Start button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|submit'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Basics
+apiPage: {}

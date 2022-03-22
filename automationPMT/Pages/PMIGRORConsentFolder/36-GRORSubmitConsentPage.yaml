@@ -1,0 +1,20 @@
+elements:
+  - id: submit-button
+    description: Submit button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|submit'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: submit-consent-page-title
+    description: Submit consent page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Thank you for completing this consent.
+apiPage: {}

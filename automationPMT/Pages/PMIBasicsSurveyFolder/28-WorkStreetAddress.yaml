@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: prefer-not-to-answer
+    description: Prefer Not to answer
+    locators:
+      - device: API
+        value: Employment_EmploymentWorkAddress
+apiPage:
+    name: Self-Employed Address
+    sections:
+      - name: TheBasics_Employment
+        fields:
+          - name: prefer-not-to-answer
+            values:
+              - PMI_PreferNotToAnswer

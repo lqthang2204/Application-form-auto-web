@@ -1,0 +1,128 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - id: organization-type
+    description: Hierarchy type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Organization']
+  - id: hierarchy-type-dropdown
+    description: Hierarchy type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select']
+  - id: custom-option
+    description: Custom option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Custom']
+  - id: name-of-hierarchy-input
+    description: Name of hierarchy input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter Name of Hierarchy']
+  - id: number-of-levels-input
+    description: Number of levels input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[class*='number-of-levels-input']
+  - id: add-new-button
+    description: Add new button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='add-new-btn']
+  - id: level-1-name-input
+    description: Level 1 name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter Level 1 Name']
+  - id: level-2-name-input
+    description: Level 2 name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter Level 2 Name']
+  - id: level-3-name-input
+    description: Level 3 name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter Level 3 Name']
+  - id: save-draft-button
+    description: Save draft button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='save-btn']
+  - id: define-attributes-button
+    description: Define attributes button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='define-attrs-btn']
+  - id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cancel-btn']
+  - &publish-button
+    id: publish-button
+    description: Publish button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='publish-btn']
+  - id: edit-attributes-button
+    description: Edit attributes button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='define-attrs-btn']
+  - &confirm-publish-button
+    id: confirm-publish-button
+    description: Confirm publish button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-publish']
+  - id: confirm-cancel-button
+    description: Confirm cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-cancel']
+  - id: back-button
+    description: Back button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='back-btn']
+actions:
+  - id: chooses-publish-button
+    description: Chooses publish button
+    actionElements:
+      - element: *publish-button
+        inputType: click
+      - element: *confirm-publish-button
+        inputType: click

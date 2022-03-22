@@ -1,0 +1,181 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - id: id-input
+    description: Id input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Please enter a maximum of 20 characters']
+  - id: name-input
+    description: Name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Please enter a maximum of 255 characters']
+  - id: add-button
+    description: Add button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='form-submit-btn']
+  - id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='form-submit-btn']
+  - &delete-button
+    id: delete-button
+    description: Delete button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='form-delete-btn']
+  - &confirm-delete-button
+    id: confirm-delete-button
+    description: Confirm delete button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-delete']
+  - id: restore-button
+    description: Restore button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='form-submit-btn']
+  - id: restored-success-message
+    description: Restored success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: This record has been restored.
+  - &publish-button
+    id: publish-button
+    description: Publish button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='publish-btn']
+  - &confirm-publish-button
+    id: confirm-publish-button
+    description: Confirm publish button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-publish']
+  - &draft-status
+    id: draft-status
+    description: Draft status
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Draft'])[1]
+  - &draft-compare-button
+    id: draft-compare-button
+    description: Compare button in draft record
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Draft']//ancestor::tr//button)[1]
+  - &deleted-status
+    id: deleted-status
+    description: Deleted status
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Deleted']
+  - &deleted-compare-button
+    id: deleted-compare-button
+    description: Compare button in deleted record
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Deleted']//ancestor::tr//button
+  - &published-status
+    id: published-status
+    description: Published status
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Published']
+  - &published-compare-button
+    id: published-compare-button
+    description: Compare button in published record
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Published']//ancestor::tr//button
+  - &restore-version-button
+    id: restore-version-button
+    description: Restore version button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'restore-version-button')])[2]
+  - &confirm-restore-version-button
+    id: confirm-restore-version-button
+    description: Confirm restore version button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-restore']
+actions:
+  - id: chooses-delete-button
+    description: Chooses delete button
+    actionElements:
+      - element: *delete-button
+        inputType: click
+      - element: *confirm-delete-button
+        inputType: click
+  - id: view-history
+    description: View history
+    actionElements:
+      - element: *draft-status
+        inputType: click
+      - element: *draft-compare-button
+        inputType: click
+      - element: *restore-version-button
+        inputType: click
+      - element: *confirm-restore-version-button
+        inputType: click
+      - element: *deleted-status
+        inputType: click
+      - element: *deleted-compare-button
+        inputType: click
+      - element: *restore-version-button
+        inputType: click
+      - element: *confirm-restore-version-button
+        inputType: click
+      - element: *published-status
+        inputType: click
+      - element: *published-compare-button
+        inputType: click
+      - element: *restore-version-button
+        inputType: click
+      - element: *confirm-restore-version-button
+        inputType: click
+  - id: chooses-publish-button
+    description: Chooses publish button
+    actionElements:
+      - element: *publish-button
+        inputType: click
+      - element: *confirm-publish-button
+        inputType: click

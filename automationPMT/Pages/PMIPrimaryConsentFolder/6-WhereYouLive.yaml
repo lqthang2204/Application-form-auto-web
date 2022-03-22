@@ -1,0 +1,35 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &state-dropdown
+    id: state-dropdown
+    description: Dropdown list with states
+    locators:
+      - device: API
+        value: StateOfResidence
+      - device: WEB
+        type: CSS
+        value: .form-control.dropdown-select
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Where you live')]
+    values:
+      - lang: EN
+        value: Where you live
+      - lang: ES
+        value: ''
+apiPage:
+    name: state of residence
+    sections:
+      - name: state of residence
+        fields:
+          - name: state-dropdown
+            values:
+              - SOR_user.state

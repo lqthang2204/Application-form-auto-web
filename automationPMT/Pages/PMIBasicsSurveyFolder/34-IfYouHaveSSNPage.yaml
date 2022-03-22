@@ -1,0 +1,19 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: If you have a Social Security Number, sharing it with us may help add
+            extra data to the All of Us database.  This extra data may come from places
+            like your health care provider or pharmacy.
+apiPage: {}

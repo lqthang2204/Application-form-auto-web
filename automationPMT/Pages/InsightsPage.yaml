@@ -1,0 +1,95 @@
+elements:
+  - &insights-header
+    id: insights-header
+    description: Header of insights page
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="content-module-wrapper"] h1
+    values:
+      - lang: EN
+        value: Insights
+  - &program-effectiveness-category
+    id: program-effectiveness-category
+    description: Category program effectiveness
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Program Effectiveness"]
+  - &program-effectiveness-category-description
+    id: program-effectiveness-category-description
+    description: Description of category program effectiveness
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Program Effectiveness"]/following-sibling::span[@class="cat-desc"]
+  - &campaigns-category
+    id: campaigns-category
+    description: Category campaigns
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Campaigns"]
+  - &campaigns-category-description
+    id: campaigns-category-description
+    description: Description of category campaigns
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Campaigns"]/following-sibling::span[@class="cat-desc"]
+  - &scheduling-category
+    id: scheduling-category
+    description: Category scheduling
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Scheduling"]
+  - &scheduling-category-description
+    id: scheduling-category-description
+    description: Description of category scheduling
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Scheduling"]/following-sibling::span[@class="cat-desc"]
+  - &support-category
+    id: support-category
+    description: Category support
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Support"]
+  - &support-category-description
+    id: support-category-description
+    description: Description of category support
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Support"]/following-sibling::span[@class="cat-desc"]
+  - &communications-and-retention-category
+    id: communications-and-retention-category
+    description: Category communications and retention
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Communications and Retention"]
+  - &communications-and-retention-category-description
+    id: communications-and-retention-category-description
+    description: Description of category communications and retention
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Communications and Retention"]/following-sibling::span[@class="cat-desc"]
+  - &recruitment-category
+    id: recruitment-category
+    description: Category recruitment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Recruitment"]
+  - &recruitment-category-description
+    id: recruitment-category-description
+    description: Description of category recruitment
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class="cat-container"]//div[.="Recruitment"]/following-sibling::span[@class="cat-desc"]

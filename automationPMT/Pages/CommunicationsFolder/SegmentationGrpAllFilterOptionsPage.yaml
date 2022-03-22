@@ -1,0 +1,326 @@
+elements:
+  - id: select-program-milestones-dropdown
+    description: Select program milestones dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select Filter']
+  - id: select-filter-operator-dropdown
+    description: Select filter operator dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select Operator']
+  - id: select-value-dropdown
+    description: Select value dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select Value']
+  - id: select-date-range-dropdown
+    description: Select date range dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'date-operator')]/div
+  - id: primary-consent-option
+    description: Primary consent option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Primary Consent']
+  - id: consent-to-share-EHR
+    description: Consent to Share Electronic Health Records option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Consent to Share Electronic Health Records']
+  - id: share-your-EHR
+    description: Sharing Your Electronic Health Records option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Sharing Your Electronic Health Records']
+  - id: consent-to-get-DNA
+    description: Consent to Get DNA Results option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Consent to Get DNA Results']
+  - id: the-basics
+    description: The Basics option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='The Basics']
+  - id: lifestyle
+    description: Lifestyle option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Lifestyle']
+  - id: overall-health
+    description: Overall Health option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Overall Health']
+  - id: HC-access-and-utilization
+    description: Health Care Access & Utilization option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Health Care Access & Utilization']
+  - id: family-history
+    description: Family History option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Family History']
+  - id: personal-medical-history
+    description: Personal Medical History option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Personal Medical History']
+  - id: ehr-consent-response
+    description: EHR Consent Response option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='EHR Consent Response']
+  - id: dv-ehr-consent-response
+    description: DV EHR Consent Response option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='DV EHR Consent Response']
+  - id: ta-data-form-option
+    description: New Created TA Data Form Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'TADataForm')][1]
+  - id: updated-data-form-option
+    description: Updated TA Data Form Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'UpdatedTADataForm')][1]
+  - id: genomics-consent-response
+    description: Genomics Consent Response option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Genomics Consent Response']
+  - id: biospecimen
+    description: Biospecimen option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Biospecimen']
+  - id: physical-measurement
+    description: Physical Measurement option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Physical Measurement']
+  - id: biosample
+    description: Biosample option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Biosample']
+  - id: program-update-on-dna-option
+    description: Program update on DNA option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Program Update on DNA']
+  - id: is-equal-to-only-option
+    description: Is equal to only option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is equal to only']
+  - id: is-not-equal-to-only-option
+    description: Is equal to only option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is not equal to only']
+  - id: is-any-of-option
+    description: Is any of option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is any of']
+  - id: is-none-of-option
+    description: Is any of option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is none of']
+  - id: eligible-but-not-started-option
+    description: Eligible but not started option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Eligible but Not Started']
+  - id: in-progress-option
+    description: In Progress option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='In Progress']
+  - id: completed-option
+    description: Completed option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Completed']
+  - id: not-completed-option
+    description: Not Completed option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Not Completed']
+  - id: not-eligible-to-start-option
+    description: Not Eligible to Start option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Not Eligible to Start']
+  - id: agreed-option
+    description: Agreed option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Agreed']
+  - id: declined-option
+    description: Declined option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Declined']
+  - id: undecided-option
+    description: Undecided option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Undecided']
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: ID
+        value: saveButton
+  - id: on-any-date-option
+    description: On any date option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='on any date']
+  - id: on-exact-date-option
+    description: On exact date option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='on exact date']
+  - id: before-option
+    description: Before option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='before']
+  - id: after-option
+    description: After option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='after']
+  - id: on-or-before-option
+    description: On or before option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='on or before']
+  - id: on-or-after-option
+    description: On or after option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='on or after']
+  - id: exactly-option
+    description: Exactly option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='exactly']
+  - id: not-exactly-option
+    description: Not Exactly option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='not exactly']
+  - id: within-the-last-option
+    description: Within the last option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='within the last']
+  - id: not-within-the-last-option
+    description: Not within the last option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='not within the last']
+  - id: is-today-option
+    description: Is today option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is today']
+  - id: is-this-week-option
+    description: Is this week option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is this week']
+  - id: is-this-month-option
+    description: Is this month option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is this month']
+  - id: is-not-today-option
+    description: Is not today option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is not today']
+  - id: is-not-this-week-option
+    description: Is not this week option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is not this week']
+  - id: is-not-this-month-option
+    description: Is not this month option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='is not this month']
+actions:
+  - id: click-save-button
+    description: Click on Save button
+    actionElements:
+      - element: *save-button
+        condition: DISPLAYED
+        timeout: 5000
+        inputType: click
+      - element: *save-button
+        condition: DISPLAYED
+        timeout: 5000
+        inputType: click

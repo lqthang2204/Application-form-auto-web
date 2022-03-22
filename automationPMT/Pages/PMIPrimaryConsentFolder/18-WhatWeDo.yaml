@@ -1,0 +1,19 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'What will we do')]
+    values:
+      - lang: EN
+        value: What will we do with your data and samples
+      - lang: ES
+        value: ''
+apiPage: {}

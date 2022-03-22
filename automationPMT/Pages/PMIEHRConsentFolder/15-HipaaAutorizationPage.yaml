@@ -1,0 +1,15 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: email-copy-option
+    description: Radion option - email copy
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"email a copy to me")]
+apiPage: {}

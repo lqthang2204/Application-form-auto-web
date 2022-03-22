@@ -1,0 +1,41 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: radio-option-1
+    description: Radion option yes
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()="Yes"]
+  - id: radio-option-2
+    description: Radion option no
+    locators:
+      - device: API
+        value: ResultsConsent_HelpMeWithConsent
+      - device: WEB
+        type: XPATH
+        value: //div[text()="No"]
+  - id: consent-help-page-title
+    description: Consent help page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), 'help you with this consent')]
+apiPage:
+    name: Consent help
+    sections:
+      - name: New Section
+        fields:
+          - name: radio-option-2
+            values:
+              - HelpMeWithConsent_No

@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: know-dna-results-page-title
+    description: Know DNA results page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: How could finding out my DNA results help me?
+apiPage: {}

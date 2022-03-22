@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: questions-page-title
+    description: Questions page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(), 'questions along the way')]
+apiPage: {}

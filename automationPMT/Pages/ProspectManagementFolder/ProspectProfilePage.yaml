@@ -1,0 +1,1172 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &schedule-appointment-button
+    id: schedule-appointment-button
+    description: Schedule appointment button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-schedule']
+  - &scheduling-success-message
+    id: scheduling-success-message
+    description: Scheduling success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Appointment successfully created.
+  - &health-condition-status-success-message
+    id: health-condition-status-success-message
+    description: Health condition status success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The Health Condition Status record has been saved successfully.
+  - &appointment-expand-button
+    id: appointment-expand-button
+    description: Appointment expand button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='accordion-icon']
+  - &appointment-expand-button-2
+    id: appointment-expand-button-2
+    description: Appointment expand button 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'accordion-icon')])[2]
+  - &reschedule-button
+    id: reschedule-button
+    description: Reschedule button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[name='reschedule']
+  - &reschedule-success-message
+    id: reschedule-success-message
+    description: Reschedule success message
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), 'successfully rescheduled')]
+  - &back-to-prospect-profile-button
+    id: back-to-prospect-profile-button
+    description: Back to prospect profile button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='scheduler-back-button']
+  - &edit-button
+    id: edit-button
+    description: Edit button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-prospect-profile-btn'] svg
+  - &edit-org-button
+    id: edit-org-button
+    description: Edit org button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-org-btn'] svg
+  - &prospect-first-name
+    id: prospect-first-name
+    description: Prospects first name
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='First Name'] div[class='info']
+  - &prospect-last-name
+    id: prospect-last-name
+    description: Prospects last name
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Last Name'] div[class='info']
+  - &prospect-email
+    id: prospect-email
+    description: Prospects email
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Email'] div[class='info']
+  - &back-to-prospects-list
+    id: back-to-prospects-list
+    description: Back to prospects List
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class*='back-arrow']
+  - &engagement-saved-success-message
+    id: engagement-saved-success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The engagement record has been saved successfully.
+  - &profile-log-session-location
+    id: profile-log-session-location
+    description: Profile log session block is below profile layout block
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='profile-layout']/following::div[@id='profile-log-session-tabs']
+  - &tab-name
+    id: tab-name
+    description: Tab name
+    locators:
+      - device: WEB
+        type: ID
+        value: profile-log-session-tabs-tab-engagement_history
+  - &tab-title
+    id: tab-title
+    description: Tab title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='src-components-prospects-components-profileLogSession-engagementHistory-styles__engagement-history'] div[class='title']
+  - &add-new-engagement-button
+    id: add-new-engagement-button
+    description: Add new engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='add-new-engagement-btn']
+  - &head-type
+    id: head-type
+    description: Type header on engagement table
+    locators:
+      - device: WEB
+        type: CSS
+        value: th[data-field='type'] span[class='headertext']
+  - &head-call-outcome
+    id: head-call-outcome
+    description: Call outcome header on engagement table
+    locators:
+      - device: WEB
+        type: CSS
+        value: th[data-field='callOutCome'] span[class='headertext']
+  - &head-summary
+    id: head-summary
+    description: Summary header on engagement table
+    locators:
+      - device: WEB
+        type: CSS
+        value: th[data-field='summary'] span[class='headertext']
+  - &head-add-by
+    id: head-add-by
+    description: Add by header on engagement table
+    locators:
+      - device: WEB
+        type: CSS
+        value: th[data-field='addedBy'] span[class='headertext']
+  - &head-engagement-list-name
+    id: head-engagement-list-name
+    description: Engagement list name header on engagement table
+    locators:
+      - device: WEB
+        type: CSS
+        value: th[data-field='engagementListName'] span[class='headertext']
+  - &head-action
+    id: head-action
+    description: Action header on engagement table
+    locators:
+      - device: WEB
+        type: CSS
+        value: th[data-field='action'] span[class='headertext']
+  - &engagement-type
+    id: engagement-type
+    description: Engagement type
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='hint-text']
+  - &engagement-summary
+    id: engagement-summary
+    description: Engagement summary
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='5'] div
+  - &engagement-added-by
+    id: engagement-added-by
+    description: Engagement added by
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='6'] div
+  - &engagement-associated-engagement-list
+    id: engagement-associated-engagement-list
+    description: Engagement associated engagement list
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='7'] div
+  - &phone-icon
+    id: phone-icon
+    description: Phone icon
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='phone-icon']
+  - &positive-outcome-dot
+    id: positive-outcome-dot
+    description: Positive outcome dot
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='dot postive-outcome']
+  - &attempt-text
+    id: attempt-text
+    description: Attempt text
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class='attempt']
+  - &unsuccessful-outcome-dot
+    id: unsuccessful-outcome-dot
+    description: Unsuccessful outcome dot
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='dot unsuccessful-outcome']
+  - &outcome-name
+    id: outcome-name
+    description: Outcome name
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='outcome-name']
+  - &follow-up-recontact
+    id: follow-up-recontact
+    description: Follow Up Recontact
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class="follow-up-recontact"]
+  - &edit-engagement-button
+    id: edit-engagement-button
+    description: Edit engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-record-btn']
+  - &unsuccessful-outcome-group-option-1-phone-inbound-icon
+    id: unsuccessful-outcome-group-option-1-phone-inbound-icon
+    description: Unsuccessful outcome group option 1 - phone inbound icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/preceding::div[@class='phone-icon'][1]
+  - &retry-outcome-group-option-1-email-outbound-icon
+    id: retry-outcome-group-option-1-email-outbound-icon
+    description: Retry outcome group option 1 - email outbound icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/preceding::div[@class='email-icon'][1]
+  - &do-not-contact-group-option-1-email-outbound-icon
+    id: do-not-contact-group-option-1-email-outbound-icon
+    description: Do not contact group option 1 - email outbound icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/preceding::div[@class='email-icon'][1]
+  - &other-outcome-group-option-1-in-person-icon
+    id: other-outcome-group-option-1-in-person-icon
+    description: Other outcome group option 1 - in person icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='in-person-icon'][1]
+  - &other-outcome-group-option-1-video-conference-icon
+    id: other-outcome-group-option-1-video-conference-icon
+    description: Other outcome group option 1 - video conference icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='video-conf-icon'][1]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-icon
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-icon
+    description: Other outcome group option 1 - video conference and screen sharing icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='video-conf-screensharing-icon'][1]
+  - &other-outcome-group-option-1-screen-sharing-icon
+    id: other-outcome-group-option-1-screen-sharing-icon
+    description: Other outcome group option 1 - screen sharing icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='screensharing-icon'][1]
+  - &unsuccessful-outcome-group-option-1-hint-text
+    id: unsuccessful-outcome-group-option-1-hint-text
+    description: Unsuccessful outcome group option 1 - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &retry-outcome-group-option-1-hint-text
+    id: retry-outcome-group-option-1-hint-text
+    description: Retry outcome group option 1 - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &do-not-contact-group-option-1-hint-text
+    id: do-not-contact-group-option-1-hint-text
+    description: Do not contact group option 1 - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &other-outcome-group-option-1-hint-text
+    id: other-outcome-group-option-1-hint-text
+    description: Other outcome group option 1 - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &other-outcome-group-option-1-video-conference-hint-text
+    id: other-outcome-group-option-1-video-conference-hint-text
+    description: Other outcome group option 1, video conference - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-hint-text
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-hint-text
+    description: Other outcome group option 1, video conference and screen sharing - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &other-outcome-group-option-1-screen-sharing-hint-text
+    id: other-outcome-group-option-1-screen-sharing-hint-text
+    description: Other outcome group option 1, screen sharing - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::div[@class='hint-text'][1]
+  - &unsuccessful-outcome-group-option-1-unsuccessful-outcome-dot
+    id: unsuccessful-outcome-group-option-1-unsuccessful-outcome-dot
+    description: Unsuccessful outcome group option 1 - unsuccessful outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/preceding::span[@class='dot unsuccessful-outcome'][1]
+  - &unsuccessful-outcome-group-option-1-attempt
+    id: unsuccessful-outcome-group-option-1-attempt
+    description: Unsuccessful outcome group option 1 - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &retry-outcome-group-option-1-retry-outcome-dot
+    id: retry-outcome-group-option-1-retry-outcome-dot
+    description: Retry outcome group option 1 - unsuccessful outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/preceding::span[@class='dot retry-outcome'][1]
+  - &retry-outcome-group-option-1-retry-outcome-dot
+    id: retry-outcome-group-option-1-attempt
+    description: Retry outcome group option 1 - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &do-not-contact-group-option-1-do-not-contact-dot
+    id: do-not-contact-group-option-1-do-not-contact-dot
+    description: Do not contact group option 1 - unsuccessful outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/preceding::span[@class='dot do-not-contact'][1]
+  - &do-not-contact-group-option-1-do-not-contact-dot
+    id: do-not-contact-group-option-1-attempt
+    description: Do not contact group option 1 - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &other-outcome-group-option-1-other-outcome-dot
+    id: other-outcome-group-option-1-other-outcome-dot
+    description: Other outcome group option 1 - other outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='dot other-outcome'][1]
+  - &other-outcome-group-option-1-attempt
+    id: other-outcome-group-option-1-attempt
+    description: Other outcome group option 1 - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &other-outcome-group-option-1-video-conference-other-outcome-dot
+    id: other-outcome-group-option-1-video-conference-other-outcome-dot
+    description: Other outcome group option 1 - video conference - other outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='dot other-outcome'][1]
+  - &other-outcome-group-option-1-video-conference-attempt
+    id: other-outcome-group-option-1-video-conference-attempt
+    description: Other outcome group option 1 - video conference - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-other-outcome-dot
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-other-outcome-dot
+    description: Other outcome group option 1 - video conference and screen sharing - other outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='dot other-outcome'][1]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-attempt
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-attempt
+    description: Other outcome group option 1 - video conference and screen sharing - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &other-outcome-group-option-1-screen-sharing-other-outcome-dot
+    id: other-outcome-group-option-1-screen-sharing-other-outcome-dot
+    description: Other outcome group option 1 - screen sharing - other outcome dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='dot other-outcome'][1]
+  - &other-outcome-group-option-1-screen-sharing-attempt
+    id: other-outcome-group-option-1-screen-sharing-attempt
+    description: Other outcome group option 1 - screen sharing - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::p[@class='attempt'][1]
+  - &unsuccessful-outcome-group-option-1-outcome-name
+    id: unsuccessful-outcome-group-option-1-outcome-name
+    description: Unsuccessful outcome group option 1 - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &retry-outcome-group-option-1-outcome-name
+    id: retry-outcome-group-option-1-outcome-name
+    description: Retry outcome group option 1 - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &do-not-contact-group-option-1-outcome-name
+    id: do-not-contact-group-option-1-outcome-name
+    description: Do not contact group option 1 - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &other-outcome-group-option-1-outcome-name
+    id: other-outcome-group-option-1-outcome-name
+    description: Other outcome group option 1 - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &other-outcome-group-option-1-video-conference-outcome-name
+    id: other-outcome-group-option-1-video-conference-outcome-name
+    description: Other outcome group option 1 - video conference - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-outcome-name
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-outcome-name
+    description: Other outcome group option 1 - video conference and screen sharing - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &other-outcome-group-option-1-screen-sharing-outcome-name
+    id: other-outcome-group-option-1-screen-sharing-outcome-name
+    description: Other outcome group option 1 - screen sharing - outcome name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/preceding::span[@class='outcome-name'][1]
+  - &unsuccessful-outcome-group-option-1-summary
+    id: unsuccessful-outcome-group-option-1-summary
+    description: Unsuccessful outcome group option 1 - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']
+  - &unsuccessful-outcome-group-option-1-added-by
+    id: unsuccessful-outcome-group-option-1-added-by
+    description: Unsuccessful outcome group option 1 - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &unsuccessful-outcome-group-option-1-associated-engagement-list
+    id: unsuccessful-outcome-group-option-1-associated-engagement-list
+    description: Unsuccessful outcome group option 1 - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &unsuccessful-outcome-group-option-1-edit-engagement-button
+    id: unsuccessful-outcome-group-option-1-edit-engagement-button
+    description: Unsuccessful outcome group option 1 - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -2- PHONE INBOUND, UNSUCCESSFUL OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &retry-outcome-group-option-1-summary
+    id: retry-outcome-group-option-1-summary
+    description: Retry outcome group option 1 - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']
+  - &retry-outcome-group-option-1-added-by
+    id: retry-outcome-group-option-1-added-by
+    description: Retry outcome group option 1 - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &retry-outcome-group-option-1-associated-engagement-list
+    id: retry-outcome-group-option-1-associated-engagement-list
+    description: Retry outcome group option 1 - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &retry-outcome-group-option-1-edit-engagement-button
+    id: retry-outcome-group-option-1-edit-engagement-button
+    description: Retry outcome group option 1 - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -3- EMAIL OUTBOUND, RETRY OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &do-not-contact-group-option-1-summary
+    id: do-not-contact-group-option-1-summary
+    description: Do not contact group option 1 - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']
+  - &do-not-contact-group-option-1-added-by
+    id: do-not-contact-group-option-1-added-by
+    description: Do not contact group option 1 - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &do-not-contact-group-option-1-associated-engagement-list
+    id: do-not-contact-group-option-1-associated-engagement-list
+    description: Do not contact group option 1 - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &do-not-contact-group-option-1-edit-engagement-button
+    id: do-not-contact-group-option-1-edit-engagement-button
+    description: Do not contact group option 1 - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -4- EMAIL INBOUND, DO NOT CONACT GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &other-outcome-group-option-1-summary
+    id: other-outcome-group-option-1-summary
+    description: Other outcome group option 1 - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']
+  - &other-outcome-group-option-1-added-by
+    id: other-outcome-group-option-1-added-by
+    description: Other outcome group option 1 - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &other-outcome-group-option-1-associated-engagement-list
+    id: other-outcome-group-option-1-associated-engagement-list
+    description: Other outcome group option 1 - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &other-outcome-group-option-1-edit-engagement-button
+    id: other-outcome-group-option-1-edit-engagement-button
+    description: Other outcome group option 1 - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -5- IN PERSON, OTHER OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &other-outcome-group-option-1-video-conference-summary
+    id: other-outcome-group-option-1-video-conference-summary
+    description: Other outcome group option 1 - video conference - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']
+  - &other-outcome-group-option-1-video-conference-added-by
+    id: other-outcome-group-option-1-video-conference-added-by
+    description: Other outcome group option 1 - video conference - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &other-outcome-group-option-1-video-conference-associated-engagement-list
+    id: other-outcome-group-option-1-video-conference-associated-engagement-list
+    description: Other outcome group option 1 - video conference - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &other-outcome-group-option-1-video-conference-edit-engagement-button
+    id: other-outcome-group-option-1-video-conference-edit-engagement-button
+    description: Other outcome group option 1 - video conference - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -6- VIDEO CONFERENCING, OTHER OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-summary
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-summary
+    description: Other outcome group option 1 - video conference and screen sharing - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']
+  - &other-outcome-group-option-1-screen-sharing-summary
+    id: other-outcome-group-option-1-screen-sharing-summary
+    description: Other outcome group option 1 - screen sharing - summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-added-by
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-added-by
+    description: Other outcome group option 1 - video conference and screen sharing - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &other-outcome-group-option-1-screen-sharing-added-by
+    id: other-outcome-group-option-1-screen-sharing-added-by
+    description: Other outcome group option 1 - screen sharing - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][1]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-associated-engagement-list
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-associated-engagement-list
+    description: Other outcome group option 1 - video conference and screen sharing - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &other-outcome-group-option-1-screen-sharing-associated-engagement-list
+    id: other-outcome-group-option-1-screen-sharing-associated-engagement-list
+    description: Other outcome group option 1 - screen sharing - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::div[@class='cell-container'][2]
+  - &other-outcome-group-option-1-video-conference-and-screen-sharing-edit-engagement-button
+    id: other-outcome-group-option-1-video-conference-and-screen-sharing-edit-engagement-button
+    description: Other outcome group option 1 - video conference and screen sharing - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -7- VIDEO CONFERENCING AND SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &other-outcome-group-option-1-screen-sharing-edit-engagement-button
+    id: other-outcome-group-option-1-screen-sharing-edit-engagement-button
+    description: Other outcome group option 1 - screen sharing - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA -8- SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &archive-button
+    id: archive-button
+    description: Archive button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='archive-btn']
+  - &archive-profile-button
+    id: archive-profile-button
+    description: Archive profile button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-warning__restore']
+  - &archived-success-message
+    id: archived-success-message
+    description: Archived success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The prospect has been archived successfully.
+  - &other-outcome-group-option-2-phone-out-bound-icon
+    id: other-outcome-group-option-2-phone-out-bound-icon
+    description: Other outcome group option 2 - phone out bound icon
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/preceding::div[@class='phone-icon'][1]
+  - &other-outcome-group-option-2-phone-out-bound-hint-text
+    id: other-outcome-group-option-2-phone-out-bound-hint-text
+    description: Other outcome group option 2, phone out bound - hint text
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/preceding::div[@class='hint-text'][1]
+  - &other-outcome-group-option-2-phone-out-bound-other-outcome-dot
+    id: other-outcome-group-option-2-phone-out-bound-other-outcome-dot
+    description: Other outcome group option 2 - phone out bound dot
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/preceding::span[@class='dot other-outcome'][1]
+  - &other-outcome-group-option-2-phone-out-bound-attempt
+    id: other-outcome-group-option-2-phone-out-bound-attempt
+    description: Other outcome group option 2 - attempt
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/preceding::p[@class='attempt'][1]
+  - &other-outcome-group-option-2-phone-out-bound-outcome-name
+    id: other-outcome-group-option-2-phone-out-bound-outcome-name
+    description: Other outcome group option 2 - phone out bound name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/preceding::span[@class='outcome-name'][1]
+  - &other-outcome-group-option-2-phone-out-bound-summary
+    id: other-outcome-group-option-2-phone-out-bound-summary
+    description: Other outcome group option 2 - phone out bound summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']
+  - &other-outcome-group-option-2-phone-out-bound-added-by
+    id: other-outcome-group-option-2-phone-out-bound-added-by
+    description: Other outcome group option 2 - phone out bound - added by
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/following::div[@class='cell-container'][1]
+  - &other-outcome-group-option-2-phone-out-bound-associated-engagement-list
+    id: other-outcome-group-option-2-phone-out-bound-associated-engagement-list
+    description: Other outcome group option 2 - phone out bound - associated engagement list
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/following::div[@class='cell-container'][2]
+  - &other-outcome-group-option-2-phone-out-bound-edit-engagement-button
+    id: other-outcome-group-option-2-phone-out-bound-edit-engagement-button
+    description: Other outcome group option 1 - phone out bound - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - PHONE OUTBOUND, OTHER OUTCOME GROUP OPTION 2 - EDITED']/following::button[1]//*[local-name()='svg']
+  - &count-engagement
+    id: count-engagement
+    description: Count engagement
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class='count-engagement']
+  - &total-record
+    id: total-record
+    description: Total record
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='showTotalRecords']
+  - &pagination
+    id: pagination
+    description: Pagination 1
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[aria-label='Go to page number 1']
+  - &info-type-bar
+    id: info-type-bar
+    description: Info type bar
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'dataTable')]/following::div[@class='info-type']
+  - &appointment-item-title
+    id: appointment-item-title
+    description: Appointment item title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Appointment Details']/following::div[@class='accordion-title'][last()]
+  - &location
+    id: location
+    description: Location
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Location']/following::div[1])[last()]
+  - &time
+    id: time
+    description: Time
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Time']/following::div[1])[last()]
+  - &appointment-empty-detail
+    id: appointment-empty-detail
+    description: Appointment empty detail
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='appointment-detail empty-detail']
+  - &prospect-profile
+    id: prospect-profile
+    description: Page prospect profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="profile-layout"]
+  - &add-status-button
+    id: add-status-button
+    description: Add status button for health condition
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='health-condition-status-list'] button svg
+  - &manage-button
+    id: manage-button
+    description: Manage button in health condition status
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='item-active'] button[class*='btn-manage']
+  - &current-status-assessment-needed
+    id: current-status-assessment-needed
+    description: Current status value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div.status-name span.name
+    values:
+      - lang: EN
+        value: Assessment Needed
+  - &current-status-follow-up-needed
+    id: current-status-follow-up-needed
+    description: Follow up deeded value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div.status-name span.name
+    values:
+      - lang: EN
+        value: Follow up Needed
+  - &current-status-assessment-completed
+    id: current-status-assessment-completed
+    description: Assessment completed value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div.status-name span.name
+    values:
+      - lang: EN
+        value: Assessment Completed
+  - &report-type-self-reported
+    id: report-type-self-reported
+    description: Self reported value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='row']/div[normalize-space(text())='Self Reported']
+    values:
+      - lang: EN
+        value: Self Reported
+  - &report-type-lab-reported
+    id: report-type-lab-reported
+    description: Lab reported value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='row']/div[normalize-space(text())='Lab Reported']
+    values:
+      - lang: EN
+        value: Lab Reported
+  - &report-type-proximity-contact
+    id: report-type-proximity-contact
+    description: Proximity contact value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='row']/div[normalize-space(text())='Proximity Contact']
+    values:
+      - lang: EN
+        value: Proximity Contact
+  - &report-type-direct-contact
+    id: report-type-direct-contact
+    description: Direct contact value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='row']/div[normalize-space(text())='Direct Contact']
+    values:
+      - lang: EN
+        value: Direct Contact
+  - &report-type-close-contact
+    id: report-type-close-contact
+    description: Close contact value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='row']/div[normalize-space(text())='Close Contact']
+    values:
+      - lang: EN
+        value: Close Contact
+  - &lab-test-result-result-pending
+    id: lab-test-result-result-pending
+    description: Result pending value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='row']/div[normalize-space(text())='Result Pending'])[1]
+    values:
+      - lang: EN
+        value: Result Pending
+  - &lab-test-result-not-needed
+    id: lab-test-result-not-needed
+    description: Not needed value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='row']/div[normalize-space(text())='Not Needed'])[1]
+    values:
+      - lang: EN
+        value: Not Needed
+  - &lab-test-result-declined-to-submit
+    id: lab-test-result-declined-to-submit
+    description: Declined to submit value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='row']/div[normalize-space(text())='Declined to Submit'])[1]
+    values:
+      - lang: EN
+        value: Declined to Submit
+  - &lab-test-result-positive-detected
+    id: lab-test-result-positive-detected
+    description: Positive / detected value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='row']/div[normalize-space(text())='Positive / Detected'])[1]
+    values:
+      - lang: EN
+        value: Positive / Detected
+  - &lab-test-result-negative-not-detected
+    id: lab-test-result-negative-not-detected
+    description: Negative / not detected value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='row']/div[normalize-space(text())='Negative / Not Detected'])[1]
+    values:
+      - lang: EN
+        value: Negative / Not Detected
+  - &lab-test-result-result-inconclusive
+    id: lab-test-result-result-inconclusive
+    description: Result inconclusive value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='row']/div[normalize-space(text())='Result Inconclusive'])[1]
+    values:
+      - lang: EN
+        value: Result Inconclusive
+  - &page-title
+    id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //h1[text()='Prospect Management']
+    values:
+      - lang: EN
+        value: Prospect Management
+  - &participant-profile-tab
+    id: participant-profile-tab
+    description: Participant profile tab on profile detail
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[id*='participant-profile']
+  - &prospect-profile-tab
+    id: prospect-profile-tab
+    description: Prospect profile tab on profile detail
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[id*='prospect-profile']
+  - &update-profile-success-message
+    id: update-profile-success-message
+    description: Update profile success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+  - &first-name-value
+    id: first-name-value
+    description: First name value in profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='First Name'] div[class='info']
+  - &middle-name-value
+    id: middle-name-value
+    description: Middle name value in profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Middle Name'] div[class='info']
+  - &last-name-value
+    id: last-name-value
+    description: Last name value in profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Last Name'] div[class='info']
+  - id: preferred-name-value
+    description: Preferred name value in profile
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='info-line Preferred Name']//div[@class='info'])[2]
+  - id: prefix-name-value
+    description: Prefix name value in profile
+    locators:
+        - device: WEB
+          type: CSS
+          value: div[class*='Prefix'] div[class='info']
+  - id: suffix-name-value
+    description: Suffix name value in profile
+    locators:
+        - device: WEB
+          type: CSS
+          value: div[class*='Suffix'] div[class='info']
+  - &email-value
+    id: email-value
+    description: email value in profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='info-line Email'] div[class='info']
+  - &mobile-phone-value
+    id: mobile-phone-value
+    description: Mobile phone value in profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='info-line Mobile Phone'] div[class='info']
+  - id: account-status-value
+    description: Account status value in profile
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='info-line Account Status']//div[@class='info'])[2]
+  - id: account-status-value-prospect-not-pair
+    description: Account status value of prospect when has not paired in profile
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='info-line Account Status']//div[@class='info']
+  - id: home-address-street1-value
+    description: Home address street 1 value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(text(),'Street 1')]/following-sibling::div)[1]
+  - id: home-address-street2-value
+    description: Home address street 2 value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(text(),'Street 2')]/following-sibling::div)[1]
+  - id: home-address-city-value
+    description: Home address city value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(text(),'City')]/following-sibling::div)[1]
+  - id: home-address-country-value
+    description: Home address country value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(text(),'Country')]/following-sibling::div)[1]
+  - id: home-address-state-value
+    description: Home address state value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(text(),'State')]/following-sibling::div)[1]
+  - id: home-address-zip-code-value
+    description: Home address zip code value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(text(),'Zip Code')]/following-sibling::div)[1]
+  - id: additional-information-expand-toggle
+    description: Additional information expand toggle
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='prospectProfile-expandToggle']
+  - id: dob-value
+    description: DOB value in profile
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='DOB/Age'] div[class='info']
+  - id: com-channel-value
+    description: Communication Channel value in profile
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Additional Information']/following::div[@class='info-line Communication Channel']/div[@class='info']
+actions:
+  - id: click-back-to-prospects-list-if-exist
+    description: Click back to prospects list if exist
+    actionElements:
+      - element: *back-to-prospects-list
+        condition: DISPLAYED
+        inputType: click
+

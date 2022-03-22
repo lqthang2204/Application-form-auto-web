@@ -1,0 +1,75 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &add-new-button
+    id: add-new-button
+    description: Add new button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='add-new-btn']
+  - &published-success-message
+    id: published-success-message
+    description: Published success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The record has been published with the latest changes.
+  - &search-input
+    id: search-input
+    description: Search input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='instance-management-search'] input
+  - &site-id
+    id: site-id
+    description: Site id
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='cell-container'])[3]
+  - &line-1
+    id: line-1
+    description: Line 1
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='1']
+  - &edit-site-button
+    id: edit-site-button
+    description: Edit site button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='row-edit-btn']
+  - id: automation-site-1
+    description: Automation Site 1 item
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Automation Site 1']
+  - id: edit-auto-site-1-button
+    description: Edit Auto Site 1 button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Automation Site 1']/following::button[contains(@class,'row-edit-btn')]
+  - &deleted-success-message
+    id: deleted-success-message
+    description: Deleted success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your record has been deleted successfully.

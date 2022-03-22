@@ -1,0 +1,52 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+      - device: ANDROID
+        type: ACCESSIBILITY_ID
+        value: Previous
+      - device: IOS
+        type: NAME
+        value: Previous
+    values:
+      - lang: EN
+        value: Previous
+      - lang: ES
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+      - device: ANDROID
+        type: ACCESSIBILITY_ID
+        value: Home
+      - device: IOS
+        type: ACCESSIBILITY_ID
+        value: Home
+    values:
+      - lang: EN
+        value: Home
+      - lang: ES
+  - id: number-of-people
+    description: Number of people input
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: number of people
+      - device: ANDROID
+        type: XPATH
+        value: //android.widget.EditText[contains(@text,"number of people")]
+      - device: IOS
+        type: ACCESSIBILITY_ID
+        value: Input number field
+apiPage: {}

@@ -1,0 +1,157 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: campaign-save-draft-success-message
+    description: Campaign save as draft success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The campaign was successfully saved as draft.
+  - id: search-input
+    description: Search input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Search Name']
+  - &create-campaign-button
+    id: create-campaign-button
+    description: Create a new campaign button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Create Campaign']
+  - id: campaign-name-in-table
+    description: Campaign name in table
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class='table-link']
+  - id: clone-button
+    description: Clone button
+    locators:
+      - device: WEB
+        type: CSS
+        value: svg[data-icon='copy']
+  - id: archive-button
+    description: Archive button
+    locators:
+      - device: WEB
+        type: CSS
+        value: svg[data-icon="archive"]
+  - id: clone-confirm-button
+    description: Clone confirm button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-clone']
+  - id: confirm-archive-button
+    description: Confirm archive button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-archive']
+  - id: campaign-clone-success-message
+    description: Campaign clone success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Campaign has been successfully cloned.
+  - id: campaign-archive-success-message
+    description: Campaign archive success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Campaign has been successfully archived.
+  - id: empty-table
+    description: Empty table
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='no-data']
+  - id: campaign-create-success-message
+    description: Campaign create success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The campaign was successfully created.
+  - id: status-in-table
+    description: Status in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[5]//div
+  - id: filter-button
+    description: Filter button
+    locators:
+      - device: WEB
+        type: ID
+        value: dropdown-filter-options
+  - id: view-archived-toggle
+    description: View archived toggle
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='OFF']
+  - id: edit-button
+    description: Edit button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[span[text()='Edit']]
+  - id: cancel-campaign-button
+    description: Cancel campaign button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[span[text()='Cancel Campaign']]
+  - id: campaigns-button
+    description: Back to campaign list button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[span[text()='Campaigns']]
+  - id: confirm-cancel-campaign-button
+    description: Confirm cancel campaign button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel Campaign']
+  - id: campaign-goal
+    description: Campaign Goal
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Campaign Goal']/../div
+  - id: cancelled-message
+    description: Cancelled Message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='box-message-cancelled'] span[class='text']
+    values:
+      - lang: EN
+        value: This campaign has been cancelled.
+actions:
+  - id: wait-for-3-seconds
+    description: Wait for 3 seconds timeout
+    actionElements:
+      - element: *create-campaign-button
+        condition: NOT_DISPLAYED
+        timeout: 3000
+        inputType: click

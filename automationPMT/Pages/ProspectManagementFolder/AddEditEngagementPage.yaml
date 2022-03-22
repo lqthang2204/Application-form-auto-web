@@ -1,0 +1,806 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &type-of-engagement-dropdown
+    id: type-of-engagement-dropdown
+    description: Type of engagement dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Type of Engagement'] div[class*='select__indicators']
+  - &phone-out-bound-option
+    id: phone-out-bound-option
+    description: Phone out bound option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Phone - out bound']
+  - &phone-in-bound-option
+    id: phone-in-bound-option
+    description: Phone in bound option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Phone - in bound']
+  - &email-out-bound-option
+    id: email-out-bound-option
+    description: Email out bound option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email - out bound']
+  - &email-in-bound-option
+    id: email-in-bound-option
+    description: Email in bound option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email - in bound']
+  - &in-person-option
+    id: in-person-option
+    description: In person option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='In-person']
+  - &video-conferencing-option
+    id: video-conferencing-option
+    description: Video conferencing option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Video Conferencing']
+  - &video-conferencing-and-screen-sharing-option
+    id: video-conferencing-and-screen-sharing-option
+    description: Video conferencing and screen sharing option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Video Conferencing AND Screen Sharing']
+  - &screen-sharing-option
+    id: screen-sharing-option
+    description: Screen sharing option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Screen Sharing']
+  - &outcome-of-engagement-dropdown
+    id: outcome-of-engagement-dropdown
+    description: Outcome of engagement dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Outcome of Engagement'] div[class*='select__indicators']
+  - &positive-outcome-group-option-1
+    id: positive-outcome-group-option-1
+    description: Positive outcome group option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Positive Outcome Group']/following::div[contains(@id, 'option')][1]
+  - &unsuccessful-outcome-group-option-1
+    id: unsuccessful-outcome-group-option-1
+    description: Unsuccessful outcome group option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Unsuccessful Outcome Group']/following::div[contains(@id, 'option')][1]
+  - &retry-outcome-group-option-1
+    id: retry-outcome-group-option-1
+    description: Retry outcome group option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Retry Outcome Group']/following::div[contains(@id, 'option')][1]
+  - &do-not-contact-group-option-1
+    id: do-not-contact-group-option-1
+    description: Do not contact group option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Do Not Contact Group']/following::div[contains(@id, 'option')][1]
+  - &other-outcome-group-option-1
+    id: other-outcome-group-option-1
+    description: Other outcome group option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Other Outcome']/following::div[contains(@id, 'option')][1]
+  - &other-outcome-group-option-2
+    id: other-outcome-group-option-2
+    description: Other outcome group option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Other Outcome']/following::div[contains(@id, 'option')][2]
+  - &outcome-of-engagement-option-1
+    id: outcome-of-engagement-option-1
+    description: Outcome of engagement option 1
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option-0-2']
+  - id: ta-custom-positive-outcome
+    description: TA Custom Positive Outcome option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'TA Custom Positive Outcome')]
+  - id: ta-updated-positive-outcome
+    description: TA Updated Positive Outcome option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),'TA Updated Positive Outcome B')]
+  - &outcome-of-engagement-option-2
+    id: outcome-of-engagement-option-2
+    description: Outcome of engagement option 2
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option-1-2']
+  - &prefers-or-intends-to-complete-activities-on-own-option
+    id: prefers-or-intends-to-complete-activities-on-own-option
+    description: Prefers or intends to complete activities on own option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prefers or intends to complete activities on own']
+  - &plans-to-schedule-future-appointment-to-complete-activities-with-support-option
+    id: plans-to-schedule-future-appointment-to-complete-activities-with-support-option
+    description: Plans to schedule future appointment to complete activities with support option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Plans to schedule future appointment to complete activities with support']
+  - &appointment-scheduled-to-complete-activities-with-support-option
+    id: appointment-scheduled-to-complete-activities-with-support-option
+    description: Appointment scheduled to complete activities with support option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Appointment scheduled to complete activities with support']
+  - &activities-or-technical-support-completed-by-participant-with-staff-remotely-option
+    id: activities-or-technical-support-completed-by-participant-with-staff-remotely-option
+    description: Activities or technical support completed by participant with staff remotely option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Activities or technical support completed by participant with staff remotely']
+  - &all-activities-now-up-to-date-option
+    id: all-activities-now-up-to-date-option
+    description: All activities now up to date option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='All activities now up to date']
+  - &requested-more-information-option
+    id: requested-more-information-option
+    description: Requested more information option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Requested more information']
+  - &warm-touchpoint-for-relationship-building-or-information-sharing-no-activity-request-made-option
+    id: warm-touchpoint-for-relationship-building-or-information-sharing-no-activity-request-made-option
+    description: Warm touchpoint for relationship-building or information-sharing no activity request made option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Warm touchpoint for relationship-building or information-sharing; no activity request made']
+  - &do-not-contact–not-responsive-to-multiple-contact-attempts-option
+    id: do-not-contact–not-responsive-to-multiple-contact-attempts-option
+    description: Do not contact – not responsive to multiple contact attempts option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Do not contact – not responsive to multiple contact attempts']
+  - &update-prospect-engagement-confirmation
+    id: update-prospect-engagement-confirmation
+    description: Update prospect engagement confirmation
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[contains(text(), 'By adding Do Not Contact engagement outcome, this prospect will be excluded from Segmentations, Campaign Communications and Case Management Lists in the future.  Their communication preference will also be deactivated.  Click Confirm to continue.')]
+    values:
+      - lang: EN
+        value: By adding Do Not Contact engagement outcome, this prospect will be excluded from Segmentations, Campaign Communications and Case Management Lists in the future.  Their communication preference will also be deactivated.  Click Confirm to continue.
+  - &update-participant-engagement-confirmation
+    id: update-participant-engagement-confirmation
+    description: Update participant engagement confirmation
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[contains(text(), 'By adding Do Not Contact engagement outcome, this participant will be excluded from Segmentations, Campaign Communications and Case Management Lists in the future.  Their communication preference will also be deactivated.  Click Confirm to continue.')]
+    values:
+      - lang: EN
+        value: By adding Do Not Contact engagement outcome, this participant will be excluded from Segmentations, Campaign Communications and Case Management Lists in the future.  Their communication preference will also be deactivated.  Click Confirm to continue.
+  - &confirm-button
+    id: confirm-button
+    description: Confirm button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-confirm']
+  - &activity-during-engagement-dropdown
+    id: activity-during-engagement-dropdown
+    description: Activity during engagement dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Activity during Engagement'] div[class*='select__indicators']
+  - &activity-during-engagement-option-1
+    id: activity-during-engagement-option-1
+    description: Activity during engagement option 1
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option-0']
+  - &activity-during-engagement-option-2
+    id: activity-during-engagement-option-2
+    description: Activity during engagement option 2
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option-1']
+  - &downloading-app-option
+    id: downloading-app-option
+    description: Downloading app option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Downloading App']
+  - &locating-log-in-or-sign-in-website-option
+    id: locating-log-in-or-sign-in-website-option
+    description: Locating log-in or sign-in website option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Locating Log-In or Sign-In website']
+  - &other-assistance-or-activity-please-specify-in-summary-option
+    id: other-assistance-or-activity-please-specify-in-summary-option
+    description: Other assistance or activity-please specify in summary option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Other Assistance or Activity-Please Specify in Summary']
+  - &personal-email-support-option
+    id: personal-email-support-option
+    description: Personal email support option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Personal Email Support']
+  - &resetting-password-or-security-questions-option
+    id: resetting-password-or-security-questions-option
+    description: Resetting password or security questions option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Resetting Password or Security Questions']
+  - &updating-contact-information-option
+    id: updating-contact-information-option
+    description: Updating contact information option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Updating Contact Information']
+  - &date-of-engagement-button
+    id: date-of-engagement-button
+    description: Date of engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class='datetime-btn']
+  - &today
+    id: today
+    description: Today
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]
+  - &yesterday
+    id: yesterday
+    description: Yesterday
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[1]
+  - &the-day-before
+    id: the-day-before
+    description: The day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[2]
+  - &the-3-day-before
+    id: the-3-day-before
+    description: The 3 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[3]
+  - &the-4-day-before
+    id: the-4-day-before
+    description: The 4 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[4]
+  - &the-5-day-before
+    id: the-5-day-before
+    description: The 5 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[5]
+  - &the-6-day-before
+    id: the-6-day-before
+    description: The 6 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[6]
+  - &the-7-day-before
+    id: the-7-day-before
+    description: The 7 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[7]
+  - &the-8-day-before
+    id: the-8-day-before
+    description: The 8 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[8]
+  - &the-9-day-before
+    id: the-9-day-before
+    description: The 9 day before
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/preceding::td[9]
+  - &time-of-engagement-button
+    id: time-of-engagement-button
+    description: Time of engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: label[for*='timeInput']
+  - &increase-hour-button
+    id: increase-hour-button
+    description: Increase hour button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='timepicker-picker']//button)[1]
+  - &decrease-hour-button
+    id: decrease-hour-button
+    description: Decrease hour button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='timepicker-picker']//button)[6]
+  - &increase-minute-button
+    id: increase-minute-button
+    description: Decrease minute button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='timepicker-picker']//button)[2]
+  - &decrease-minute-button
+    id: decrease-minute-button
+    description: Decrease minute button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='timepicker-picker']//button)[7]
+  - &am-button
+    id: am-button
+    description: AM button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='timepicker-picker']//button)[5]
+  - &duration-of-engagement-dropdown
+    id: duration-of-engagement-dropdown
+    description: Duration of engagement dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Duration of Engagement'] div[class*='select__indicators']
+  - &less-than-5-minutes-option
+    id: less-than-5-minutes-option
+    description: Less than 5 minutes option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Less than 5 minutes']
+  - &6-15-minutes-option
+    id: 6-15-minutes-option
+    description: 6-15 minutes option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='6-15 minutes']
+  - &16-30-minutes-option
+    id: 16-30-minutes-option
+    description: 16-30 minutes option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='16-30 minutes']
+  - &31-60-minutes-option
+    id: 31-60-minutes-option
+    description: 31-60 minutes option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='31-60 minutes']
+  - &greater-than-60-min-option
+    id: greater-than-60-min-option
+    description: Greater than 60 min option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Greater than 60 min']
+  - &associated-engagement-list-dropdown
+    id: associated-engagement-list-dropdown
+    description: Associated engagement list dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Associated Engagement List'] div[class*='select__indicators']
+  - &not-applicable-option
+    id: not-applicable-option
+    description: Not applicable N/A option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Not Applicable (N/A)']
+  - &summary-textarea
+    id: summary-textarea
+    description: Summary textarea
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Summary'] textarea
+  - &time-set-up-checkbox
+    id: time-set-up-checkbox
+    description: Set up a time to follow up checkbox
+    locators:
+      - device: WEB
+        type: CSS
+        value: label[class*='checkbox-content']
+  - &recontact-date-dropdown
+    id: recontact-date-dropdown
+    description: Recontact date dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id*='input-date-single-picker']
+  - &today-option
+    id: today-option
+    description: Today option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Today']
+  - &tomorrow-option
+    id: tomorrow-option
+    description: Tomorrow option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Tomorrow']
+  - &in-2-business-days-option
+    id: in-2-business-days-option
+    description: In 2 business days option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='In 2 business days']
+  - &in-3-business-days-option
+    id: in-3-business-days-option
+    description: In 3 business days option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='In 3 business days']
+  - &next-week-option
+    id: next-week-option
+    description: Next week option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Next week']
+  - &custom-date-option
+    id: custom-date-option
+    description: Custom date option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Custom Date']
+  - &next-month-nav
+    id: next-month-nav
+    description: Next month navigation
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[aria-label*="Move forward"]
+  - &one-day-after-selected-day
+    id: one-day-after-selected-day
+    description: One day after selected day
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[contains(@aria-label,'Selected')]/following-sibling::td[1]
+  - &apply-date-button
+    id: apply-date-button
+    description: Apply Date button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[@id='date-single-apply-btn']
+  - &recontact-time-dropdown
+    id: recontact-time-dropdown
+    description: Recontact time dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id*='input-time-single-picker']
+  - &morning-option
+    id: morning-option
+    description: Morning option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Morning (8:00 AM - 11:00 AM)']
+  - &lunch-option
+    id: lunch-option
+    description: Lunch option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Lunch (11:01 AM - 2:00 PM)']
+  - &afternoon-option
+    id: afternoon-option
+    description: Afternoon option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Afternoon (2:01 PM - 5:00 PM)']
+  - &evening-option
+    id: evening-option
+    description: Evening option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Evening (5:01 PM - 8:00 PM)']
+  - &custom-time-option
+    id: custom-time-option
+    description: Custom time option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Custom Time']
+  - &apply-time-button
+    id: apply-time-button
+    description: Apply Time button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[@id='time-single-apply-btn']
+  - &save-engagement-button
+    id: save-engagement-button
+    description: Save engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='save-engagement-btn']
+  - &cancel-engagement-button
+    id: cancel-engagement-button
+    description: Cancel engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cancel-engagement-btn']
+  - &success-message
+    id: success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The engagement record has been save successfully.
+  - &type-of-engagement-required-error-message
+    id: type-of-engagement-required-error-message
+    description: The Type of the engagement is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Type of Engagement'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: The Type of the engagement is required.
+  - &outcome-of-engagement-required-error-message
+    id: outcome-of-engagement-required-error-message
+    description: The Outcome of the engagement is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Outcome of Engagement'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: The Outcome of the engagement is required.
+  - &start-time-of-engagement-should-be-pass-value-error-message
+    id: start-time-of-engagement-should-be-pass-value-error-message
+    description: Start time of engagement should be past value error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Start time of Engagement'] span[class='help-block']
+    values:
+      - lang: EN
+        value: The Time of the engagement should be past value.
+  - &duration-of-engagement-required-error-message
+    id: duration-of-engagement-required-error-message
+    description: Duration value for the engagement is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Duration of Engagement'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: Duration value for the engagement is required.
+  - &summary-of-engagement-required-error-message
+    id: summary-of-engagement-required-error-message
+    description: The Summary of the engagement is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Summary'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: The Summary of the engagement is required.
+  - &associated-engagement-list-required-error-message
+    id: associated-engagement-list-required-error-message
+    description: The Summary of the engagement is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Associated Engagement List'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: Associated Engagement List value for the engagement is required.
+  - &follow-up-date-required-error-message
+    id: follow-up-date-required-error-message
+    description: Follow up date is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Recontact Date'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: Follow up date is required.
+  - &follow-up-time-required-error-message
+    id: follow-up-time-required-error-message
+    description: Follow up time is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Recontact Time'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: Follow up time is required.
+  - &support-activity-engagement-required-error-message
+    id: support-activity-engagement-required-error-message
+    description: Support activity for the engagement is required error message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Activity during Engagement'] span[class='error-msg']
+    values:
+      - lang: EN
+        value: Support Activity for the engagement is required.
+  - &the-disabled-future-day
+    id: the-disabled-future-day
+    description: The disabled future day
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'rdtToday')]/following::td[1][contains(@class, 'rdtDisabled')]
+  - &back-to-prospect-list-button
+    id: back-to-prospect-list-button
+    description: Back to prospect list button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class*='back-arrow']
+  - &add-new-engagement-button
+    id: add-new-engagement-button
+    description: Add new engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='add-new-engagement-btn']
+  - &value-remove-button
+    id: value-remove-button
+    description: Value remove button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='value__remove']
+  - &other-outcome-group-option-1-screen-sharing-edit-engagement-button
+    id: other-outcome-group-option-1-screen-sharing-edit-engagement-button
+    description: Other outcome group option 1 - screen sharing - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - SCREEN SHARING, OTHER OUTCOME GROUP OPTION 1']/following::button[1]//*[local-name()='svg']
+  - &set-up-time-to-follow-up-edit-engagement-button
+    id: set-up-time-to-follow-up-edit-engagement-button
+    description: Set Up Time To Follow Up Summary - edit engagement button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - SET UP A TIME TO FOLLOW UP']/following::button[1]//*[local-name()='svg']
+  - &date-of-engagement-value
+    id: date-of-engagement-value
+    description: Date of engagement value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='date-of-engagement-field'] input
+  - &start-time-of-engagement-value
+    id: start-time-of-engagement-value
+    description: Start time of engagement value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='time-engagement-field'] input
+  - &edit-engagement-button
+    id: edit-engagement-button
+    description: Edit engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-record-btn']
+  - id: associated-engagement-list-dropdown
+    description: Associated Engagement List Dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Associated Engagement List'] div[class*='select__indicators']
+  - id: not-applicable-na-option
+    description: Not Applicable (N/A) option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Not Applicable (N/A)']
+  - &tab-title
+    id: tab-title
+    description: Tab title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='src-components-prospects-components-profileLogSession-engagementHistory-styles__engagement-history'] div[class='title']
+actions:
+  - id: save-engagement
+    description: Save engagement
+    actionElements:
+      - element: *tab-title
+        inputType: click
+      - element: *save-engagement-button
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click

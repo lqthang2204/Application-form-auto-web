@@ -1,0 +1,33 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: option-african-american
+    description: black-african
+    locators:
+      - device: API
+        value: Black_BlackSpecific
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "African American")]
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Black, African American or African
+      - lang: ES
+apiPage:
+    name: Black
+    sections:
+      - name: WhatRaceEthnicity_Black
+        fields:
+          - name: option-african-american
+            values:
+              - BlackSpecific_AfricanAmerican

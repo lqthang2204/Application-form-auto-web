@@ -1,0 +1,73 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: radio-option-1
+    description: Radio option 1
+    locators:
+      - device: API
+        value: ResultsConsent_CheckDNA
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Yes")]
+  - id: radio-option-2
+    description: Radio option 2
+    locators:
+      - device: API
+        value: ResultsConsent_CheckDNA
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"No")]
+  - id: radio-option-3
+    description: Radio option 3
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"not sure")]
+  - id: consent-dna-page-title
+    description: Consent DNA page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Would you like us to check your DNA and tell you what we find?
+  - id: check-dna-yes
+    description: Check DNA yes - needed for API form submission
+    locators:
+      - device: API
+        value: _CheckDNA_Yes
+  - id: check-dna-no
+    description: Check DNA no - needed for API form submission
+    locators:
+      - device: API
+        value: _CheckDNA_No
+  - id: check-dna-not-sure
+    description: Check DNA not sure - needed for API form submission
+    locators:
+      - device: API
+        value: _CheckDNA_NotSure
+apiPage:
+  name: Consent for us to check DNA
+  sections:
+    - name: Consent to check DNA
+      fields:
+        - name: radio-option-1
+          values:
+            - CheckDNA_No
+        - name: check-dna-yes
+          values:
+            - false
+        - name: check-dna-no
+          values:
+            - true
+        - name: check-dna-not-sure
+          values:
+            - false

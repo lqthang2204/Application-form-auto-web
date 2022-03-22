@@ -1,0 +1,281 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &current-status-dropdown
+    id: current-status-dropdown
+    description: Current status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[normalize-space(text())='Assessment Needed']
+  - &current-status-option-assessment-needed
+    id: current-status-option-assessment-needed
+    description: Assessment needed option under current status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Assessment Needed']
+  - &current-status-option-follow-up-needed
+    id: current-status-option-follow-up-needed
+    description: Follow up needed option under current status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Follow up Needed']
+  - &current-status-option-assessment-completed
+    id: current-status-option-assessment-completed
+    description: Assessment completed option under current status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Assessment Completed']
+  - &report-type-dropdown
+    id: report-type-dropdown
+    description: Report type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[normalize-space(text())='Self Reported']
+  - &report-type-option-self-reported
+    id: report-type-option-self-reported
+    description: Self reported option under report type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Self Reported']
+  - &report-type-option-lab-reported
+    id: report-type-option-lab-reported
+    description: Lab reported option under report type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Lab Reported']
+  - &report-type-option-proximity-contact
+    id: report-type-option-proximity-contact
+    description: Proximity contact option under report type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Proximity Contact']
+  - &report-type-option-direct-contact
+    id: report-type-option-direct-contact
+    description: Direct contact option under report type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Direct Contact']
+  - &report-type-option-close-contact
+    id: report-type-option-close-contact
+    description: Close contact option under report type dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Close Contact']
+  - &reported-date-input
+    id: reported-date-input
+    description: Reported date picker
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Reported Date')]/following-sibling::div//input
+  - &lab-test-date-input
+    id: lab-test-date-input
+    description: Lab test date picker
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Date')]/following-sibling::div//input
+  - &lab-test-result-dropdown
+    id: lab-test-result-dropdown
+    description: Lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Lab Test Result')]/following-sibling::div
+  - &lab-test-result-option-result-pending
+    id: lab-test-result-option-result-pending
+    description: Result pending option under lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Result Pending']
+  - &lab-test-result-option-not-needed
+    id: lab-test-result-option-not-needed
+    description: Not needed option under lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Not Needed']
+  - &lab-test-result-option-declined-to-submit
+    id: lab-test-result-option-declined-to-submit
+    description: Declined to submit option under lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Declined to Submit']
+  - &lab-test-result-option-positive-detected
+    id: lab-test-result-option-positive-detected
+    description: Positive / detected option under lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Positive / Detected']
+  - &lab-test-result-option-negative-not-detected
+    id: lab-test-result-option-negative-not-detected
+    description: Negative / not detected option under lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Negative / Not Detected']
+  - &lab-test-result-option-result-inconclusive
+    id: lab-test-result-option-result-inconclusive
+    description: Result inconclusive option under lab test result dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Result Inconclusive']
+  - &monitoring-duration-day-input
+    id: monitoring-duration-day-input
+    description: Monitoring duration day input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='monitoringDurationDays']
+  - &remaining-day-input
+    id: remaining-day-input
+    description: Remaining day input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Remaining Days']/following-sibling::input
+  - &symptom-status-dropdown
+    id: symptom-status-dropdown
+    description: Symptom status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Symptom Status')]/following-sibling::div
+  - &symptom-status-option-symptomatic
+    id: symptom-status-option-symptomatic
+    description: Symptomatic option under Symptom Status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Symptomatic']
+  - &symptom-status-option-asymptomatic
+    id: symptom-status-option-asymptomatic
+    description: Asymptomatic option under Symptom Status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Asymptomatic']
+  - &infectious-period-start-date-input
+    id: infectious-period-start-date-input
+    description: Infectious period start date picker
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Infectious Period Start Date')]/following-sibling::div//input
+  - &symptom-onset-date-input
+    id: symptom-onset-date-input
+    description: Symptom onset date picker will show when select symptomatic option under symptom status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Symptom Onset Date')]/following-sibling::div//input
+  - &symptom-resolve-date-input
+    id: symptom-resolve-date-input
+    description: Symptom resolve date picker will show when select symptomatic option under symptom status dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Symptom Resolve Date')]/following-sibling::div//input
+  - &exposure-prevention-measure-dropdown
+    id: exposure-prevention-measure-dropdown
+    description: Exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Exposure Prevention Measure')]/following-sibling::div
+  - &exposure-prevention-measure-option-quarantining
+    id: exposure-prevention-measure-option-quarantining
+    description: Quarantining option under exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Quarantining']
+  - &exposure-prevention-measure-option-isolating
+    id: exposure-prevention-measure-option-isolating
+    description: Isolating option under exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Isolating']
+  - &exposure-prevention-measure-option-ongoing-exposure
+    id: exposure-prevention-measure-option-ongoing-exposure
+    description: Ongoing exposure option under exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Ongoing exposure']
+  - &exposure-prevention-measure-option-under-interventional-care
+    id: exposure-prevention-measure-option-under-interventional-care
+    description: Under interventional care option under exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Under interventional care']
+  - &exposure-prevention-measure-option-not-following-guidance
+    id: exposure-prevention-measure-option-not-following-guidance
+    description: Not following guidance option under exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Not following guidance']
+  - &exposure-prevention-measure-option-unknown
+    id: exposure-prevention-measure-option-unknown
+    description: Unknown option under exposure prevention measure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Unknown']
+  - &measure-start-date-input
+    id: measure-start-date-input
+    description: Measure start date picker will show when select quarantining/isolating option under exposure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Measure Start Date')]/following-sibling::div//input
+  - &measure-end-date-input
+    id: measure-end-date-input
+    description: Measure end date picker will show when select quarantining/isolating option under exposure dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(.,'Measure End Date')]/following-sibling::div//input
+  - &summary-textarea
+    id: summary-textarea
+    description: Summary textarea
+    locators:
+      - device: WEB
+        type: CSS
+        value: textarea[name='summary']
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Save']
+  - &cancel-button
+    id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel']

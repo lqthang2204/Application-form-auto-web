@@ -1,0 +1,55 @@
+elements:
+  - id: sign-consent
+    description: Sign consent
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope' and contains(text(), 'please use
+            your mouse to sign below')]
+  - id: select-type-signature
+    description: Type signature radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()=" Type"]
+  - id: select-draw-signature
+    description: Draw signature radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()=" Draw"]
+  - id: full-name
+    description: Type your full name
+    locators:
+      - device: API
+        value: ResultsConsent_Signature
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='type your signature' or @aria-label='type your
+            full name']
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: signature-page-title
+    description: Signature page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Signature
+apiPage:
+    name: Signature
+    sections:
+      - name: New Section
+        fields:
+          - name: full-name
+            values:
+              - user.firstName

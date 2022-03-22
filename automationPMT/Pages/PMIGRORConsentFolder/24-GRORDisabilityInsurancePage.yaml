@@ -1,0 +1,33 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: option-1
+    description: Option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"I am worried")]
+  - id: option-2
+    description: Option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"I would still like")]
+  - id: disability-insurance-page-title
+    description: Disability insurance page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: It might be harder or more expensive to get disability, life, and long-term
+            care insurance.
+apiPage: {}

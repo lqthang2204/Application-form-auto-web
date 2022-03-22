@@ -1,0 +1,7 @@
+elements:
+  - id: done-button
+    description: Done Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[@class='MuiButton-label']

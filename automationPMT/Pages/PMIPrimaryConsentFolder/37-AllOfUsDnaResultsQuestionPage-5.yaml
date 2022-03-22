@@ -1,0 +1,31 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Yes, I will have to complete another form if
+            I want to see my All of Us DNA Results.")]
+  - id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"No, All of Us will tell me my DNA results if
+            I fill out this form.")]
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Question 5')]
+    values:
+      - lang: EN
+        value: Question 5
+apiPage: {}

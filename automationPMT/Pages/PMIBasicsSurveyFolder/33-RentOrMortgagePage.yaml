@@ -1,0 +1,29 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Rent or Mortgage
+  - id: rent-or-mortgage
+    description: Rent or Mortgage
+    locators:
+      - device: API
+        value: LivingSituation_StableHouseConcern
+apiPage:
+    name: Concerned About Place to Live
+    sections:
+      - name: TheBasics_LivingSituation
+        fields:
+          - name: rent-or-mortgage
+            values:
+              - StableHouseConcern_Yes

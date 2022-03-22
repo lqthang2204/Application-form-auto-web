@@ -1,0 +1,86 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: edit-location-settings
+    description: Edit Location Settings button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Edit Location Settings']
+  - id: daily-goal-input
+    description: Daily Goal Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@class,'edit-goal')]
+  - id: daily-target-input
+    description: Daily Target Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@class,'edit-target')]
+  - id: add-type-and-duration
+    description: Add appoinment type and duration
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='type-duration-title']/following-sibling::a
+  - id: type-name-input
+    description: Appointment Type Name Input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Name']/following-sibling::input
+  - id: increase-duration-button
+    description: Increase appointment duration button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[text()='15 minute increments']/preceding-sibling::div//*[@data-icon='plus']
+  - id: blue-color-option
+    description: Blue Color Option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='#1e88e5']/following-sibling::span
+  - id: default-type-toggle
+    description: Default Type Toggle
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[text()='Indicates a default type for this site']/following-sibling::div//div[text()='OFF']
+  - id: create-button
+    description: Create Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(@class,'save-button')]
+  - id: accept-appoinment-toggle
+    description: Accept Appoinment Toggle when it is OFF
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //p[text()='Accepting Appointments?']/../following-sibling::div//div[text()='OFF']
+  - id: success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+  - id: all-location-button
+    description: All Location button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='All Locations']
+  - id: save-location-button
+    description: Save Location Settings button
+    locators:
+      - device: WEB
+        type: ID
+        value: saveBtn

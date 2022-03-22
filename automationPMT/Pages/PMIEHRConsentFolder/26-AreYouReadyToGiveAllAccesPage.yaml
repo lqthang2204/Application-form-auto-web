@@ -1,0 +1,34 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &radio-option-1
+    id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: API
+        value: EHRConsentPII_ConsentPermission
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Yes")]
+  - &radio-option-2
+    id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: API
+        value: EHRConsentPII_ConsentPermission
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"No")]
+apiPage:
+    name: are you ready
+    sections:
+      - name: are you ready
+        fields:
+          - name: radio-option-1
+            values:
+              - ConsentPermission_Yes

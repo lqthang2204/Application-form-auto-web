@@ -1,0 +1,14 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: dna-results-page-title
+    description: DNA Results page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: Your DNA Results
+apiPage: {}

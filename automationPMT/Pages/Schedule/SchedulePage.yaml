@@ -1,0 +1,37 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &calendar-tab
+    id: calendar-tab
+    description: Calendar tab in scheduling
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href='/scheduling/calendar']
+  - id: settings-tab
+    description: Settings tab in scheduling
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href='/scheduling/settings/scheduling']
+  - &inactive-calendar-tab
+    id: inactive-calendar-tab
+    description: Calendar tab in scheduling is inactive
+    locators:
+      - device: WEB
+        type: CSS
+        value: li[class="sub-tab "] a[href="/scheduling/calendar"]
+
+actions:
+  - id: switch-calendar-tab
+    description: Switch to calendar tab
+    actionElements:
+      - element: *inactive-calendar-tab
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click

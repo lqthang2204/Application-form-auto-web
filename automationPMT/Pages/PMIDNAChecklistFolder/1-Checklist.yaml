@@ -1,0 +1,17 @@
+elements:
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: '//strong[contains(text(),''Checklist: How to Prepare to Receive Your
+            DNA Results'')]'
+    values:
+      - lang: EN
+        value: Checklist to Receive DNA Results
+  - id: done-button
+    description: Done button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|submit'

@@ -1,0 +1,20 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: The next questions are about health insurance. Include health insurance
+            obtained through employment or purchased directly as well as government
+            programs like Medicare and Medicaid that provide medical care or help
+            pay medical bills.
+apiPage: {}

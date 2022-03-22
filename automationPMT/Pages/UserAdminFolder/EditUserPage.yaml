@@ -1,0 +1,280 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: first-name-input
+    description: First name input
+    locators:
+      - device: WEB
+        type: NAME
+        value: firstName
+  - id: last-name-input
+    description: Last name input
+    locators:
+      - device: WEB
+        type: NAME
+        value: lastName
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: ID
+        value: save
+  - id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[contains(@class,'cancel-btn')][@value='Cancel']
+  - id: automation-org
+    description: Automation org node
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='PMI|AUTOMATION_AWARDEE|AUTOMATION_ORG']
+  - id: vrp-automation-org
+    description: VRP Automation org node
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='4|AUTOMATION_AWARDEE|AUTOMATION_ORG']
+  - id: automation-org-2
+    description: Automation org node 2
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='PMI|AUTOMATION_AWARDEE_2|AUTOMATION_ORG_2']
+  - id: vrp-automation-org-2
+    description: VRP Automation org node 2
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='4|AUTOMATION_AWARDEE_2|AUTOMATION_ORG_2']
+  - &automation-site-1
+    id: automation-site-1
+    description: Automation site 1 node
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='PMI|AUTOMATION_AWARDEE|AUTOMATION_ORG|AUTOMATION_SITE_1']
+  - &vrp-automation-last-node
+    id: vrp-automation-last-node
+    description: Vrp automation last node
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@name='nodeIds'])[last()]
+  - id: vrp-automation-last-node-checked
+    description: Automation last node checkbox is checked in vrp
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//input[@name='nodeIds'])[last()][@checked]
+  - &role-dropdown
+    id: role-dropdown
+    description: Role dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='userRoles'] div[class*='dropdown']
+  - &role-remove
+    id: role-remove
+    description: Role remove button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='react-select__multi-value__remove']
+  - &role-research-assistant
+    id: role-research-assistant
+    description: Role research assistant
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Research Assistant']
+  - id: automation-org-checked
+    description: Automation org checkbox is checked
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@id='PMI|AUTOMATION_AWARDEE|AUTOMATION_ORG'][@checked]
+  - id: automation-site-1-checked
+    description: Automation site 1 checkbox is checked
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@id='PMI|AUTOMATION_AWARDEE|AUTOMATION_ORG|AUTOMATION_SITE_1'][@checked]
+  - id: automation-site-2-checked
+    description: Automation site 2 checkbox is checked
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@id='PMI|AUTOMATION_AWARDEE|AUTOMATION_ORG|AUTOMATION_SITE_2'][@checked]
+  - id: first-name-required-error
+    description: Error when inputting empty first name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='firstName']/following-sibling::span[text()='Required']
+    values:
+      - lang: EN
+        value: Required
+  - id: last-name-required-error
+    description: Error when inputting empty last name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='lastName']/following-sibling::span[text()='Required']
+    values:
+      - lang: EN
+        value: Required
+  - id: first-name-50-characters-error
+    description: Error when inputting empty first name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='firstName']/following-sibling::span[text()='Must be
+            50 characters or less']
+    values:
+      - lang: EN
+        value: Must be 50 characters or less
+  - id: last-name-50-characters-error
+    description: Error when inputting empty last name
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //input[@name='lastName']/following-sibling::span[text()='Must be 50
+            characters or less']
+    values:
+      - lang: EN
+        value: Must be 50 characters or less
+  - id: role-required-error
+    description: Error when un-selecting at least one role
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Roles']/following-sibling::span[text()='Please select
+            at least one user role.']
+    values:
+      - lang: EN
+        value: Please select at least one user role.
+  - id: group-required-error
+    description: Error when un-selecting at least one group
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(),'Groups')]/following-sibling::span[text()='Please
+            select at least one group for site pairing.']
+    values:
+      - lang: EN
+        value: Please select at least one group for site pairing.
+  - &delete-user-button
+    id: delete-user-button
+    description: Delete user button on editing page
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Delete']
+  - &delete-user-confirm-button
+    id: delete-user-confirm-button
+    description: Delete user button on delete confirmation model
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Delete User']
+  - id: lock-button
+    description: Lock button on editing page
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Lock']
+  - id: unlock-button
+    description: Unlock button on editing page
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Unlock']
+  - id: delete-confirm-message
+    description: Delete confirm message
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text() = 'Are you sure you want to delete']
+  - id: cancel-deletion-button
+    description: Cancel button on delete confirmation model
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(@class,'button-cancel')][text()='Cancel']
+  - id: back-to-user-management
+    description: Header back to user management
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="heading-back"]
+  - id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - &search-input
+    id: search-input
+    description: Search input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Search by name or email address']
+actions:
+  - id: edit-user
+    description: Edit user
+    actionElements:
+      - element: *role-remove
+        inputType: click
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-research-assistant
+        inputType: click
+      - element: *automation-site-1
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *vrp-automation-last-node
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: vrp-edit-user
+    description: Edit user in vrp
+    actionElements:
+      - element: *role-remove
+        inputType: click
+      - element: *role-dropdown
+        inputType: click
+      - element: *role-research-assistant
+        inputType: click
+      - element: *vrp-automation-last-node
+        inputType: click
+      - element: *save-button
+        condition: ENABLED
+        inputType: click
+  - id: delete-user
+    description: Delete User
+    actionElements:
+      - element: *delete-user-button
+        condition: DISPLAYED
+        inputType: click
+      - element: *delete-user-confirm-button
+        condition: DISPLAYED
+        inputType: click
+      - element: *search-input
+        condition: DISPLAYED
+        inputType: click

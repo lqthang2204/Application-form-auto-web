@@ -1,0 +1,79 @@
+elements:
+  - &login-link
+    id: login-link
+    description: Login link
+    locators:
+      - device: WEB
+        type: ID
+        value: login-page-link
+  - &logout
+    id: logout
+    description: Logout button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[ng-click="hc.saveFormAndLogout()"]
+  - &setting-icon
+    id: setting-icon
+    description: Icon setting on left menu
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[.='Settings']
+  - &cati-banner
+    id: cati-banner
+    description: Text in cati banner
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='catiBanner'] p
+  - &cati-interviewer
+    id: cati-interviewer
+    description: Text in cati interviewer
+    locators:
+      - device: WEB
+        type: CSS
+        value: b[class*="cati-interviewer"]
+  - &pmi-user
+    id: pmi-user
+    description: Email of pmi-user displayed in cati interviewer
+    locators:
+      - device: WEB
+        type: CSS
+        value: b[class*="pmi-user"]
+  - &dashboard-icon
+    id: dashboard-icon
+    description: Icon dashboard on left menu
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ui-view="navigation"] a[href="/dashboard"]
+  - &cati-session-banner
+    id: cati-session-banner
+    description: Banner cati session
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ui-view="catiSessionBanner"]
+  - &setting-icon
+    id: setting-icon
+    description: Icon setting on the left menu
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href="/settings?lang=en&programCode=pmi"]
+  - &agreements-icon
+    id: agreements-icon
+    description: Icon agreements on the left menu
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target="navigation.links.agreements"]
+actions:
+  - id: click-login-link
+    description: Click login link
+    actionElements:
+      - element: *login-link
+        condition: DISPLAYED
+        timeout: 3000
+        inputType: click

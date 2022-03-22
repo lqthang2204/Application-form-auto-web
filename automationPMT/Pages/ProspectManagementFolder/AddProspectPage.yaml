@@ -1,0 +1,1098 @@
+elements:
+  - &external-id-input
+    id: external-id-input
+    description: External id input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='externalId']
+  - &external-id-maximum-length-limit-25-error
+    id: external-id-maximum-length-limit-25-error
+    description: External id maximum length limit 25 error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of external Id exceeds maximum length limit of 25 characters.
+  - &cohort-group-dropdown
+    id: cohort-group-dropdown
+    description: Cohort group dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Cohort Group'] div[class*='react-select-container']
+  - &cohort-group-option-1
+    id: cohort-group-option-1
+    description: Cohort group option 1
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option-0']
+  - &language-dropdown
+    id: language-dropdown
+    description: Language dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Language'] div[class*='react-select-container']
+  - &english-option
+    id: english-option
+    description: English option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='English']
+  - &spanish-option
+    id: spanish-option
+    description: Spanish option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Spanish']
+  - &preferred-name-input
+    id: preferred-name-input
+    description: Preferred name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='preferredName']
+  - &preferred-name-maximum-length-limit-25-error
+    id: preferred-name-maximum-length-limit-25-error
+    description: Preferred name maximum length limit 25 error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of preferred name exceeds maximum length limit of 25 characters.
+  - &prefix-salutations-dropdown
+    id: prefix-salutations-dropdown
+    description: Prefix/Salutations dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Prefix/Salutations'] div[class*='react-select-container']
+  - &mx-option
+    id: mx-option
+    description: Mx option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mx.']
+  - &mr-option
+    id: mr-option
+    description: Mr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mr.']
+  - &ms-option
+    id: ms-option
+    description: Ms option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Ms.']
+  - &miss-option
+    id: miss-option
+    description: Miss option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Miss']
+  - &dr-option
+    id: dr-option
+    description: Dr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Dr.']
+  - &mrs-option
+    id: mrs-option
+    description: Mrs option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mrs.']
+  - &suffix-dropdown
+    id: suffix-dropdown
+    description: Suffix dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Suffix'] div[class*='react-select-container']
+  - &jr-option
+    id: jr-option
+    description: Jr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Jr.']
+  - &sr-option
+    id: sr-option
+    description: Sr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Sr.']
+  - &iii-option
+    id: iii-option
+    description: III option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='III']
+  - &md-option
+    id: md-option
+    description: md option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='M.D.']
+  - &phd-option
+    id: phd-option
+    description: phd option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Ph.D.']
+  - &first-name-input
+    id: first-name-input
+    description: First name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='firstName']
+  - &first-name-maximum-length-limit-25-error
+    id: first-name-maximum-length-limit-25-error
+    description: First name maximum length limit 25 error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of first name exceeds maximum length limit of 25 characters.
+  - &middle-name-input
+    id: middle-name-input
+    description: Middle name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='middleName']
+  - &middle-name-maximum-length-limit-25-error
+    id: middle-name-maximum-length-limit-25-error
+    description: Middle name maximum length limit 25 error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of middle name exceeds maximum length limit of 25 characters.
+  - &last-name-input
+    id: last-name-input
+    description: Last name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='lastName']
+  - &last-name-maximum-length-limit-25-error
+    id: last-name-maximum-length-limit-25-error
+    description: Last name maximum length limit 25 error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of last name exceeds maximum length limit of 25 characters.
+  - &email-input
+    id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='email']
+  - &email-invalid-error
+    id: email-invalid-error
+    description: Email invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: Email is invalid format.
+  - &secondary-email-input
+    id: secondary-email-input
+    description: Secondary email input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='secondaryEmail']
+  - &mobile-phone-input
+    id: mobile-phone-input
+    description: Mobile phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter mobile phone']
+  - &mobile-phone-invalid-error
+    id: mobile-phone-invalid-error
+    description: Mobile phone invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: Phone number is invalid format - should be 10 digits.
+  - &home-phone-input
+    id: home-phone-input
+    description: Mobile phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter home phone']
+  - &home-phone-invalid-error
+    id: home-phone-invalid-error
+    description: Home phone invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: Home Phone number is invalid format - should be 10 digits.
+  - &work-phone-input
+    id: work-phone-input
+    description: Work phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter work phone']
+  - &work-phone-invalid-error
+    id: work-phone-invalid-error
+    description: Work phone invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: Work Phone number is invalid format - should be 10 digits.
+  - &home-address-street-1-input
+    id: home-address-street-1-input
+    description: Home address street 1 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street10']
+  - &street-1-invalid-error
+    id: street-1-invalid-error
+    description: Street 1 invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of street 1 exceeds maximum length limit of 50 characters.
+  - &home-address-street-2-input
+    id: home-address-street-2-input
+    description: Home address street 2 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street20']
+  - &street-2-invalid-error
+    id: street-2-invalid-error
+    description: Street 2 invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of street 2 exceeds maximum length limit of 50 characters.
+  - &home-address-city-input
+    id: home-address-city-input
+    description: City input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='city0']
+  - &city-invalid-error
+    id: city-invalid-error
+    description: City invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of city exceeds maximum length limit of 50 characters.
+  - &home-address-state-dropdown
+    id: home-address-state-dropdown
+    description: Home address state dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Select state'])[1]
+  - &alabama-option
+    id: alabama-option
+    description: Alabama option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alabama']
+  - &alaska-option
+    id: alaska-option
+    description: Alaska option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alaska']
+  - &wyoming-option
+    id: wyoming-option
+    description: Wyoming option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Wyoming']
+  - &home-address-zip-code-input
+    id: home-address-zip-code-input
+    description: Home address zip code input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='zipCode0']
+  - &zip-code-maximum-length-error
+    id: zip-code-maximum-length-error
+    description: Zip code maximum length error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value zip code exceeds maximum length limit of 15 characters.
+  - &home-address-country-dropdown
+    id: home-address-country-dropdown
+    description: Home address country dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Select country'])[1]
+  - &home-address-afghanistan-option
+    id: home-address-afghanistan-option
+    description: Home address Afghanistan option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Afghanistan']
+  - &home-address-albania-option
+    id: home-address-albania-option
+    description: Home address Albania option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Albania']
+  - &home-address-zimbabwe-option
+    id: home-address-zimbabwe-option
+    description: Home address Zimbabwe option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Zimbabwe']
+  - &same-as-home-address-checkbox
+    id: same-as-home-address-checkbox
+    description: Same as home address checkbox
+    locators:
+      - device: WEB
+        type: CSS
+        value: label[class*='colored-checkbox-content']
+  - &mailing-address-street-1-address-input
+    id: mailing-address-street-1-input
+    description: Mailing address street 1 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street11']
+  - &mailing-address-street-2-address-input
+    id: mailing-address-street-2-input
+    description: Mailing address street 2 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street21']
+  - &mailing-address-city-input
+    id: mailing-address-city-input
+    description: City input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='city1']
+  - &mailing-address-state-dropdown
+    id: mailing-address-state-dropdown
+    description: Mailing address state dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Select state'])[1]
+  - &alabama-option
+    id: alabama-option
+    description: Alabama option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alabama']
+  - &mailing-address-zip-code-input
+    id: mailing-address-zip-code-input
+    description: Mailing address zip code input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='zipCode1']
+  - &mailing-address-country-dropdown
+    id: mailing-address-country-dropdown
+    description: Mailing address country dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[text()='Select country'])[1]
+  - &mailing-address-afghanistan-option
+    id: mailing-address-afghanistan-option
+    description: Mailing address Afghanistan option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Afghanistan']
+  - &mailing-address-albania-option
+    id: mailing-address-albania-option
+    description: Mailing address Albania option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Albania']
+  - &mailing-address-zimbabwe-option
+    id: mailing-address-zimbabwe-option
+    description: Mailing address Zimbabwe option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Zimbabwe']
+  - &gender-dropdown
+    id: gender-dropdown
+    description: Gender dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select gender']
+  - &none-of-these-describe-me-option
+    id: none-of-these-describe-me-option
+    description: None of these describe me option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='None of these describe me']
+  - &man-option
+    id: man-option
+    description: Man option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Man']
+  - &non-binary-option
+    id: non-binary-option
+    description: Non-binary option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Non-Binary']
+  - &transgender-option
+    id: transgender-option
+    description: Transgender option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Transgender']
+  - &woman-option
+    id: woman-option
+    description: Woman option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Woman']
+  - &prefer-not-to-answer-option
+    id: prefer-not-to-answer-option
+    description: Prefer not to answer option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prefer not to answer']
+  - &race-dropdown
+    id: race-dropdown
+    description: Race dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select race']
+  - &prefer-not-to-answer-option
+    id: prefer-not-to-answer-option
+    description: Prefer not to answer option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prefer not to answer']
+  - &american-indian-or-alaska-native-option
+    id: american-indian-or-alaska-native-option
+    description: American Indian or Alaska Native option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='American Indian or Alaska Native']
+  - &white-option
+    id: white-option
+    description: White option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='White']
+  - &dob-input
+    id: dob-input
+    description: DOB input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter Date of Birth']
+  - &dob-invalid-error
+    id: dob-invalid-error
+    description: DOB invalid error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The Date of birth is incorrect format - should be MM/DD/YYYY.
+  - &communication-channel-dropdown
+    id: communication-channel-dropdown
+    description: Select communication channel dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'Communication Channel')]//div[contains(@class, 'react-select-container')]
+  - &email-option
+    id: email-option
+    description: Email option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email']
+  - &sms-option
+    id: sms-option
+    description: SMS option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='SMS']
+  - &both-email-sms-option
+    id: both-email-sms-option
+    description: Both Email & SMS option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Both Email & SMS']
+  - &none-option
+    id: none-option
+    description: None option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='None']
+  - &school-university-name-dropdown
+    id: school-university-name-dropdown
+    description: Select school/university name dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select school/university name']
+  - &abraham-baldwin-agricultural-college-option
+    id: abraham-baldwin-agricultural-college-option
+    description: Abraham Baldwin Agricultural College (Abraham Baldwin) option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), 'Abraham Baldwin Agricultural College')]
+  - &adams-state-university-option
+    id: adams-state-university-option
+    description: Adams state university option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Adams State University']
+  - &youngstown-state-university-option
+    id: youngstown-state-university-option
+    description: Youngstown State University option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Youngstown State University']
+  - &graduation-year-dropdown
+    id: graduation-year-dropdown
+    description: Select graduation year dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Select graduation year']
+  - &1900-option
+    id: 1900-option
+    description: 1900 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='1900']
+  - &2020-option
+    id: 2020-option
+    description: 2020 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='2020']
+  - &event-id-input
+    id: event-id-input
+    description: Enter event id input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Event ID'] input
+  - &event-id-option
+    id: event-id-option
+    description: Enter event id option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Event ID']/following::div[contains(@id,'option-0')]
+  - &event-id-required-error
+    id: event-id-required-error
+    description: Event id required error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: Event ID is required in case Event Name available.
+  - &event-id-option-remove-button
+    id: event-id-option-remove-button
+    description: Enter event id option remove button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Event ID']/following::div[contains(@class, 'clear-indicator')]
+  - &event-name-input
+    id: event-name-input
+    description: Enter event name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Event Name'] input
+  - &event-name-option
+    id: event-name-option
+    description: Enter event name option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Event Name']/following::div[contains(@id,'option-0')]
+  - &event-name-option-remove-button
+    id: event-name-option-remove-button
+    description: Enter event name option remove button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Event Name']/following::div[contains(@class, 'clear-indicator')]
+  - &event-name-required-error
+    id: event-name-required-error
+    description: Event name required error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: Event Name is required in case Event ID available.
+  - &list-name-input
+    id: list-name-input
+    description: Enter list name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='List Name'] input
+  - &list-name-option
+    id: list-name-option
+    description: Option in list name dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='List Name']/following::div[contains(@id,'option-0')]
+  - &list-name-required-error
+    id: list-name-required-error
+    description: List name required error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: List Name field cannot be an empty value.
+  - &source-1-input
+    id: source-1-input
+    description: Source 1 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source1']
+  - &source-1-maximum-length-limit-error
+    id: source-1-maximum-length-limit-error
+    description: Source 1 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 1 exceeds maximum length limit of 25 characters.
+  - &source-2-input
+    id: source-2-input
+    description: Source 2 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source2']
+  - &source-2-maximum-length-limit-error
+    id: source-2-maximum-length-limit-error
+    description: Source 2 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 2 exceeds maximum length limit of 25 characters.
+  - &source-3-input
+    id: source-3-input
+    description: Source 3 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source3']
+  - &source-3-maximum-length-limit-error
+    id: source-3-maximum-length-limit-error
+    description: Source 3 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 3 exceeds maximum length limit of 25 characters.
+  - &source-4-input
+    id: source-4-input
+    description: Source 4 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source4']
+  - &source-4-maximum-length-limit-error
+    id: source-4-maximum-length-limit-error
+    description: Source 4 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 4 exceeds maximum length limit of 25 characters.
+  - &source-5-input
+    id: source-5-input
+    description: Source 5 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source5']
+  - &source-5-maximum-length-limit-error
+    id: source-5-maximum-length-limit-error
+    description: Source 5 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 5 exceeds maximum length limit of 25 characters.
+  - &source-6-input
+    id: source-6-input
+    description: Source 6 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source6']
+  - &source-6-maximum-length-limit-error
+    id: source-6-maximum-length-limit-error
+    description: Source 6 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 6 exceeds maximum length limit of 25 characters.
+  - &source-7-input
+    id: source-7-input
+    description: Source 7 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source7']
+  - &source-7-maximum-length-limit-error
+    id: source-7-maximum-length-limit-error
+    description: Source 7 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 7 exceeds maximum length limit of 25 characters.
+  - &source-8-input
+    id: source-8-input
+    description: Source 8 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source8']
+  - &source-8-maximum-length-limit-error
+    id: source-8-maximum-length-limit-error
+    description: Source 8 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 8 exceeds maximum length limit of 25 characters.
+  - &source-9-input
+    id: source-9-input
+    description: Source 9 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source9']
+  - &source-9-maximum-length-limit-error
+    id: source-9-maximum-length-limit-error
+    description: Source 9 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 9 exceeds maximum length limit of 25 characters.
+  - &source-10-input
+    id: source-10-input
+    description: Source 10 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source10']
+  - &source-10-maximum-length-limit-error
+    id: source-10-maximum-length-limit-error
+    description: Source 10 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 10 exceeds maximum length limit of 25 characters.
+  - &source-11-input
+    id: source-11-input
+    description: Source 11 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source11']
+  - &source-11-maximum-length-limit-error
+    id: source-11-maximum-length-limit-error
+    description: Source 11 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 11 exceeds maximum length limit of 25 characters.
+  - &source-12-input
+    id: source-12-input
+    description: Source 12 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='source12']
+  - &source-12-maximum-length-limit-error
+    id: source-12-maximum-length-limit-error
+    description: Source 12 maximum length limit error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-msg']
+    values:
+      - lang: EN
+        value: The value of source 12 exceeds maximum length limit of 25 characters.
+  - &edit-org-button
+    id: edit-org-button
+    description: Edit org button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*="edit-org-btn"] > svg
+  - &org-structure-required-error
+    id: org-structure-required-error
+    description: Organization structure required error
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class='error-message']
+    values:
+      - lang: EN
+        value: Organizational Structure is required field.
+  - &site-title
+    id: site-title
+    description: Site title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='title-hierarchy row'][text()='Site']
+  - &site-view-all-button
+    id: site-view-all-button
+    description: Site view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'view-all-btn')])[3]
+  - &site-1-radio-button
+    id: site-1-radio-button
+    description: Site 1 radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Site 1']
+  - &org-structure-save-button
+    id: org-structure-save-button
+    description: Organization structure save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='structure-summary'] button[class*='btn-save']
+  - &org-structure-cancel-button
+    id: org-structure-cancel-button
+    description: Organization structure cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='structure-summary'] button[class*='btn-cancel']
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Save']
+  - &save-and-add-button
+    id: save-and-add-button
+    description: Save and add button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Save and Add New']
+  - &cancel-button
+    id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Cancel']
+  - &back-to-prospect-list-button
+    id: back-to-prospect-list-button
+    description: Back to prospect list button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class*='back-arrow']
+  - &email-in-use-error-message
+    id: email-in-use-error-message
+    description: Prospect's Email value already in use in another profile error message
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()="Prospect's Email value already in use in another profile."]
+  - &vrp-site-title
+    id: vrp-site-title
+    description: VRP site title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='title-hierarchy row'])[2]
+  - &vrp-site-view-all-button
+    id: vrp-site-view-all-button
+    description: VRP site view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'view-all-btn')])[2]
+  - &clinic-automation-radio-button
+    id: clinic-automation-radio-button
+    description: Clinic Automation radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Org']
+  - &clinic-automation-2-radio-button
+    id: clinic-automation-2-radio-button
+    description: Clinic Automation 2 radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Org 2']
+actions:
+  - id: check-email-in-use-error-if-exist
+    description: Check email in use error if exist
+    actionElements:
+      - element: *email-in-use-error-message
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+      - element: *cancel-button
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: edit-org-structure
+    description: Edit organization structure
+    actionElements:
+      - element: *edit-org-button
+        inputType: click
+      - element: *vrp-site-title
+        inputType: click
+      - element: *vrp-site-view-all-button
+        inputType: click
+      - element: *clinic-automation-radio-button
+        condition: ENABLED
+        inputType: click
+      - element: *org-structure-save-button
+        condition: ENABLED
+        inputType: click

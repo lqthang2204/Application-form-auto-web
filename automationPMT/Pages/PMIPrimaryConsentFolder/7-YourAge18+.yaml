@@ -1,0 +1,35 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: Radio option yes
+    locators:
+      - device: API
+        value: ExtraConsent_18YearsofAge
+      - device: WEB
+        type: XPATH
+        value: //div[text()="Yes"]
+    values:
+      - lang: EN
+        value: 'Yes'
+  - id: radio-option-2
+    description: Radio option no
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()="No"]
+    values:
+      - lang: EN
+        value: 'No'
+apiPage:
+    name: 18 or older
+    sections:
+      - name: 18 or older
+        fields:
+          - name: radio-option-1
+            values:
+              - 18YearsofAge_18YearsYes

@@ -1,0 +1,32 @@
+elements:
+  - &next-button
+    id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &radio-option-1
+    id: radio-option-1
+    description: Radion option yes
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()="Yes"]
+  - &radio-option-2
+    id: radio-option-2
+    description: Radion option no
+    locators:
+      - device: API
+        value: EHRConsentPII_HelpWithEHRConsent
+      - device: WEB
+        type: XPATH
+        value: //div[text()="No"]
+apiPage:
+    name: did anyone help you with consent?
+    sections:
+      - name: everyone signature page
+        fields:
+          - name: radio-option-2
+            values:
+              - HelpWithEHRConsent_No

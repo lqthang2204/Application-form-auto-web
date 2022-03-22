@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Income
+  - id: pick-an-option-dropdown
+    description: Pick an income option dropdown
+    locators:
+      - device: API
+        value: Income_AnnualIncome
+      - device: WEB
+        type: CSS
+        value: select[ng-model="subField._parent.fieldEntryValue.value.value"]
+apiPage:
+    name: Income
+    sections:
+      - name: TheBasics_Income
+        fields:
+          - name: pick-an-option-dropdown
+            values:
+              - AnnualIncome_100k150k

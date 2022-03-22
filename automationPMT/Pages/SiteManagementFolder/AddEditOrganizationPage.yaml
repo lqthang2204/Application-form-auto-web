@@ -1,0 +1,161 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &select-parent-input
+    id: select-parent-input
+    description: Select parent input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Select Parent']/following::input[1]
+  - &select-parent-option
+    id: select-parent-option
+    description: Select parent option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@id, 'option')][text()='AUTOMATION_AWARDEE']
+  - &organization-id-input
+    id: organization-id-input
+    description: Organization id input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Organization ID']/following::input[1]
+  - &organization-name-input
+    id: organization-name-input
+    description: Organization name input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Organization Name']/following::input[1]
+  - &address-input
+    id: address-input
+    description: Address input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[contains(text(),'Address')]/following::input[1]
+  - &city-input
+    id: city-input
+    description: City input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='City']/following::input[1]
+  - &state-dropdown
+    id: state-dropdown
+    description: State dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='State']/following::div[contains(@class, 'select__control')]
+  - &option-1
+    id: option-1
+    description: Option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alabama']
+  - &zip-code-input
+    id: zip-code-input
+    description: Zip code input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Zip Code']/following::input[1]
+  - &verify-button
+    id: verify-button
+    description: Verify button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='verify-btn']
+  - &publish-button
+    id: publish-button
+    description: Publish button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cerulean-blue-btn']
+  - &publish-confirm-button
+    id: publish-confirm-button
+    description: Publish confirm button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-publish']
+  - &delete-button
+    id: delete-button
+    description: Delete button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='delete-btn']
+  - &confirm-delete-button
+    id: confirm-delete-button
+    description: Confirm delete button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-delete']
+  - &ptsc-scheduling-status-active-option
+    id: ptsc-scheduling-status-active-option
+    description: PTSC scheduling status active option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='PTSC Scheduling Status']/following::label[text()='Active'][1]
+  - &digital-scheduling-status-active-option
+    id: digital-scheduling-status-active-option
+    description: Digital scheduling status active option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='Digital Scheduling Status']/following::label[text()='Active'][1]
+actions:
+  - id: fill-address-if-exist
+    description: Fill address if exist
+    actionElements:
+      - element: *address-input
+        infoType: streetOne
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: text
+      - element: *city-input
+        infoType: city
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: text
+      - element: *zip-code-input
+        infoType: zip
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: text
+      - element: *state-dropdown
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *option-1
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *ptsc-scheduling-status-active-option
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+      - element: *digital-scheduling-status-active-option
+        condition: DISPLAYED
+        timeout: 1000
+        inputType: click
+  - id: click-verify-button-if-exist
+    description: Click verify button if exist
+    actionElements:
+      - element: *verify-button
+        condition: DISPLAYED
+        inputType: click

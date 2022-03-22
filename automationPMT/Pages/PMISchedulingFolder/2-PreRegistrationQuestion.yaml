@@ -1,0 +1,48 @@
+elements:
+  - id: pre-registration-questions-page
+    description: Pre-registration Questions Page
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //b[text()='Before continuing we need a bit more information.']
+    values:
+      - lang: EN
+        value: Before continuing we need a bit more information.
+  - id: pre-registration-question1
+    description: Pre-registration Page first Question
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //legend[text()='In the past week, have you donated blood (e.g. Blood
+            Bank, RedCross), platelets, or plasma?']
+    values:
+      - lang: EN
+        value: In the past week, have you donated blood (e.g. Blood Bank, RedCross),
+            platelets, or plasma?
+  - id: pre-registration-answer1-yes
+    description: Pre-registration Page First Question Answer as Yes
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: donatedBlood.questions.yes
+  - id: pre-registration-question2
+    description: Pre-registration Page Second Question
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //legend[text()='In the past 6 months, have you had a blood transfusion?']
+    values:
+      - lang: EN
+        value: In the past 6 months, have you had a blood transfusion?
+  - id: pre-registration-answer2-yes
+    description: Pre-registration Page Second Question Answer as Yes
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: bloodTransfusion.questions.yes
+  - id: next-button
+    description: Next Button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[@class='MuiButton-label']

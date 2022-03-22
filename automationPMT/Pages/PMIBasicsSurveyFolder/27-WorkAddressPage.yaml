@@ -1,0 +1,19 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Sharing where you work may help us learn about how the environment
+            affects health. Sharing your work address is your choice. You can say
+            no and still take part in the program.
+apiPage: {}

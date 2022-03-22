@@ -1,0 +1,42 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: Radion option yes
+    locators:
+      - device: API
+        value: ConsentPII_HelpWithConsent
+      - device: WEB
+        type: XPATH
+        value: //div[text()="Yes"]
+  - id: radio-option-2
+    description: Radion option no
+    locators:
+      - device: API
+        value: ConsentPII_HelpWithConsent
+      - device: WEB
+        type: XPATH
+        value: //div[text()="No"]
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope' and contains(text(),'Did someone')]
+    values:
+      - lang: EN
+        value: Did someone from All of Us help you with this consent process?
+      - lang: ES
+        value: ''
+apiPage:
+    name: did someone from All of Us help you with the consent process?
+    sections:
+      - name: informed consent
+        fields:
+          - name: radio-option-2
+            values:
+              - HelpWithConsent_No

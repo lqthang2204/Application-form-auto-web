@@ -1,0 +1,38 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Active Duty
+  - id: no-answer
+    description: Answer No
+    locators:
+      - device: API
+        value: ActiveDuty_AvtiveDutyServeStatus
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "No")]
+      - device: ANDROID
+        type: XPATH
+        value: (//android.widget.TextView[contains(@text,"No")])[2]
+    values:
+      - lang: EN
+        value: 'No'
+apiPage:
+    name: Active Duty
+    sections:
+      - name: TheBasics_ActiveDuty
+        fields:
+          - name: no-answer
+            values:
+              - AvtiveDutyServeStatus_No

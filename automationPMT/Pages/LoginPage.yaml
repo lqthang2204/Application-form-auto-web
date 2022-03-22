@@ -1,0 +1,41 @@
+elements:
+  - &email-text-input
+    id: email-text-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: ID
+        value: username
+  - &password-text-input
+    id: password-text-input
+    description: Password input
+    locators:
+      - device: WEB
+        type: ID
+        value: password
+  - &login-button
+    id: login-button
+    description: Login button
+    locators:
+      - device: WEB
+        type: NAME
+        value: login
+  - &forgot-password-link
+    id: forgot-password-link
+    description: Forgot password link
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[contains(text(), 'Forgot Password?')]
+actions:
+  - id: login
+    description: Login to PMT
+    actionElements:
+      - element: *email-text-input
+        infoType: email
+        inputType: text
+      - element: *password-text-input
+        infoType: password
+        inputType: text
+      - element: *login-button
+        inputType: click

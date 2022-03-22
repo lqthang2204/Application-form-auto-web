@@ -1,0 +1,155 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - &first-name-input
+    id: first-name-input
+    description: Person 1 first name input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_PersonOneFirstName
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 1 first name"]
+  - &last-name-input
+    id: last-name-input
+    description: Person 1 last name input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_PersonOneLastName
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 1 last name"]
+  - &address-1-input
+    id: address-1-input
+    description: Person 1 Address 1 input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_PersonOneAddressOne
+      - device: WEB
+        type: XPATH
+        value: //textarea[@placeholder ='person 1 address 1']
+  - &city-input
+    id: city-input
+    description: Person 1 city input
+    locators:
+      - device: API
+        value: PersonOneAddress_PersonOneAddressCity
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 1 city"]
+  - &state-input-dropdown
+    id: state-input-dropdown
+    description: Person 1 state drop-down
+    locators:
+      - device: API
+        value: PersonOneAddress_PersonOneAddressState
+      - device: WEB
+        type: XPATH
+        value: (//select)[1]
+  - &email-input
+    id: email-input
+    description: Person 1 email input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_PersonOneEmail
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 1 email address"]
+  - &zip-code-input
+    id: zip-code-input
+    description: Person 1 zip code input
+    locators:
+      - device: API
+        value: PersonOneAddress_PersonOneAddressZipCode
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 1 zip code"]
+  - &phone-number-input
+    id: phone-number-input
+    description: Person 1 phone number input
+    locators:
+      - device: API
+        value: SecondaryContactInfo_PersonOneTelephone
+      - device: WEB
+        type: CSS
+        value: input[aria-label="person 1 phone number"]
+  - &relationship-input-dropdown
+    id: relationship-input-dropdown
+    description: Person 1 relationship drop-down
+    locators:
+      - device: API
+        value: SecondaryContactInfo_PersonOneRelationship
+      - device: WEB
+        type: XPATH
+        value: (//select)[2]
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: The All of Us Research Program will contact you periodically to gather
+          additional health related information. Please provide us with the name,
+          address, and telephone number of a relative or friend who would know where
+          you can be reached in case we have trouble contacting you (please give
+          us name of a person not currently living in the household).
+actions:
+  - id: fill-person-1-details
+    description: Fills out person 1 details for below elements
+    actionElements:
+      - element: *first-name-input
+        inputType: text
+      - element: *last-name-input
+        inputType: text
+      - element: *address-1-input
+        inputType: text
+      - element: *city-input
+        inputType: text
+      - element: *state-input-dropdown
+        inputType: dropDown
+      - element: *zip-code-input
+        inputType: text
+      - element: *email-input
+        inputType: text
+      - element: *phone-number-input
+        inputType: text
+      - element: *relationship-input-dropdown
+        inputType: dropDown
+apiPage:
+    name: Secondary Contact Info 1
+    sections:
+      - name: TheBasics_SecondaryContactInfo
+        fields:
+          - name: first-name-input
+            values:
+              - John
+          - name: last-name-input
+            values:
+              - Doe
+          - name: address-1-input
+            values:
+              - 4797  Blackwell Street
+          - name: city-input
+            values:
+              - Dry Creek
+          - name: state-input-dropdown
+            values:
+              - PersonOneAddressState_AK
+          - name: zip-code-input
+            values:
+              - 99737
+          - name: email-input
+            values:
+              - john.doe@example.com
+          - name: phone-number-input
+            values:
+              - 1111111119
+          - name: relationship-input-dropdown
+            values:
+              - PersonOneRelationship_Friend

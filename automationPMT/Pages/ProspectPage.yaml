@@ -1,0 +1,122 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: prospect-icon
+    description: Icon prospect on left menu
+    locators:
+      - device: WEB
+        type: ID
+        value: icon-Prospect
+  - id: add-prospect-button
+    description: Add prospect button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-add-prospect']
+  - id: list-name-field
+    description: Div list name on creating prospect form
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="creatable-select-listname"]
+  - id: list-name-input
+    description: Field list name on creating prospect form
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="creatable-select-listname"] input
+  - id: list-name-option
+    description: Option Automation prospect list in list name dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'select__option')][contains(text(),'Automation
+            prospect list')]
+  - id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name="email"]
+  - id: first-name-input
+    description: First name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name="firstName"]
+  - id: last-name-input
+    description: Last name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name="lastName"]
+  - id: edit-org-button
+    description: Button edit organization structure
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-org-btn'] > svg
+  - id: select-awardee
+    description: Select awardee
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="summary-structure-field"]:first-of-type
+  - id: view-all-awardee
+    description: View all awardee
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Awardee']//button[contains(@class,'view-all-btn')]
+  - id: automation-awardee
+    description: Automation awardee checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[@class='radio-label'][text()='Automation Awardee']
+  - id: save-org-button
+    description: Button save organization structure
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='structure-summary'] button[class*='btn-save']
+  - id: save-prospect-button
+    description: Button save prospect
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-save-prospect']
+  - id: mobile-phone-input
+    description: Field mobile phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder="Enter mobile phone"]
+  - id: org-structure-container
+    description: Organization structure container
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="org-container"]
+  - id: organization-title
+    description: Organization title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class,'title-hierarchy')][text()='Organization']
+  - id: organization-view-all-button
+    description: Organization view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Organization']//button[text()='View All']
+  - id: automation-org-checkbox
+    description: Automation Org checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Org']

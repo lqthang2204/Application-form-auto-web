@@ -1,0 +1,187 @@
+elements:
+  - id: primary-consent-start-button
+    description: Primary Consent start button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[contains(text(),"Primary Consent")]/following::button[1]
+  - id: site-pairing-start-button
+    description: Site Pairing start button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[contains(text(), 'Find a Partner')]/following::button[1]
+  - id: ehr-consent-start-button
+    description: EHR Consent start button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[contains(text(),"Electronic Health Records")]/following::button[1]
+  - id: basics-start-button
+    description: Basics start button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[contains(text(),"Basics")]/following::button[1]
+  - id: dna-consent-start-button
+    description: DNA start button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[contains(text(),"Consent to Get DNA")]/following::button[1]
+  - id: program-opportunities-section-title
+    description: Program Opportunities section title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[contains(text(), 'Program Opportunities')]
+  - id: look-location-banner-button
+    description: Look for a Location button on Dashboard Banner
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[contains(text(),' Look for a location ')]
+  - id: green-appointment-details-banner
+    description: Green Banner of Appointment Details
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@banners|schedule'
+  - id: reschedule-appointment-button
+    description: Reschedule Appointment Button of Green Banner
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: banners.appointment.reschedule.title
+  - id: cancel-appointment
+    description: Cancel Appointment that has been scheduled
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: banners.appointment.cancel.title
+  - id: confirm-cancel-appointment
+    description: Confirmation screen for cancelling an appointment
+    locators:
+      - device: WEB
+        type: ID
+        value: ds-modal-title
+  - id: click-cancel-confirmation-button
+    description: Click Cancel Appointment button on confirmation screen
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ds-btn-bar']//button[text()='Cancel Appointment']
+  - id: yellow-scheduling-banner
+    description: Yellow scheduling banner
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@banners|physicalMeasurements'
+  - id: checklist-dna-results-start-button
+    description: Checklist DNA start button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[contains(text(),"Checklist to Receive DNA Results")]//following::button[@title="Start"]
+  - id: look-for-a-location
+    description: Look for a location button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: banners.section.lookForaLocation.button
+  - id: notification-banner-title
+    description: Notification banner title
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: banners.scheduling.reminder.text
+    values:
+      - lang: EN
+        value:  Your appointment for Physical Measurements and Biospecimen has been scheduled.
+  - id: appointment-datetime
+    description: Appointment datetime
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: banners.section.receieve.section.DateAndTime
+  - id: go-to-dashboard
+    description: Go to dashboard
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//a[@href='/dashboard?lang=en&programCode=pmi'])[3]
+  - id: green-banner-appointment-site
+    description: Green Banner Appointment Site Details
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //strong[text()='Automation Site 1']
+  - id: pmi-logo
+    description: The logo for All of Us program
+    locators:
+      - device: WEB
+        type: CSS
+        value: img[alt='pmi logo']
+  - id: progress-striped
+    description: Progress striped when filling the survey form
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="progress-striped"]
+  - id: my-data-tab
+    description: My Data navigation button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: navigation.links.mydata
+    values:
+      - lang: EN
+        value: My Data
+  - id: form-insights
+    description: Form insights after any form submission
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: insights.form.name
+  - id: review-button
+    description: Review button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[title='Review']
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target*='form|button|continue']
+  - id: submit-button
+    description: Submit button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target*='form|button|submit']
+  - id: consent-yes-radio
+    description: YES, I agree to join the Panda Research study radio
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='radio-image-left ng-scope'])[1]
+  - id: firstname-input
+    description: Firstname input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter first name']
+  - id: middle-initial-input
+    description: Middle initial
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter your middle initial']
+  - id: lastname-input
+    description: Lastname input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Enter your last name']

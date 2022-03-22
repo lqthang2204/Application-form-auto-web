@@ -1,0 +1,30 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: email-address
+    description: This is a hidden email address field that is filled when user is
+        registered and starts filling out Primary consent (Not present on UI)
+    locators:
+      - device: API
+        value: ConsentPII_EmailAddress
+  - id: page-title
+    description: Page title
+    locators:
+        - device: WEB
+          type: XPATH
+          value: //div[@class='ng-binding ng-scope']//*[text()='Welcome']
+    values:
+      - lang: EN
+        value: Welcome
+apiPage:
+    name: welcome
+    sections:
+      - name: welcome 1
+        fields:
+          - name: email-address
+            values:
+              - user.email

@@ -1,0 +1,157 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &success-message
+    id: success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - &upload-prospect-button
+    id: upload-prospect-button
+    description: Upload prospect button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-upload-file']
+  - &add-prospect-button
+    id: add-prospect-button
+    description: Add prospect button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-add-prospect']
+  - &filter-button
+    id: filter-button
+    description: Filter button
+    locators:
+      - device: WEB
+        type: ID
+        value: dropdown-filter-options
+  - &search-input
+    id: search-input
+    description: Search input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[class*='search-input']
+  - &search-button
+    id: search-button
+    description: Search button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='search-btn']
+  - &upload-input
+    id: upload-input
+    description: Upload input
+    locators:
+      - device: WEB
+        type: ID
+        value: file-id
+  - &validation-complete-title
+    id: validation-complete-title
+    description: Validation complete title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='complete-title']
+    values:
+      - lang: EN
+        value: Validation Complete!
+  - &submit-list-button
+    id: submit-list-button
+    description: Submit list button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='submit-list-btn']
+  - &name-of-first-record
+    id: name-of-first-record
+    description: Name of first record
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class='prospect-name'] div
+  - &email-of-first-record
+    id: email-of-first-record
+    description: Email of first record
+    locators:
+      - device: WEB
+        type: CSS
+        value: td[tabindex='3'] div
+  - &expand-button
+    id: expand-button
+    description: Expand button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class='down']
+  - &archive-button
+    id: archive-button
+    description: Archive button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='delete-btn']
+  - &archive-profile-button
+    id: archive-profile-button
+    description: Archive profile button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-warning__restore']
+  - &archived-success-message
+    id: archived-success-message
+    description: Archived success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The prospect has been archived successfully.
+  - &empty-table
+    id: empty-table
+    description: Empty table
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='no-data']
+  - &filter-button
+    id: filter-button
+    description: Filter button
+    locators:
+      - device: WEB
+        type: ID
+        value: dropdown-filter-options
+  - &toggle-button
+    id: toggle-button
+    description: Toggle button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ballslider']
+  - &apply-button
+    id: apply-button
+    description: Apply button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class='apply-btn']
+  - &prospect-name
+    id: prospect-name
+    description: Prospect name
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class='prospect-name']

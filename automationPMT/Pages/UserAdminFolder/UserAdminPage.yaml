@@ -1,0 +1,71 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: success-message
+    description: Success message when creating user successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: Your changes have been saved.
+  - id: search-input
+    description: Search input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder='Search by name or email address']
+  - id: add-user
+    description: Add user button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class*='add-user-button']
+  - id: email-in-table
+    description: Column contains user email in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[3]//div
+  - id: first-name-in-table
+    description: Column contains user first name in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[1]//div
+  - id: last-name-in-table
+    description: Column contains user last name in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[2]//div
+  - id: status-in-table
+    description: Column contains user status in table
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[6]//div
+  - id: empty-user-table
+    description: Empty user table when filter a not existing user
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[text()='There is no data to display']
+  - &first-name
+    id: first-name
+    description: First name in the result table
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href*="/userAdmin/editUser"]
+  - id: cati-full-name
+    description: Full name displayed on the editing user page
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class="heading-create_user"]

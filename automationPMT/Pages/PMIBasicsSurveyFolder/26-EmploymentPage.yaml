@@ -1,0 +1,32 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Employment
+  - id: option-employed
+    description: Employed status
+    locators:
+      - device: API
+        value: Employment_EmploymentStatus
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Employed for wages")]
+apiPage:
+    name: Current Employment Status
+    sections:
+      - name: TheBasics_Employment
+        fields:
+          - name: option-employed
+            values:
+              - EmploymentStatus_EmployedForWages

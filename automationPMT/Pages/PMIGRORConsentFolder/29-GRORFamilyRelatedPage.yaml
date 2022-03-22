@@ -1,0 +1,33 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: previous-button
+    description: Previous button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|previous'
+  - id: option-1
+    description: Option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"I am worried")]
+  - id: option-2
+    description: Option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"I would still like")]
+  - id: family-related-page-title
+    description: Family related page title
+    locators:
+      - device: WEB
+        type: ARIA_LABEL
+        value: I may realize I’m not related to some family members in the way I thought
+            I was.
+apiPage: {}

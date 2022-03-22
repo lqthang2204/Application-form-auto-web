@@ -1,0 +1,921 @@
+elements:
+  - &spinner
+    id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - &success-message
+    id: success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+  - &engagement-saved-success-message
+    id: engagement-saved-success-message
+    description: Success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The engagement record has been saved successfully.
+  - &external-id-input
+    id: external-id-input
+    description: External id input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='externalId']
+  - &language-dropdown
+    id: language-dropdown
+    description: Language dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Language'] div[class*='react-select-container']
+  - &english-option
+    id: english-option
+    description: English option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='English']
+  - &spanish-option
+    id: spanish-option
+    description: Spanish option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Spanish']
+  - &cohort-group-dropdown
+    id: cohort-group-dropdown
+    description: Cohort group dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Cohort Group'] div[class*='react-select-container']
+  - &cohort-group-option-2
+    id: cohort-group-option-2
+    description: Cohort group option 2
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option-1']
+  - &preferred-name-input
+    id: preferred-name-input
+    description: Preferred name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='preferredName']
+  - &prefix-salutations-dropdown
+    id: prefix-salutations-dropdown
+    description: Prefix/Salutations dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Prefix/Salutations'] div[class*='react-select-container']
+  - &mx-option
+    id: mx-option
+    description: Mx option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mx.']
+  - &mr-option
+    id: mr-option
+    description: Mr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mr.']
+  - &ms-option
+    id: ms-option
+    description: Ms option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Ms.']
+  - &miss-option
+    id: miss-option
+    description: Miss option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Miss']
+  - &dr-option
+    id: dr-option
+    description: Dr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Dr.']
+  - &mrs-option
+    id: mrs-option
+    description: Mrs option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mrs.']
+  - &suffix-dropdown
+    id: suffix-dropdown
+    description: Suffix dropdown
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Suffix'] div[class*='react-select-container']
+  - &jr-option
+    id: jr-option
+    description: Jr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Jr.']
+  - &sr-option
+    id: sr-option
+    description: Sr option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Sr.']
+  - &iii-option
+    id: iii-option
+    description: III option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='III']
+  - &md-option
+    id: md-option
+    description: md option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='M.D.']
+  - &phd-option
+    id: phd-option
+    description: phd option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Ph.D.']
+  - &first-name-input
+    id: first-name-input
+    description: First name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='firstName']
+  - &middle-name-input
+    id: middle-name-input
+    description: Middle name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='middleName']
+  - &last-name-input
+    id: last-name-input
+    description: Last name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='lastName']
+  - &email-input
+    id: email-input
+    description: Email input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='email']
+  - &email-value
+    id: email-value
+    description: Email value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email']/parent::label/following-sibling::div/div
+  - &secondary-email-input
+    id: secondary-email-input
+    description: Secondary email input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='secondaryEmail']
+  - &mobile-phone-input
+    id: mobile-phone-input
+    description: Mobile phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Mobile Phone'] div[class*='phone-field'] input
+  - &mobile-phone-value
+    id: mobile-phone-value
+    description: Mobile phone value
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Mobile Phone']/parent::label/following-sibling::div/div
+  - &home-phone-input
+    id: home-phone-input
+    description: Mobile phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Home Phone'] div[class*='phone-field'] input
+  - &work-phone-input
+    id: work-phone-input
+    description: Work phone input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Work Phone'] div[class*='phone-field'] input
+  - &home-address-street-1-input
+    id: home-address-street-1-input
+    description: Home address street 1 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street10']
+  - &home-address-street-2-input
+    id: home-address-street-2-input
+    description: Home address street 2 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street20']
+  - &home-address-city-input
+    id: home-address-city-input
+    description: City input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='city0']
+  - &home-address-state-input
+    id: home-address-state-input
+    description: Home address state input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'State')]//div[contains(@class, 'input-field')]//input)[1]
+  - &alabama-option
+    id: alabama-option
+    description: Alabama option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alabama']
+  - &alaska-option
+    id: alaska-option
+    description: Alaska option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alaska']
+  - &wyoming-option
+    id: wyoming-option
+    description: Wyoming option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Wyoming']
+  - &home-address-zip-code-input
+    id: home-address-zip-code-input
+    description: Home address zip code input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='zipCode0']
+  - &home-address-country-dropdown
+    id: home-address-country-dropdown
+    description: Home address country dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'Country')]//div[contains(@class, 'react-select-container')])[1]
+  - &home-address-afghanistan-option
+    id: home-address-afghanistan-option
+    description: Home address Afghanistan option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Afghanistan']
+  - &home-address-albania-option
+    id: home-address-albania-option
+    description: Home address Albania option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Albania']
+  - &home-address-zimbabwe-option
+    id: home-address-zimbabwe-option
+    description: Home address Zimbabwe option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Zimbabwe']
+  - &same-as-home-address-checkbox
+    id: same-as-home-address-checkbox
+    description: Same as home address checkbox
+    locators:
+      - device: WEB
+        type: CSS
+        value: label[class*='colored-checkbox-content']
+  - &mailing-address-street-1-address-input
+    id: mailing-address-street-1-input
+    description: Mailing address street 1 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street11']
+  - &mailing-address-street-2-address-input
+    id: mailing-address-street-2-input
+    description: Mailing address street 2 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='street21']
+  - &mailing-address-city-input
+    id: mailing-address-city-input
+    description: City input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='city1']
+  - &mailing-address-state-input
+    id: mailing-address-state-input
+    description: Mailing address state input
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'State')]//div[contains(@class, 'input-field')]//input)[2]
+  - &alabama-option
+    id: alabama-option
+    description: Alabama option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Alabama']
+  - &mailing-address-zip-code-input
+    id: mailing-address-zip-code-input
+    description: Mailing address zip code input
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[name='zipCode1']
+  - &mailing-address-country-dropdown
+    id: mailing-address-country-dropdown
+    description: Mailing address country dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class, 'Country')]//div[contains(@class, 'react-select-container')])[2]
+  - &mailing-address-afghanistan-option
+    id: mailing-address-afghanistan-option
+    description: Mailing address Afghanistan option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Afghanistan']
+  - &mailing-address-albania-option
+    id: mailing-address-albania-option
+    description: Mailing address Albania option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Albania']
+  - &mailing-address-zimbabwe-option
+    id: mailing-address-zimbabwe-option
+    description: Mailing address Zimbabwe option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Zimbabwe']
+  - &gender-dropdown
+    id: gender-dropdown
+    description: Gender dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'Gender')]//div[contains(@class, 'react-select-container')]
+  - &none-of-these-describe-me-option
+    id: none-of-these-describe-me-option
+    description: None of these describe me option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='None of these describe me']
+  - &man-option
+    id: man-option
+    description: Man option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Man']
+  - &non-binary-option
+    id: non-binary-option
+    description: Non-binary option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Non-Binary']
+  - &transgender-option
+    id: transgender-option
+    description: Transgender option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Transgender']
+  - &woman-option
+    id: woman-option
+    description: Woman option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Woman']
+  - &prefer-not-to-answer-option
+    id: prefer-not-to-answer-option
+    description: Prefer not to answer option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prefer not to answer']
+  - &race-dropdown
+    id: race-dropdown
+    description: Race dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'Race')]//div[contains(@class, 'react-select-container')]
+  - &prefer-not-to-answer-option
+    id: prefer-not-to-answer-option
+    description: Prefer not to answer option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Prefer not to answer']
+  - &american-indian-or-alaska-native-option
+    id: american-indian-or-alaska-native-option
+    description: American Indian or Alaska Native option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='American Indian or Alaska Native']
+  - &white-option
+    id: white-option
+    description: White option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='White']
+  - &dob-input
+    id: dob-input
+    description: DOB input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='date-of-birth-field'] input
+  - &date-time-button
+    id: date-time-button
+    description: Date time button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='datetime-btn']
+  - &the-next-day
+    id: the-next-day
+    description: The next day
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //td[contains(@class, 'rdtActive')]/following::td[1]
+  - &communication-channel-dropdown
+    id: communication-channel-dropdown
+    description: Select communication channel dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'Communication Channel')]//div[contains(@class, 'react-select-container')]
+  - &email-option
+    id: email-option
+    description: Email option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Email']
+  - &sms-option
+    id: sms-option
+    description: SMS option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='SMS']
+  - &both-email-sms-option
+    id: both-email-sms-option
+    description: Both Email & SMS option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Both Email & SMS']
+  - &none-option
+    id: none-option
+    description: None option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='None']
+  - &school-university-name-dropdown
+    id: school-university-name-dropdown
+    description: Select school/university name dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'School/University Name')]//div[contains(@class, 'react-select-container')]
+  - &abraham-baldwin-agricultural-college-option
+    id: abraham-baldwin-agricultural-college-option
+    description: Abraham Baldwin Agricultural College (Abraham Baldwin) option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), 'Abraham Baldwin Agricultural College')]
+  - &adams-state-university-option
+    id: adams-state-university-option
+    description: Adams state university option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Adams State University']
+  - &youngstown-state-university-option
+    id: youngstown-state-university-option
+    description: Youngstown State University option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Youngstown State University']
+  - &graduation-year-dropdown
+    id: graduation-year-dropdown
+    description: Select graduation year dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(@class, 'Graduation Year')]//div[contains(@class, 'react-select-container')]
+  - &2019-option
+    id: 2019-option
+    description: 2019 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='2019']
+  - &2020-option
+    id: 2020-option
+    description: 2020 option
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='2020']
+  - &list-name-input
+    id: list-name-input
+    description: Enter list name input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='List Name'] input
+  - &list-name-option
+    id: list-name-option
+    description: Option in list name dropdown
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()='List Name']/following::div[contains(@id,'option-0')]
+  - &source-1-input
+    id: source-1-input
+    description: Source 1 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 1'] input
+  - &source-option
+    id: source-option
+    description: Source option
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[id*='option']
+  - &source-2-input
+    id: source-2-input
+    description: Source 2 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 2'] input
+  - &source-3-input
+    id: source-3-input
+    description: Source 3 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 3'] input
+  - &source-4-input
+    id: source-4-input
+    description: Source 4 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 4'] input
+  - &source-5-input
+    id: source-5-input
+    description: Source 5 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 5'] input
+  - &source-6-input
+    id: source-6-input
+    description: Source 6 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 6'] input
+  - &source-7-input
+    id: source-7-input
+    description: Source 7 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 7'] input
+  - &source-8-input
+    id: source-8-input
+    description: Source 8 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 8'] input
+  - &source-9-input
+    id: source-9-input
+    description: Source 9 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 9'] input
+  - &source-10-input
+    id: source-10-input
+    description: Source 10 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 10'] input
+  - &source-11-input
+    id: source-11-input
+    description: Source 11 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 11'] input
+  - &source-12-input
+    id: source-12-input
+    description: Source 12 input
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='Source 12'] input
+  - &site-title
+    id: site-title
+    description: Site title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='title-hierarchy row'][text()='Site']
+  - &site-view-all-button
+    id: site-view-all-button
+    description: Site view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'view-all-btn')])[3]
+  - &site-2-radio-button
+    id: site-2-radio-button
+    description: Site 2 radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Site 2']
+  - &org-structure-save-button
+    id: org-structure-save-button
+    description: Organization structure save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='structure-summary'] button[class*='btn-save']
+  - &org-structure-cancel-button
+    id: org-structure-cancel-button
+    description: Organization structure cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='structure-summary'] button[class*='btn-cancel']
+  - &save-button
+    id: save-button
+    description: Save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-save-prospect']
+  - &cancel-button
+    id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cancel-btn']
+  - &save-and-add-button
+    id: save-and-add-button
+    description: Save and add button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='btn-success']
+  - &cancel-button
+    id: cancel-button
+    description: Cancel button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='cancel-prospect-btn']
+  - &back-to-prospect-list-button
+    id: back-to-prospect-list-button
+    description: Back to prospect list button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[class*='back-arrow']
+  - &update-button
+    id: update-button
+    description: Update button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='update-profile-btn']
+  - &archive-button
+    id: archive-button
+    description: Archive button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='archive-btn']
+  - &archive-profile-button
+    id: archive-profile-button
+    description: Archive profile button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-warning__restore']
+  - &archived-success-message
+    id: archived-success-message
+    description: Archived success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The prospect has been archived successfully.
+  - &restore-button
+    id: restore-button
+    description: Restore button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='archive-btn']
+  - &restore-profile-button
+    id: restore-profile-button
+    description: Restore profile button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='button-warning__archive']
+  - &restore-success-message
+    id: restore-success-message
+    description: Restore success message
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='message animated fade success in']
+    values:
+      - lang: EN
+        value: The prospect has been restored successfully.
+  - &add-new-engagement-button
+    id: add-new-engagement-button
+    description: Add new engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='add-new-engagement-btn']
+  - &out-bound-phone
+    id: out-bound-phone
+    description: Out bound phone
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='hint-text']
+    values:
+      - lang: EN
+        value: Outbound Phone
+  - &out-bound-email
+    id: out-bound-email
+    description: Out bound email
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='hint-text']
+    values:
+      - lang: EN
+        value: Outbound Email
+  - &out-come-name
+    id: out-come-name
+    description: Out come name
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class*='outcome-name']
+    values:
+      - lang: EN
+        value: Appointment scheduled to complete activities with support
+  - &summary
+    id: summary
+    description: Summary
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - AUTOMATION SUMMARY TEXTAREA']
+    values:
+      - lang: EN
+        value: TA - AUTOMATION SUMMARY TEXTAREA
+  - &edit-engagement-button
+    id: edit-engagement-button
+    description: Edit engagement button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[class*='edit-record-btn'] svg
+  - &summary-edited
+    id: summary-edited
+    description: Summary edited
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='TA - AUTOMATION SUMMARY TEXTAREA EDITED']
+    values:
+      - lang: EN
+        value: TA - AUTOMATION SUMMARY TEXTAREA EDITED
+  - &follow-up-recontact
+    id: follow-up-recontact
+    description: Follow up recontact
+    locators:
+      - device: WEB
+        type: CSS
+        value: p[class*='follow-up-recontact']
+  - &vrp-awardee-title
+    id: vrp-awardee-title
+    description: VRP awardee title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='title-hierarchy row'])[1]
+  - &vrp-awardee-view-all-button
+    id: vrp-awardee-view-all-button
+    description: VRP awardee view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'view-all-btn')])[1]
+  - &awardee-automation-2-radio-button
+    id: awardee-automation-2-radio-button
+    description: Awardee Automation 2 radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Awardee 2']
+  - &vrp-site-title
+    id: vrp-site-title
+    description: VRP site title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='title-hierarchy row'])[2]
+  - &vrp-site-view-all-button
+    id: vrp-site-view-all-button
+    description: VRP site view all button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//button[contains(@class,'view-all-btn')])[2]
+  - &clinic-automation-2-radio-button
+    id: clinic-automation-2-radio-button
+    description: Clinic Automation 2 radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //span[text()='Automation Org 2']

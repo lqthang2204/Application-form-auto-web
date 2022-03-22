@@ -1,0 +1,30 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Taking part is voluntary. I get to choose if
+            I want to do it.")]
+  - id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Taking part is required. I have to do it.")]
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Question 2')]
+    values:
+      - lang: EN
+        value: Question 2
+apiPage: {}

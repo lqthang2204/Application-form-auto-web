@@ -1,0 +1,42 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Gender Identity
+      - lang: ES
+  - id: option-woman
+    description: Gender Woman
+    locators:
+      - device: API
+        value: Gender_GenderIdentity
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "Woman")]
+    values:
+      - lang: EN
+        value: Woman
+  - id: page-end
+    description: page end
+    locators:
+      - device: WEB
+        type: ID
+        value: pageEnd
+apiPage:
+    name: Gender Identity
+    sections:
+      - name: TheBasics_Gender
+        fields:
+          - name: option-woman
+            values:
+              - GenderIdentity_Woman

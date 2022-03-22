@@ -1,0 +1,19 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: The next questions ask if you have a disability.  Some questions will
+            ask you about more than one disability at a time.  Please answer “Yes”
+            if you have any one of them.
+apiPage: {}

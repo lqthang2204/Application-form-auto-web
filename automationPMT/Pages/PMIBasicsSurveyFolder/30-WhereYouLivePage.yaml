@@ -1,0 +1,29 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Where You Live
+  - id: where-you-live
+    description: Own or Rent
+    locators:
+      - device: API
+        value: HomeOwn_CurrentHomeOwn
+apiPage:
+    name: Own or Rent
+    sections:
+      - name: TheBasics_HomeOwn
+        fields:
+          - name: where-you-live
+            values:
+              - CurrentHomeOwn_Rent

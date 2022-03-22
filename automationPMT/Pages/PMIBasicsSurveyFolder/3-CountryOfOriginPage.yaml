@@ -1,0 +1,38 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Country of Origin
+  - id: radio-option-1
+    description: Radion option 1
+    locators:
+      - device: API
+        value: TheBasics_Birthplace
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"USA")]
+  - id: radio-option-2
+    description: Radion option 2
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(),"Other")]
+apiPage:
+    name: Country Born
+    sections:
+      - name: TheBasics_Birthplace
+        fields:
+          - name: radio-option-1
+            values:
+              - Birthplace_USA

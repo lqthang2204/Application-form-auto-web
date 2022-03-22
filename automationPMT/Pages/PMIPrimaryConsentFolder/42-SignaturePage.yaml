@@ -1,0 +1,49 @@
+elements:
+  - id: select-type-signature
+    description: Type signature radio button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //label[text()=" Type"]
+    values:
+      - lang: EN
+        value: Type
+  - id: full-name
+    description: Type your full name
+    locators:
+      - device: API
+        value: ExtraConsent_Signature
+      - device: WEB
+        type: XPATH
+        value: //input[@aria-label='type your signature' or @aria-label='type your
+            full name']
+    values:
+      - lang: EN
+        value: type your full name
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope' and contains(text(),'please use your mouse to sign below')]
+    values:
+      - lang: EN
+        value: If you're using a computer please use your mouse to sign below. If
+          you are using a mobile device please use your finger to sign. If you’d
+          rather, you can type your name instead.
+      - lang: ES
+        value: ''
+apiPage:
+    name: consent signature
+    sections:
+      - name: informed consent
+        fields:
+          - name: full-name
+            values:
+              - user.firstName

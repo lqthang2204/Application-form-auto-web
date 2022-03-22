@@ -1,0 +1,128 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Ancestry
+      - lang: ES
+  - id: american-indian-or-alaska-native
+    description: American Indian or Alaska Native Selector
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "American Indian")]
+    values:
+      - lang: EN
+        value: 'American Indian or Alaska Native (For example: Aztec, Blackfeet Tribe,
+            Mayan, Navajo Nation, Native Village of Barrow Inupiat Traditional Government,
+            Nome Eskimo Community, etc.)'
+      - lang: ES
+  - id: black-african-american
+    description: African American Selector
+    locators:
+      - device: API
+        value: Race_WhatRaceEthnicity
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "Black, African")]
+    values:
+      - lang: EN
+        value: 'Black, African American or African (For example: African American,
+            Ethiopian, Haitian, Jamaican, Nigerian, Somali, etc.)'
+  - id: none-of-these
+    description: None of these fully describe me Selector
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "None of these")]
+    values:
+      - lang: EN
+        value: None of these fully describe me
+  - id: asian
+    description: Asian Selector
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "Asian")]
+    values:
+      - lang: EN
+        value: 'Asian (For example: Asian Indian, Chinese, Filipino, Japanese, Korean,
+            Vietnamese, etc.)'
+      - lang: ES
+  - id: asian-check
+    description: Asian Selector Check
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "Asian")]/../..
+  - id: american-indian-or-alaska-native-check
+    description: American Indian or Alaska Native Selector Check
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "American Indian")]/../..
+  - id: black-african-american-check
+    description: African American Selector Check
+    locators:
+      - device: API
+        value: Race_WhatRaceEthnicity
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "Black, African")]/../..
+  - id: none-of-these-check
+    description: None of these fully describe me Selector Check
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "None of these")]/../..
+  - id: prefer-not-to-answer
+    description: Prefer not to answer Selector
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "Prefer not")]
+    values:
+      - lang: EN
+        value: Prefer not to answer
+      - lang: ES
+  - id: prefer-not-to-answer-check
+    description: Prefer not to answer Selector Check
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[starts-with(text(), "Prefer not")]/../..
+  - id: native-hawaiian
+    description: Native Hawaiian Selector
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[contains(text(), "Native Hawaiian")]
+    values:
+      - lang: EN
+        value: 'Native Hawaiian or other Pacific Islander (For example: Chamorro,
+                 Fijian, Marshallese, Native Hawaiian, Tongan, etc.) '
+      - lang: ES
+  - id: text-input-placeholder
+    description: User text input field placeholder
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[placeholder="enter other race or ethnicity"]
+apiPage:
+    name: Race Describes You
+    sections:
+      - name: TheBasics_Race
+        fields:
+          - name: black-african-american
+            values:
+              - WhatRaceEthnicity_Black

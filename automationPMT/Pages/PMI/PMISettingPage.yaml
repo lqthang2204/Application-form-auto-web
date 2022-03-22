@@ -1,0 +1,419 @@
+elements:
+  - &sms-code
+    id: sms-code
+    description: SMS code
+    locators:
+      - device: WEB
+        type: ID
+        value: smsCode
+  - &add-personal-info
+    id: add-personal-info
+    description: Button add personal infomation
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target="settings.section.fields.add.action"]
+  - &change-personal-info
+    id: change-personal-info
+    description: Button Change personal infomation
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target="settings.section.personalInfo.change"]
+  - &firstname-input
+    id: firstname-input
+    description: Input participant's first name
+    locators:
+      - device: WEB
+        type: ID
+        value: firstName
+  - &firstname-value
+    id: firstname-value
+    description: Participant's first name value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[data-target *='view|firstName']
+  - id: middle-name-input
+    description: Input participant's middle name
+    locators:
+      - device: WEB
+        type: ID
+        value: middleInitial
+  - id: preferred-name-input
+    description: Input participant's preferred name
+    locators:
+      - device: WEB
+        type: ID
+        value: prefferedName
+  - &lastname-input
+    id: lastname-input
+    description: Input participant's last name
+    locators:
+      - device: WEB
+        type: ID
+        value: lastName
+  - &lastname-value
+    id: lastname-value
+    description: Participant's last name value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[data-target *='view|lastName']
+  - &birthday-input
+    id: birthday-input
+    description: Input participant's birthday
+    locators:
+      - device: WEB
+        type: ID
+        value: profileBirthDate
+  - &contact-phone-number-input
+    id: contact-phone-number-input
+    description: Input contact phone number
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='profilePhone']
+  - id: alternate-email-input
+    description: Input alternate Email Address
+    locators:
+      - device: WEB
+        type: CSS
+        value: input[id='alternateEmail']
+  - &save-personal-info-button
+    id: save-personal-info-button
+    description: Button save personal infomation
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="personalInfo.button.save"]
+  - &home-address-street1
+    id: home-address-street1
+    description: Street1 of home address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="HomeAddress"] span[data-target="address.streetOne"]
+  - &home-address-city
+    id: home-address-city
+    description: City of home address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="HomeAddress"] span[data-target="address.city"]
+  - &home-address-state
+    id: home-address-state
+    description: State of home address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="HomeAddress"] span[data-target="address.state"]
+  - &home-address-zip
+    id: home-address-zip
+    description: Zipcode of home address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="HomeAddress"] span[data-target="address.zip"]
+  - &shipping-address-street1
+    id: shipping-address-street1
+    description: Street1 of shipping address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="ShippingAddress"] span[data-target="address.streetOne"]
+  - &shipping-address-city
+    id: shipping-address-city
+    description: City of shipping address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="ShippingAddress"] span[data-target="address.city"]
+  - &shipping-address-state
+    id: shipping-address-state
+    description: State of shipping address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="ShippingAddress"] span[data-target="address.state"]
+  - &shipping-address-zip
+    id: shipping-address-zip
+    description: Zipcode of shipping address
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[ng-if*="ShippingAddress"] span[data-target="address.zip"]
+  - id: add-home-address
+    description: Add Home address button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target*='homeAddress.add']
+  - &change-home-address
+    id: change-home-address
+    description: Change Home address button
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target="settings.section.addressInfo.homeAddress.change"]
+  - &street1-input
+    id: street1-input
+    description: Field input street1
+    locators:
+      - device: WEB
+        type: ID
+        value: streetOne
+  - &street2-input
+    id: street2-input
+    description: Field input street2
+    locators:
+      - device: WEB
+        type: ID
+        value: streetTwo
+  - &city-input
+    id: city-input
+    description: Field input city
+    locators:
+      - device: WEB
+        type: ID
+        value: city
+  - &state-dropdown
+    id: state-dropdown
+    description: State dropdown
+    locators:
+      - device: WEB
+        type: ID
+        value: states
+  - &arizona-dropdown-option
+    id: arizona-dropdown-option
+    description: Arizona option
+    locators:
+      - device: WEB
+        type: CSS
+        value: option[label='Arizona']
+  - &zip-input
+    id: zip-input
+    description: Zip code input
+    locators:
+      - device: WEB
+        type: ID
+        value: zip
+  - &address-next-button
+    id: address-next-button
+    description: Address next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target='addressInfo.verification.next']
+  - &address-save-button
+    id: address-save-button
+    description: Address save button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target='addessInfo.verification.save']
+  - &add-phone
+    id: add-phone
+    description: Add phone
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[href*="/settings/addPhone"]
+  - &new-phone
+    id: new-phone
+    description: New phone
+    locators:
+      - device: WEB
+        type: ID
+        value: newPhone
+  - &continue-phone
+    id: continue-phone
+    description: Button continue phone
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="addEditPhone.action.continue"]
+  - &verify-phone
+    id: verify-phone
+    description: Verify phone number
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="addEditPhone.button.verify"]
+  - &remove-email
+    id: remove-email
+    description: Button remove email
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[data-target="settings.section.signinInfo.action.removeEmail"]
+  - &confirm-remove-email
+    id: confirm-remove-email
+    description: Button confirm remove email
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="settings.removeEmailPhone.dialog.action"]
+  - &add-email
+    id: add-email
+    description: Button add email
+    locators:
+      - device: WEB
+        type: CSS
+        value: a[ui-sref="root.main.site.contentWrapper.settings.addEditEmail"]
+  - &new-email
+    id: new-email
+    description: Input new email
+    locators:
+      - device: WEB
+        type: ID
+        value: newEmail
+  - &continue-email
+    id: continue-email
+    description: Button continue after inputing new email
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="addEditEmail.action.continue"]
+  - &email-verification-code-input
+    id: email-verification-code-input
+    description: Input email verification code
+    locators:
+      - device: WEB
+        type: ID
+        value: emailCode
+  - &verify-email
+    id: verify-email
+    description: Button verify email
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="addEditEmail.button.verify"]
+  - &email-value
+    id: email-value
+    description: Email value in verification code pop-up
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class*='email-value']
+  - &next-button
+    id: next-button
+    description: Button next
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="addressInfo.verification.next"]
+  - &save-button
+    id: save-button
+    description: Button save
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[data-target="addessInfo.verification.save"]
+  - &prefix-selector
+    id: prefix-selector
+    description: Prefix selector
+    locators:
+      - device: WEB
+        type: NAME
+        value: prefix-selector
+  - &mr-option
+    id: mr-option
+    description: Option Mr.
+    locators:
+      - device: WEB
+        type: CSS
+        value: option[label="Mr."]
+  - id: suffix-selector
+    description: Suffix selector
+    locators:
+      - device: WEB
+        type: NAME
+        value: suffix-selector
+  - id: jr-option
+    description: Option Jr.
+    locators:
+      - device: WEB
+        type: CSS
+        value: option[label="Jr."]
+  - &span-message
+    id: span-message
+    description: Message displays after save changes
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class*='message']
+  - &stop-participant
+    id: stop-participant
+    description: Stop participant link
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[data-target="settings.section.participation.web.stop.participation"]
+  - &form-name
+    id: form-name
+    description: Form name when clicking stop participant link
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[ng-if="getFormName()"]
+  - &stop-participant-next-button
+    id: stop-participant-next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[ng-click="goToNextPage()"]
+  - &deactivate-option
+    id: deactivate-option
+    description: First option of the form - to deactivate participant
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class,"radio-image-left")])[1]
+  - &withdraw-option
+    id: withdraw-option
+    description: Second option of the form - to withdraw participant
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[contains(@class,"radio-image-left")])[2]
+  - &stop-participating-button
+    id: stop-participating-button
+    description: Button stop participating
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[title="Withdraw from the program"]
+  - id: vrp-stop-participating-button
+    description: Button stop participating
+    locators:
+      - device: WEB
+        type: CSS
+        value: button[title='Stop Participating']
+  - &stop-participating-agreement
+    id: stop-participating-agreement
+    description: Text thank you displayed after stop participating successfully
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[translate*="agreements.stopParticipating"]
+  - &option-yes-continue
+    id: option-yes-continue
+    description: Option yes continue when withdrawing participant
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//label[contains(@class,'sub-field-option-label')])[1]
+  - id: email-address-value
+    description: Email Address value on Settings page
+    locators:
+      - device: WEB
+        type: ID
+        value: emailAddressInput
+  - id: mobile-phone-number-value
+    description: Mobile Phone Number value on Settings page
+    locators:
+      - device: WEB
+        type: ID
+        value: primaryPhoneInput

@@ -1,0 +1,44 @@
+elements:
+  - id: next-button
+    description: Next button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|continue'
+  - id: radio-option-1
+    description: Radion option yes
+    locators:
+      - device: API
+        value: ExtraConsent_19YearsofAge
+      - device: WEB
+        type: XPATH
+        value: //div[text()="Yes"]
+    values:
+      - lang: EN
+        value: 'Yes'
+  - id: radio-option-2
+    description: Radion option no
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()="No"]
+    values:
+      - lang: EN
+        value: 'No'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[@class='ng-binding ng-scope']//*[contains(text(),'Your age')]
+    values:
+      - lang: EN
+        value: Your age
+apiPage:
+    name: 19 or older Alabama
+    sections:
+      - name: 19 or older Alabama
+        fields:
+          - name: radio-option-1
+            values:
+              - 19YearsofAge_19YearsYes

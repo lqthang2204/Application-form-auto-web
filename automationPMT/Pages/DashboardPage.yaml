@@ -1,0 +1,31 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: prospect-dashboard
+    description: Prospect dashboard
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="prospectDashboard"]
+  - id: total-prospects
+    description: Total prospects
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="prospect"] div[class*="total-value"]
+  - id: total-prospects-value
+    description: Total prospects value
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*="prospect"] div[class*="total-value"] p[class*="value"]
+  - id: program-name
+    description: Program name
+    locators:
+      - device: WEB
+        type: CSS
+        value: span[class*="active breadcrumbs"]

@@ -1,0 +1,259 @@
+elements:
+  - id: spinner
+    description: Spinner icon while loading
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class*='spinner-container']
+  - id: toggle-cati-feature-is-off
+    description: Toggle cati feature is off
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Computer Assisted Telephone Interviewing (CATI)']/following::div[@class='switch '])[1]//input[@data-value='false']/parent::div
+  - &vrp-contact-tracing-toggle-is-off
+    id: contact-tracing-toggle-is-off
+    description: Contact Tracing toggle
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='switch '])[6]//div[@class='inactive-text']
+  - &vrp-prospect-management-toggle-is-off
+    id: prospect-management-toggle-is-off
+    description: Prospect Management toggle
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='switch '])[9]//div[@class='inactive-text']
+  - &aou-prospect-management-toggle-is-off
+    id: aou-prospect-management-toggle-is-off
+    description: Prospect Management toggle
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//div[@class='switch '])[8]//div[@class='inactive-text']
+  - &prospect-management-select-all-checkbox
+    id: prospect-management-select-all-checkbox
+    description: Prospect Management select All checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Prospect Management']/following-sibling::button[text()='Select All']
+  - &campaigns-select-all-checkbox
+    id: campaigns-select-all-checkbox
+    description: Campaigns select All checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Campaigns']/following-sibling::button[text()='Select All']
+  - &case-management-select-all-checkbox
+    id: case-management-select-all-checkbox
+    description: Case Management select All checkbox
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //*[text()='Case Management']/following-sibling::button[text()='Select All']
+  - &toggle-campaigns-feature-is-off
+    id: toggle-campaigns-feature-is-off
+    description: Toggle campaigns feature is off
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Campaigns']/following::div[@class='switch '])[1]//input[@data-value='false']/parent::div
+  - id: toggle-campaigns-feature-is-on
+    description: Toggle campaigns feature is on
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Campaigns']/following::div[@class='switch '])[1]//input[@data-value='true']/parent::div
+  - &toggle-case-management-feature-is-off
+    id: toggle-case-management-feature-is-off
+    description: Toggle case management feature is off
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Case Management']/following::div[@class='switch '])[1]//input[@data-value='false']/parent::div
+  - id: toggle-case-management-feature-is-on
+    description: Toggle case management feature is on
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Case Management']/following::div[@class='switch '])[1]//input[@data-value='true']/parent::div
+  - id: toggle-support-tools-feature-is-off
+    description: Toggle support tools feature is off
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Support Tools']/following::div[@class='switch '])[1]//input[@data-value='false']/parent::div
+  - id: toggle-prospect-dashboard-feature-is-off
+    description: Toggle prospect dashboard feature is off
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Prospect Dashboard']/following::div[@class='switch '])[1]//input[@data-value='false']/parent::div
+  - id: toggle-support-tools-feature-is-on
+    description: Toggle support tools feature is on
+    locators:
+      - device: WEB
+        type: XPATH
+        value: (//h3[@class="toggle-name"][.='Support Tools']/following::div[@class='switch '])[1]//input[@data-value='true']/parent::div
+  - id: program-settings-tab
+    description: Program Settings Tab
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //a[text()='Program Settings']
+  - id: template-information-tab
+    description: Template Information Tab
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Template Information']
+  - id: template-action-button
+    description: Add or Edit template button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //div[text()='Automation Awardee']/../following-sibling::div[4]/button
+  - id: sender-email-field
+    description: Sender Email Field
+    locators:
+      - device: WEB
+        type: NAME
+        value: senderEmail
+  - id: from-name-english-field
+    description: From Name English Field
+    locators:
+      - device: WEB
+        type: NAME
+        value: fromNameEnglish
+  - id: from-name-spanish-field
+    description: From Name Spanish Field
+    locators:
+      - device: WEB
+        type: NAME
+        value: fromNameSpanish
+  - id: save-template-info
+    description: Save Template Info button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Save']
+  - id: confirm-replace-all
+    description: Confirm Replace All button
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Yes, Replace all']
+  - id: engagement-outcome-tab
+    description: Engagement Outcome Tab
+    locators:
+      - device: WEB
+        type: XPATH
+        value: //button[text()='Engagement Outcomes']
+actions:
+  - id: toggle-on-cati-feature
+    description: Turn on cati feature if it is off
+    actionElements:
+      - element: toggle-cati-feature-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: turn-on-contact-tracing-toggle
+    description: Turn on Contact Tracing toggle
+    actionElements:
+      - element: *vrp-contact-tracing-toggle-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: turn-on-prospect-management-toggle
+    description: Turn on Prospect Management toggle
+    actionElements:
+      - element: *vrp-prospect-management-toggle-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: turn-on-aou-prospect-management-toggle
+    description: Turn on Prospect Management toggle
+    actionElements:
+      - element: *aou-prospect-management-toggle-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: select-all-prospect-management-checkbox
+    description: Select all prospect management checkbox
+    actionElements:
+      - element: *prospect-management-select-all-checkbox
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: select-all-campaigns-checkbox
+    description: Select all campaigns checkbox
+    actionElements:
+      - element: *campaigns-select-all-checkbox
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: select-all-case-management-checkbox
+    description: Select all Case Management checkbox
+    actionElements:
+      - element: *case-management-select-all-checkbox
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-on-campaigns-feature
+    description: Turn on campaigns feature if it is off
+    actionElements:
+      - element: *toggle-campaigns-feature-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-on-case-management-feature
+    description: Turn on case management feature if it is off
+    actionElements:
+      - element: *toggle-case-management-feature-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-on-scheduling-and-capacity-management-feature
+    description: Turn on scheduling and capacity management feature if it is off
+    actionElements:
+      - element: toggle-scheduling-and-capacity-management-feature-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-on-support-tools-feature
+    description: Turn on support tools feature if it is off
+    actionElements:
+      - element: toggle-support-tools-feature-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-off-campaigns-feature
+    description: Turn off campaigns feature if it is on
+    actionElements:
+      - element: toggle-campaigns-feature-is-on
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-off-case-management-feature
+    description: Turn off case management feature if it is on
+    actionElements:
+      - element: toggle-case-management-feature-is-on
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-off-support-tools-feature
+    description: Turn off support tools feature if it is on
+    actionElements:
+      - element: toggle-support-tools-feature-is-on
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click
+  - id: toggle-on-prospect-dashboard-feature
+    description: Turn on prospect dashboard feature if it is off
+    actionElements:
+      - element: toggle-prospect-dashboard-feature-is-off
+        condition: DISPLAYED
+        timeout: 2000
+        inputType: click

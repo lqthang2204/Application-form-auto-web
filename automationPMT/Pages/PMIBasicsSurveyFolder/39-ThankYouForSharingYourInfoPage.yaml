@@ -1,0 +1,18 @@
+elements:
+  - id: submit-button
+    description: Submit button
+    locators:
+      - device: WEB
+        type: DATATARGET
+        value: '@form|button|submit'
+  - id: page-title
+    description: Page title
+    locators:
+      - device: WEB
+        type: CSS
+        value: div[class='ng-binding ng-scope']
+    values:
+      - lang: EN
+        value: Thank you for sharing your information with All of Us.
+      - lang: ES
+apiPage: {}
